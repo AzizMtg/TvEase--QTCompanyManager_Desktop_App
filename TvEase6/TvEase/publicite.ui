@@ -1,0 +1,445 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>publicite</class>
+ <widget class="QDialog" name="publicite">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1500</width>
+    <height>800</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: #E3E4F2;</string>
+  </property>
+  <widget class="QGroupBox" name="groupBox_2">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>261</width>
+     <height>801</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color :#ABADD8 ; 
+border-top-right-radius : 40px ; 
+</string>
+   </property>
+   <property name="title">
+    <string/>
+   </property>
+   <widget class="QWidget" name="verticalLayoutWidget_2">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>80</y>
+      <width>261</width>
+      <height>740</height>
+     </rect>
+    </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout_2">
+     <item>
+      <widget class="QPushButton" name="pushButton_16">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton{
+background-color: transparent;
+    font-family: Arial, sans-serif; 
+    font-weight: bold; 
+    font-size: 20px; 
+border : none ; 
+border-radius : 0 px ;
+color : #4D53A8 ; 
+
+}
+QPushButton:hover{
+background-color: #E3E4F2;
+border:none ; 
+ 
+}
+</string>
+       </property>
+       <property name="text">
+        <string> Personnels</string>
+       </property>
+       <property name="icon">
+        <iconset resource="source.qrc">
+         <normaloff>:/img/images/personnel.png</normaloff>:/img/images/personnel.png</iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>50</width>
+         <height>100</height>
+        </size>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="pushButton_17">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton{
+background-color: transparent;
+    font-family: Arial, sans-serif; 
+    font-weight: bold; 
+    font-size: 20px; 
+border : none ; 
+border-radius : 0 px ;
+color : #4D53A8 ; 
+}
+QPushButton:hover{
+background-color: #E3E4F2;
+ 
+}</string>
+       </property>
+       <property name="text">
+        <string>Programmes</string>
+       </property>
+       <property name="icon">
+        <iconset resource="source.qrc">
+         <normaloff>:/img/images/programme.png</normaloff>:/img/images/programme.png</iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>50</width>
+         <height>100</height>
+        </size>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="pushButton_18">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">
+
+background-color: #E3E4F2;
+  font-family: Arial, sans-serif; 
+  font-weight: bold; 
+    font-size: 20px; 
+border : none ; 
+border-radius : 0 px ;
+color : #4D53A8 ; 
+
+</string>
+       </property>
+       <property name="text">
+        <string> Publicités </string>
+       </property>
+       <property name="icon">
+        <iconset resource="source.qrc">
+         <normaloff>:/img/images/ad.png</normaloff>:/img/images/ad.png</iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>50</width>
+         <height>100</height>
+        </size>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="pushButton_19">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton{
+background-color: transparent;
+    font-family: Arial, sans-serif; 
+    font-weight: bold; 
+    font-size: 20px; 
+border : none ; 
+border-radius : 0px ;
+color : #4D53A8 ; 
+}
+QPushButton:hover{
+background-color: #E3E4F2;
+ 
+}</string>
+       </property>
+       <property name="text">
+        <string> Auditeurs </string>
+       </property>
+       <property name="icon">
+        <iconset resource="source.qrc">
+         <normaloff>:/img/images/people.png</normaloff>:/img/images/people.png</iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>50</width>
+         <height>100</height>
+        </size>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="pushButton_20">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton{
+background-color: transparent;
+    font-family: Arial, sans-serif; 
+    font-weight: bold; 
+    font-size: 20px; 
+border : none ; 
+border-radius : 0 px ;
+color : #4D53A8 ; 
+}
+QPushButton:hover{
+background-color: #E3E4F2;
+ 
+}</string>
+       </property>
+       <property name="text">
+        <string>Abonnements </string>
+       </property>
+       <property name="icon">
+        <iconset resource="source.qrc">
+         <normaloff>:/img/images/subscribe.png</normaloff>:/img/images/subscribe.png</iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>50</width>
+         <height>100</height>
+        </size>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="pushButton_21">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton{
+background-color: transparent;
+    font-family: Arial, sans-serif; 
+    font-weight: bold; 
+    font-size: 20px; 
+border : none ; 
+border-radius : 0 px ;
+color : #4D53A8 ; 
+}
+QPushButton:hover{
+background-color: #E3E4F2;
+ 
+}</string>
+       </property>
+       <property name="text">
+        <string>Studios</string>
+       </property>
+       <property name="icon">
+        <iconset resource="source.qrc">
+         <normaloff>:/img/images/studio.png</normaloff>:/img/images/studio.png</iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>50</width>
+         <height>100</height>
+        </size>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="pushButton_22">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton{
+background-color: transparent;
+    font-family: Arial, sans-serif; 
+    font-weight: bold; 
+    font-size: 20px; 
+border : none ; 
+border-radius : 0 px ;
+color : #4D53A8 ; 
+}
+QPushButton:hover{
+background-color: #E3E4F2;
+ 
+}</string>
+       </property>
+       <property name="text">
+        <string>Quitter</string>
+       </property>
+       <property name="icon">
+        <iconset resource="source.qrc">
+         <normaloff>:/img/images/button.png</normaloff>:/img/images/button.png</iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>50</width>
+         <height>100</height>
+        </size>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>50</x>
+      <y>20</y>
+      <width>171</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>20</pointsize>
+      <weight>75</weight>
+      <italic>true</italic>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border : none ;
+color : #333770 ;
+border:none ; 
+    </string>
+    </property>
+    <property name="text">
+     <string>Dashboard</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QTabWidget" name="tabWidget">
+   <property name="geometry">
+    <rect>
+     <x>300</x>
+     <y>50</y>
+     <width>1251</width>
+     <height>641</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QTabWidget::pane {
+    border-top: 2px solid #C2C7CB; /* Top border color */
+    position: absolute;
+    top: -0.5em;
+border:none ; 
+
+}
+
+QTabWidget::tab-bar {
+    alignment: center;
+
+}
+
+QTabBar::tab {
+    background-color: #ABADD8 ;  /* Background color of tabs */
+    color: #000000; /* Text color of tabs */
+    padding: 15px; /* Padding of tabs */
+    border-top-left-radius: 4px; /* Rounded corners */
+    border-top-right-radius: 4px;
+ margin-right : 75px ; 
+width:200px;
+border-radius : 10px;
+}
+
+QTabBar::tab:selected {
+    background-color: #333770 ;  /* Background color of selected tab */
+    color: #FFFFFF; /* Text color of selected tab */
+}
+
+QTabBar::tab:hover {
+}
+
+QPushButton {
+    background-color: #4CAF50; /* Background color of button */
+    color: #FFFFFF; /* Text color of button */
+    padding: 8px; /* Padding of button */
+    border: none; /* No border */
+    border-radius: 4px; /* Rounded corners *
+}</string>
+   </property>
+   <property name="currentIndex">
+    <number>3</number>
+   </property>
+   <widget class="QWidget" name="tab">
+    <attribute name="title">
+     <string>Afficher</string>
+    </attribute>
+   </widget>
+   <widget class="QWidget" name="tab_3">
+    <attribute name="title">
+     <string>Ajouter</string>
+    </attribute>
+   </widget>
+   <widget class="QWidget" name="tab_4">
+    <attribute name="title">
+     <string>Modifier</string>
+    </attribute>
+   </widget>
+   <widget class="QWidget" name="tab_2">
+    <attribute name="title">
+     <string>Supprimer</string>
+    </attribute>
+   </widget>
+  </widget>
+ </widget>
+ <resources>
+  <include location="source.qrc"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>pushButton_22</sender>
+   <signal>clicked()</signal>
+   <receiver>publicite</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>181</x>
+     <y>740</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>324</x>
+     <y>713</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

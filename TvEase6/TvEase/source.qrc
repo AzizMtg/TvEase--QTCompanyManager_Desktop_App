@@ -1,0 +1,14 @@
+<RCC>
+    <qresource prefix="/img">
+        <file>images/tv.png</file>
+        <file>images/personnel.png</file>
+        <file>images/programme.png</file>
+        <file>images/ad.png</file>
+        <file>images/people.png</file>
+        <file>images/button.png</file>
+        <file>images/studio.png</file>
+        <file>images/subscribe.png</file>
+        <file>images/1.jpeg</file>
+        <file>images/image.jpg</file>
+    </qresource>
+</RCC>

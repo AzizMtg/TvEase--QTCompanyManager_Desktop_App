@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>SingIn</class>
+ <widget class="QDialog" name="SingIn">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>778</width>
+    <height>594</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color :   #ABADD8 ; </string>
+  </property>
+  <widget class="QGroupBox" name="groupBox">
+   <property name="geometry">
+    <rect>
+     <x>130</x>
+     <y>10</y>
+     <width>611</width>
+     <height>551</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border : 3px dashed #333670 ; 
+background-color: #E3E4F2;
+
+
+</string>
+   </property>
+   <property name="title">
+    <string/>
+   </property>
+   <widget class="QLineEdit" name="lineEdit_email_sign_in">
+    <property name="geometry">
+     <rect>
+      <x>160</x>
+      <y>150</y>
+      <width>311</width>
+      <height>91</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color : transparent ; 
+border : none ; 
+border-bottom: 5px solid #333670 ; 
+
+
+
+</string>
+    </property>
+    <property name="placeholderText">
+     <string>email</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="lineEdit_password_sign_in">
+    <property name="geometry">
+     <rect>
+      <x>160</x>
+      <y>290</y>
+      <width>321</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color : transparent ; 
+border : none ; 
+border-bottom: 5px solid #333670 ; 
+</string>
+    </property>
+    <property name="placeholderText">
+     <string>mot de passe</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_2">
+    <property name="geometry">
+     <rect>
+      <x>280</x>
+      <y>380</y>
+      <width>81</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">#pushButton_2 {border :none ;
+background-color : #8186C5 ; 
+widht : 400px ; 
+border-radius : 10px ;
+color : #E3E4F2;}
+
+
+#pushButton_2:hover {
+color : #3A3F7E ; 
+background-color : #ABAFD8; 
+}
+</string>
+    </property>
+    <property name="text">
+     <string>connexion</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_3">
+    <property name="geometry">
+     <rect>
+      <x>420</x>
+      <y>470</y>
+      <width>131</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">#pushButton_3{
+border : none ;
+color : blue ; 
+border-bottom: 1px solid blue; }
+
+#pushButton_3:hover {
+color : #3A3F7E ; 
+border-bottom: 1px solid #3A3F7E; }
+
+</string>
+    </property>
+    <property name="text">
+     <string>mot de passe oublier</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>170</x>
+      <y>40</y>
+      <width>291</width>
+      <height>81</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>25</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border  : none ; 
+color : #333670 ; 
+</string>
+    </property>
+    <property name="text">
+     <string> SE CONNECTER</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QWidget" name="widget" native="true">
+   <property name="geometry">
+    <rect>
+     <x>-40</x>
+     <y>210</y>
+     <width>321</width>
+     <height>471</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-image: url(:/img/images/tv.png);
+
+background-size: cover; 
+  background-repeat: no-repeat; 
+  background-position: center;
+background-color : transparent ; </string>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
