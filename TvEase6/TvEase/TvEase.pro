@@ -1,6 +1,14 @@
+<<<<<<< Updated upstream
 QT       += core gui
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
+=======
+QT       += core gui sql widgets serialport printsupport serialport
+QT += charts network
+QT += multimedia
+QT       += core gui multimedia multimediawidgets
+greaterThan(QT_MAJOR_VERSION, 4): QT += widgets quickwidgets
+>>>>>>> Stashed changes
 
 CONFIG += c++11
 
@@ -24,7 +32,58 @@ SOURCES += \
     programme.cpp \
     publicite.cpp \
     singin.cpp \
+<<<<<<< Updated upstream
     studio.cpp
+=======
+    staperso.cpp \
+    studio.cpp \
+    travailler.cpp\
+    cprogramme.cpp \
+    statprog.cpp\
+    cabonnement.cpp \
+    ajtevent.cpp \
+    chat.cpp \
+    employearduino.cpp \
+    espeak.cpp \
+    lopiza.cpp \
+    mesevents.cpp \
+    pubarduino.cpp \
+    testdialog.cpp \
+    cpub.cpp \
+    event.cpp \
+    pubhisto.cpp \
+    dialognickname.cpp \
+    messenger.cpp \
+    peer.cpp \
+    pmwindow.cpp \
+    roomwindow.cpp \
+    dialogroom.cpp \
+    dialogabout.cpp \
+    abonnement_arduino.cpp\
+    gamehub.cpp \
+    parkings.cpp \
+    statstudio.cpp \
+    cstudio.cpp \
+    gui/w.cpp \
+    core/tile.cpp \
+    core/board.cpp \
+    core/game.cpp \
+    gui/qgameboard.cpp \
+    gui/qtile.cpp \
+    gui/qresetbutton.cpp \
+    core/observer.cpp \
+    core/subject.cpp \
+    gui/qgameoverwindow.cpp \
+    ss.cpp\
+    widget.cpp \
+    field.cpp \
+    tile.cpp \
+    snake.cpp\
+    alarme.cpp \
+    audi.cpp \
+
+
+>>>>>>> Stashed changes
 
 HEADERS += \
     abonnement.h \
@@ -34,7 +93,59 @@ HEADERS += \
     programme.h \
     publicite.h \
     singin.h \
+<<<<<<< Updated upstream
     studio.h
+=======
+    staperso.h \
+    studio.h \
+    travailler.h \
+    cprogramme.h \
+    statprog.h\
+     cabonnement.h \
+    ajtevent.h \
+    chat.h \
+    employearduino.h \
+    espeak.h \
+    lopiza.h \
+    mesevents.h \
+    pubarduino.h \
+    testdialog.h \
+    cpub.h \
+    event.h \
+    pubhisto.h \
+    dialognickname.h \
+    messenger.h \
+    peer.h \
+    pmwindow.h \
+    roomwindow.h \
+    dialogroom.h \
+    dialogabout.h \
+    abonnement_arduino.h \
+    gamehub.h \
+    parkings.h \
+    statstudio.h \
+    cstudio.h \
+    gui/w.h \
+    core/tile.h \
+    core/board.h \
+    core/game.h \
+    gui/qgameboard.h \
+    gui/qtile.h \
+    gui/qresetbutton.h \
+    core/observer.h \
+    core/subject.h \
+    gui/qgameoverwindow.h \
+    ss.h\
+    widget.h \
+    field.h\
+    tile.h \
+    snake.h\
+    alarme.h \
+    audi.h \
+
+
+
+>>>>>>> Stashed changes
 
 FORMS += \
     abonnement.ui \
@@ -44,7 +155,36 @@ FORMS += \
     programme.ui \
     publicite.ui \
     singin.ui \
+<<<<<<< Updated upstream
     studio.ui
+=======
+    staperso.ui \
+    studio.ui \
+    travailler.ui\
+    statprog.ui\
+    ajtevent.ui \
+    chat.ui \
+    employearduino.ui \
+    lopiza.ui \
+    mesevents.ui \
+    pubarduino.ui \
+    testdialog.ui \
+    event.ui \
+    pubhisto.ui \
+    dialognickname.ui \
+    pmwindow.ui \
+    roomwindow.ui \
+    dialogroom.ui \
+    dialogabout.ui\
+   abonnement_arduino.ui \
+    gamehub.ui \
+    parkings.ui \
+    statstudio.ui \
+    alarme.ui \
+
+
+
+>>>>>>> Stashed changes
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
@@ -52,6 +192,11 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
 
 RESOURCES += \
-    source.qrc
+    source.qrc \
+    qml.qrc
 
+LIBS += -L"C:/Program Files (x86)/eSpeak" -lespeak_sapi
+LIBS += -lole32 -lsapi
 
+DISTFILES += \
+    images/565422.png

@@ -34,7 +34,7 @@ public:
     {
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName(QStringLiteral("MainWindow"));
-        MainWindow->resize(800, 600);
+        MainWindow->resize(873, 589);
         MainWindow->setStyleSheet(QLatin1String("\n"
 "background-size: 800px 600px;\n"
 "background-position: center;\n"
@@ -44,12 +44,23 @@ public:
         centralwidget->setObjectName(QStringLiteral("centralwidget"));
         pushButton = new QPushButton(centralwidget);
         pushButton->setObjectName(QStringLiteral("pushButton"));
-        pushButton->setGeometry(QRect(310, 460, 121, 31));
-        pushButton->setStyleSheet(QStringLiteral("background-color : white ; "));
+        pushButton->setGeometry(QRect(320, 440, 151, 31));
+        pushButton->setStyleSheet(QLatin1String("#pushButton{border :none ;\n"
+"background-color : #8186C5 ; \n"
+"widht : 400px ; \n"
+"border-radius : 10px ;\n"
+"color : #E3E4F2;}\n"
+"\n"
+"\n"
+"##pushButton {\n"
+"color : #3A3F7E ; \n"
+"background-color : #ABAFD8; \n"
+"}\n"
+""));
         MainWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(MainWindow);
         menubar->setObjectName(QStringLiteral("menubar"));
-        menubar->setGeometry(QRect(0, 0, 800, 22));
+        menubar->setGeometry(QRect(0, 0, 873, 22));
         MainWindow->setMenuBar(menubar);
         statusbar = new QStatusBar(MainWindow);
         statusbar->setObjectName(QStringLiteral("statusbar"));
@@ -63,7 +74,7 @@ public:
     void retranslateUi(QMainWindow *MainWindow)
     {
         MainWindow->setWindowTitle(QApplication::translate("MainWindow", "MainWindow", Q_NULLPTR));
-        pushButton->setText(QApplication::translate("MainWindow", "se connecter", Q_NULLPTR));
+        pushButton->setText(QApplication::translate("MainWindow", "NEXT", Q_NULLPTR));
     } // retranslateUi
 
 };

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>PubHisto</class>
+ <widget class="QDialog" name="PubHisto">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>573</width>
+    <height>646</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Historique Publicite</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true"/>
+  </property>
+  <widget class="QGroupBox" name="groupBox">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>741</width>
+     <height>691</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">/* Set the background color of child widgets to transparent */
+/* Set the background image for the group box */
+#groupBox {
+    background-image: url(:/img/images/8e4aaa996388c571c188857db3fee3f8.jpg);
+}
+
+/* Set transparent background for child widgets */
+#groupBox QWidget {
+    background-color: transparent;
+}
+</string>
+   </property>
+   <property name="title">
+    <string/>
+   </property>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>100</x>
+      <y>80</y>
+      <width>361</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Neue Haas Grotesk Text Pro Ligh</family>
+      <pointsize>18</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: transparent;
+</string>
+    </property>
+    <property name="text">
+     <string>Historique Ajout Publicites</string>
+    </property>
+   </widget>
+   <widget class="QTableView" name="histotab">
+    <property name="geometry">
+     <rect>
+      <x>80</x>
+      <y>150</y>
+      <width>401</width>
+      <height>431</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(255, 255, 255);
+</string>
+    </property>
+   </widget>
+   <zorder>histotab</zorder>
+   <zorder>label</zorder>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

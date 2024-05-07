@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>chat</class>
+ <widget class="QDialog" name="chat">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>729</width>
+    <height>619</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>TvEase Chatbot</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true"/>
+  </property>
+  <widget class="QWidget" name="widget" native="true">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>751</width>
+     <height>731</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-image: url(:/img/images/background.jpg);</string>
+   </property>
+   <widget class="QTextEdit" name="messageTextEdit">
+    <property name="geometry">
+     <rect>
+      <x>80</x>
+      <y>560</y>
+      <width>441</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QTextEdit{
+	font: 9pt  &quot;neue haas grotesk text pro extr&quot;;
+}</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="SendButton">
+    <property name="geometry">
+     <rect>
+      <x>540</x>
+      <y>560</y>
+      <width>101</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>neue haas grotesk text pro extr</family>
+      <pointsize>11</pointsize>
+      <weight>50</weight>
+      <italic>false</italic>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton{
+	font: 11pt &quot;neue haas grotesk text pro extr&quot;;
+  background-color: rgb(170, 0, 127);
+}</string>
+    </property>
+    <property name="text">
+     <string>Envoyer</string>
+    </property>
+   </widget>
+   <widget class="QTextEdit" name="chatDisplayTextEdit">
+    <property name="geometry">
+     <rect>
+      <x>50</x>
+      <y>90</y>
+      <width>611</width>
+      <height>421</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QTextEdit{
+	font: 13pt &quot;neue haas grotesk text pro extr&quot;;
+	background-image: url();
+   
+}
+</string>
+    </property>
+    <property name="readOnly">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>110</x>
+      <y>30</y>
+      <width>311</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Neue Haas Grotesk Text Pro Extr</family>
+      <pointsize>19</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border : none ;
+background-color: none;
+color : #333770 ;
+background-image : url();
+    
+</string>
+    </property>
+    <property name="text">
+     <string>TvEaseBot!</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_2">
+    <property name="geometry">
+     <rect>
+      <x>40</x>
+      <y>10</y>
+      <width>71</width>
+      <height>71</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">image: url(:/img/images/pngtree-chatbot-icon-chat-bot-robot-png-image_4841963.png);
+border : none ;
+background-color: none;
+color : #333770 ;
+background-image : url();
+    
+</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_3">
+    <property name="geometry">
+     <rect>
+      <x>80</x>
+      <y>530</y>
+      <width>551</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Neue Haas Grotesk Text Pro Extr</family>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border : none ;
+background-color: none;
+color : #333770 ;
+background-image : url();
+    
+
+</string>
+    </property>
+    <property name="text">
+     <string>Veuillez écrire ici et appuyer sur envoyer pour ajouter votre message.</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_4">
+    <property name="geometry">
+     <rect>
+      <x>50</x>
+      <y>60</y>
+      <width>371</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Neue Haas Grotesk Text Pro Extr</family>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border : none ;
+background-color: none;
+color : #333770 ;
+background-image : url();
+    
+</string>
+    </property>
+    <property name="text">
+     <string>Votre assistant virtuel pour une gestion efficace !</string>
+    </property>
+   </widget>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

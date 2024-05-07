@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>mesevents</class>
+ <widget class="QDialog" name="mesevents">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>569</width>
+    <height>766</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <widget class="QGroupBox" name="groupBox">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>571</width>
+     <height>781</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-image: url(:/img/images/GettyImages-530686103-56a2b3775f9b58b7d0cd87d9.jpg);</string>
+   </property>
+   <property name="title">
+    <string/>
+   </property>
+   <widget class="QTableView" name="mesevent">
+    <property name="geometry">
+     <rect>
+      <x>80</x>
+      <y>50</y>
+      <width>401</width>
+      <height>341</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border : none ;
+background-color: rgb(220, 220, 220);
+color : #333770 ;
+background-image : url();
+    
+</string>
+    </property>
+   </widget>
+   <widget class="QTableView" name="participant">
+    <property name="geometry">
+     <rect>
+      <x>90</x>
+      <y>430</y>
+      <width>391</width>
+      <height>271</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border : none ;
+background-color: rgb(220, 220, 220);
+color : #333770 ;
+background-image : url();
+    
+</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="retourner">
+    <property name="geometry">
+     <rect>
+      <x>420</x>
+      <y>710</y>
+      <width>121</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Retourner</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>190</x>
+      <y>10</y>
+      <width>271</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Neue Haas Grotesk Text Pro Ligh</family>
+      <pointsize>13</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border : none ;
+background-color: none;
+color : #333770 ;
+background-image : url();
+    
+</string>
+    </property>
+    <property name="text">
+     <string>Mes Evenements</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_2">
+    <property name="geometry">
+     <rect>
+      <x>180</x>
+      <y>410</y>
+      <width>221</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Neue Haas Grotesk Text Pro Ligh</family>
+      <pointsize>11</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border : none ;
+background-color: none;
+color : #333770 ;
+background-image : url();
+    
+</string>
+    </property>
+    <property name="text">
+     <string>Touts Les Participants</string>
+    </property>
+   </widget>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

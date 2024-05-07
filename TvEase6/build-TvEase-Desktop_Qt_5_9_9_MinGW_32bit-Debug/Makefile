@@ -210,7 +210,6 @@ Makefile: ../TvEase/TvEase.pro D:/Qt/5.9.9/mingw53_32/mkspecs/win32-g++/qmake.co
 		D:/Qt/5.9.9/mingw53_32/mkspecs/features/qt_config.prf \
 		D:/Qt/5.9.9/mingw53_32/mkspecs/win32-g++/qmake.conf \
 		D:/Qt/5.9.9/mingw53_32/mkspecs/features/spec_post.prf \
-		.qmake.stash \
 		D:/Qt/5.9.9/mingw53_32/mkspecs/features/exclusive_builds.prf \
 		D:/Qt/5.9.9/mingw53_32/mkspecs/features/toolchain.prf \
 		D:/Qt/5.9.9/mingw53_32/mkspecs/features/default_pre.prf \
@@ -235,8 +234,18 @@ Makefile: ../TvEase/TvEase.pro D:/Qt/5.9.9/mingw53_32/mkspecs/win32-g++/qmake.co
 		D:/Qt/5.9.9/mingw53_32/mkspecs/features/lex.prf \
 		../TvEase/TvEase.pro \
 		D:/Qt/5.9.9/mingw53_32/lib/qtmaind.prl \
+		D:/Qt/5.9.9/mingw53_32/lib/Qt5PrintSupport.prl \
+		D:/Qt/5.9.9/mingw53_32/lib/Qt5Charts.prl \
+		D:/Qt/5.9.9/mingw53_32/lib/Qt5MultimediaWidgets.prl \
+		D:/Qt/5.9.9/mingw53_32/lib/Qt5QuickWidgets.prl \
 		D:/Qt/5.9.9/mingw53_32/lib/Qt5Widgets.prl \
+		D:/Qt/5.9.9/mingw53_32/lib/Qt5Multimedia.prl \
+		D:/Qt/5.9.9/mingw53_32/lib/Qt5Quick.prl \
 		D:/Qt/5.9.9/mingw53_32/lib/Qt5Gui.prl \
+		D:/Qt/5.9.9/mingw53_32/lib/Qt5Sql.prl \
+		D:/Qt/5.9.9/mingw53_32/lib/Qt5SerialPort.prl \
+		D:/Qt/5.9.9/mingw53_32/lib/Qt5Qml.prl \
+		D:/Qt/5.9.9/mingw53_32/lib/Qt5Network.prl \
 		D:/Qt/5.9.9/mingw53_32/lib/Qt5Core.prl
 	$(QMAKE) -o Makefile ..\TvEase\TvEase.pro -spec win32-g++ "CONFIG+=debug" "CONFIG+=qml_debug"
 D:/Qt/5.9.9/mingw53_32/mkspecs/features/spec_pre.prf:
@@ -388,7 +397,6 @@ D:/Qt/5.9.9/mingw53_32/mkspecs/features/qt_functions.prf:
 D:/Qt/5.9.9/mingw53_32/mkspecs/features/qt_config.prf:
 D:/Qt/5.9.9/mingw53_32/mkspecs/win32-g++/qmake.conf:
 D:/Qt/5.9.9/mingw53_32/mkspecs/features/spec_post.prf:
-.qmake.stash:
 D:/Qt/5.9.9/mingw53_32/mkspecs/features/exclusive_builds.prf:
 D:/Qt/5.9.9/mingw53_32/mkspecs/features/toolchain.prf:
 D:/Qt/5.9.9/mingw53_32/mkspecs/features/default_pre.prf:
@@ -413,8 +421,18 @@ D:/Qt/5.9.9/mingw53_32/mkspecs/features/yacc.prf:
 D:/Qt/5.9.9/mingw53_32/mkspecs/features/lex.prf:
 ../TvEase/TvEase.pro:
 D:/Qt/5.9.9/mingw53_32/lib/qtmaind.prl:
+D:/Qt/5.9.9/mingw53_32/lib/Qt5PrintSupport.prl:
+D:/Qt/5.9.9/mingw53_32/lib/Qt5Charts.prl:
+D:/Qt/5.9.9/mingw53_32/lib/Qt5MultimediaWidgets.prl:
+D:/Qt/5.9.9/mingw53_32/lib/Qt5QuickWidgets.prl:
 D:/Qt/5.9.9/mingw53_32/lib/Qt5Widgets.prl:
+D:/Qt/5.9.9/mingw53_32/lib/Qt5Multimedia.prl:
+D:/Qt/5.9.9/mingw53_32/lib/Qt5Quick.prl:
 D:/Qt/5.9.9/mingw53_32/lib/Qt5Gui.prl:
+D:/Qt/5.9.9/mingw53_32/lib/Qt5Sql.prl:
+D:/Qt/5.9.9/mingw53_32/lib/Qt5SerialPort.prl:
+D:/Qt/5.9.9/mingw53_32/lib/Qt5Qml.prl:
+D:/Qt/5.9.9/mingw53_32/lib/Qt5Network.prl:
 D:/Qt/5.9.9/mingw53_32/lib/Qt5Core.prl:
 qmake: FORCE
 	@$(QMAKE) -o Makefile ..\TvEase\TvEase.pro -spec win32-g++ "CONFIG+=debug" "CONFIG+=qml_debug"

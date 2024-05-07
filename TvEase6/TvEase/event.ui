@@ -1,0 +1,368 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Event</class>
+ <widget class="QDialog" name="Event">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>718</width>
+    <height>691</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <widget class="QGroupBox" name="groupBox_2">
+   <property name="geometry">
+    <rect>
+     <x>-20</x>
+     <y>-10</y>
+     <width>821</width>
+     <height>811</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-image: url(:/img/images/background.jpg);</string>
+   </property>
+   <property name="title">
+    <string/>
+   </property>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>100</x>
+      <y>40</y>
+      <width>211</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Neue Haas Grotesk Text Pro Ligh</family>
+      <pointsize>20</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border : none ;
+background-color: none;
+color : #333770 ;
+background-image : url();
+    
+</string>
+    </property>
+    <property name="text">
+     <string>Evenements</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="ajt">
+    <property name="geometry">
+     <rect>
+      <x>620</x>
+      <y>40</y>
+      <width>71</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">image: url(:/img/images/parametre.png);</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="icon">
+     <iconset>
+      <normaloff>:/img/images/add-circle-outline-logo-icon-png-svg.png</normaloff>:/img/images/add-circle-outline-logo-icon-png-svg.png</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>30</width>
+      <height>30</height>
+     </size>
+    </property>
+   </widget>
+   <widget class="QTableView" name="eventdispo">
+    <property name="geometry">
+     <rect>
+      <x>110</x>
+      <y>150</y>
+      <width>521</width>
+      <height>271</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border : none ;
+background-color: none;
+color : #333770 ;
+background-image : url();
+    
+</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="nomev">
+    <property name="geometry">
+     <rect>
+      <x>310</x>
+      <y>450</y>
+      <width>161</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border : none ;
+background-color: none;
+color : #333770 ;
+background-image : url();
+    </string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_2">
+    <property name="geometry">
+     <rect>
+      <x>110</x>
+      <y>110</y>
+      <width>641</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Neue Haas Grotesk Text Pro Ligh</family>
+      <pointsize>12</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border : none ;
+background-color: none;
+color : #333770 ;
+background-image : url();
+    
+</string>
+    </property>
+    <property name="text">
+     <string>Veuillez clicker sur l'un des evenements ci -dessous</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="particip">
+    <property name="geometry">
+     <rect>
+      <x>340</x>
+      <y>580</y>
+      <width>101</width>
+      <height>28</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Neue Haas Grotesk Text Pro Thin</family>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">#pushButton_modifier_personnel
+{
+background-color:  #FFEB3B;
+border-radius : 10px ;
+color : white ; 
+padding : 10px;}
+
+
+#pushButton_modifier_personnel:hover
+{
+color : white ; 
+background-color:  #FFF176;
+ }
+
+</string>
+    </property>
+    <property name="text">
+     <string>Participer</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_3">
+    <property name="geometry">
+     <rect>
+      <x>120</x>
+      <y>450</y>
+      <width>171</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Neue Haas Grotesk Text Pro Ligh</family>
+      <pointsize>12</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border : none ;
+background-color: none;
+color : rgb(255, 255, 127) ;
+background-image : url();
+    
+</string>
+    </property>
+    <property name="text">
+     <string>Nom Evenement :</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="lieu">
+    <property name="geometry">
+     <rect>
+      <x>310</x>
+      <y>490</y>
+      <width>161</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border : none ;
+background-color: none;
+color : #333770 ;
+background-image : url();
+    </string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_4">
+    <property name="geometry">
+     <rect>
+      <x>120</x>
+      <y>490</y>
+      <width>171</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Neue Haas Grotesk Text Pro Ligh</family>
+      <pointsize>12</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border : none ;
+background-color: none;
+color :rgb(255, 255, 127) ;
+background-image : url();
+    
+</string>
+    </property>
+    <property name="text">
+     <string>Lieu :</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="tempdeb">
+    <property name="geometry">
+     <rect>
+      <x>310</x>
+      <y>530</y>
+      <width>161</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border : none ;
+background-color: none;
+color : #333770 ;
+background-image : url();
+    </string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_5">
+    <property name="geometry">
+     <rect>
+      <x>120</x>
+      <y>530</y>
+      <width>171</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Neue Haas Grotesk Text Pro Ligh</family>
+      <pointsize>12</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border : none ;
+background-color: none;
+color :rgb(255, 255, 127) ;
+background-image : url();
+    
+</string>
+    </property>
+    <property name="text">
+     <string>Commence a :</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton">
+    <property name="geometry">
+     <rect>
+      <x>260</x>
+      <y>650</y>
+      <width>241</width>
+      <height>28</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Neue Haas Grotesk Text Pro Medi</family>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">#pushButton_modifier_personnel
+{
+background-color:  #FFEB3B;
+border-radius : 10px ;
+color : white ; 
+padding : 10px;}
+
+
+#pushButton_modifier_personnel:hover
+{
+color : white ; 
+background-color:  #FFF176;
+ }
+
+</string>
+    </property>
+    <property name="text">
+     <string>Mes Evenements</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_6">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>30</y>
+      <width>81</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">image: url(:/img/images/1714933.png);
+border : none ;
+background-color: none;
+color : #333770 ;
+background-image : url();
+    
+</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

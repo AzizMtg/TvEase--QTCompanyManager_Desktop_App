@@ -10,5 +10,53 @@
         <file>images/subscribe.png</file>
         <file>images/1.jpeg</file>
         <file>images/image.jpg</file>
+<<<<<<< Updated upstream
+=======
+        <file>images/pdf.png</file>
+        <file>images/search.png</file>
+        <file>images/pdf2.png</file>
+        <file>images/filtrage.png</file>
+        <file>images/logo.png</file>
+        <file>images/background.jpg</file>
+        <file>images/per.png</file>
+        <file>images/audi.png</file>
+        <file>images/perso.png</file>
+        <file>images/program.png</file>
+        <file>images/pub.png</file>
+        <file>images/quit.png</file>
+        <file>images/stu.png</file>
+        <file>images/abonementtt.png</file>
+        <file>images/pd.png</file>
+        <file>images/croissant.png</file>
+        <file>images/decroissant.png</file>
+        <file>images/travailler.png</file>
+        <file>images/table.png</file>
+        <file>images/forgetpass.png</file>
+        <file>images/nouvm.png</file>
+        <file>images/nouv2.png</file>
+        <file>images/parametre.png</file>
+        <file>images/parametre2.png</file>
+        <file>images/motpas.png</file>
+        <file>images/eyepass.png</file>
+        <file>images/hidepass.png</file>
+        <file>images/con1.png</file>
+        <file>images/con2.png</file>
+        <file>images/connormal.png</file>
+        <file>images/convoir.png</file>
+        <file>images/consmile.png</file>
+        <file>images/stat.png</file>
+        <file>images/password.png</file>
+        <file>images/password (1).png</file>
+        <file>images/accestudio.png</file>
+        <file>images/calculator.png</file>
+        <file>images/image-removebg-preview (1).png</file>
+        <file>images/image-removebg-preview (2).png</file>
+        <file>images/image-removebg-preview (3).png</file>
+        <file>images/image-removebg-preview.png</file>
+        <file>images/tvv.png</file>
+        <file>images/refresh.png</file>
+        <file>images/snake.png</file>
+        <file>images/OI.jpeg</file>
+>>>>>>> Stashed changes
     </qresource>
 </RCC>
