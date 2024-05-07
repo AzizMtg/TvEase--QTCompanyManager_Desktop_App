@@ -7,8 +7,6 @@
 #include "auditeur.h"
 #include "studio.h"
 //
-<<<<<<< Updated upstream
-=======
 //file role
 #include <iostream>
 #include <fstream>
@@ -46,15 +44,86 @@
 std::string getRoleFromFileAB(const std::string& filePath) {
     // Open the file for reading
     std::ifstream inFile(filePath);
->>>>>>> Stashed changes
 
+    // Check if the file is successfully opened
+    if (inFile.is_open()) {
+        std::string line;
+        std::string role; // Variable to store the second line
+
+        // Read and discard the first line
+        std::getline(inFile, line);
+
+        // Read the second line and store it in the variable
+        if (std::getline(inFile, role)) {
+            // Close the file
+            inFile.close();
+            return role;
+        } else {
+            // Handle the case where the file does not have a second line
+            std::cerr << "File does not have a second line." << std::endl;
+        }
+    } else {
+        std::cerr << "Error opening file for reading." << std::endl;
+    }
+
+    // Return an empty string if there was an error
+    return "";
+}
+///
+std::string getNomPrenomFromFileAB(const std::string& filePath) {
+    // Open the file for reading
+    std::ifstream inFile(filePath);
+
+    // Check if the file is successfully opened
+    if (inFile.is_open()) {
+        std::string line;
+        std::string nomPrenom; // Variable to store "nom prenom"
+
+        // Discard the first two lines
+        for (int i = 0; i < 2; ++i) {
+            if (!std::getline(inFile, line)) {
+                std::cerr << "File does not have enough lines." << std::endl;
+                inFile.close();
+                return "";
+            }
+        }
+
+        // Read the third line and append it to the nomPrenom string
+        if (std::getline(inFile, line)) {
+            nomPrenom += line + " ";
+        } else {
+            std::cerr << "File does not have a third line." << std::endl;
+            inFile.close();
+            return "";
+        }
+
+        // Read the fourth line and append it to the nomPrenom string
+        if (std::getline(inFile, line)) {
+            nomPrenom += line;
+        } else {
+            std::cerr << "File does not have a fourth line." << std::endl;
+            inFile.close();
+            return "";
+        }
+
+        // Close the file
+        inFile.close();
+
+        return nomPrenom;
+    } else {
+        std::cerr << "Error opening file for reading." << std::endl;
+    }
+
+    // Return an empty string if there was an error
+    return "";
+}
+
+///
 abonnement::abonnement(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::abonnement)
 {
     ui->setupUi(this);
-<<<<<<< Updated upstream
-=======
 
     std::string filePath = "C:\\Users\\CHAIMA\\Documents\\Esprit 2eme\\semestre 2\\projet c++\\TvEase6\\TvEase\\role\\role.txt";
     std::string rolest = getRoleFromFileAB(filePath);
@@ -73,7 +142,6 @@ abonnement::abonnement(QWidget *parent) :
 
       mettreAJourGraphique();
 
->>>>>>> Stashed changes
 }
 
 abonnement::~abonnement()
@@ -81,45 +149,156 @@ abonnement::~abonnement()
     delete ui;
 }
 
+//////////////
 void abonnement::on_pushButton_30_clicked()
 {
-    hide() ;
-    personnelle personnelle ;
-    personnelle.setModal(true) ;
-    personnelle.exec() ;
+
+    std::string filePath = "C:\\Users\\CHAIMA\\Documents\\Esprit 2eme\\semestre 2\\projet c++\\TvEase6\\TvEase\\role\\role.txt";
+    std::string rolest = getRoleFromFileAB(filePath);
+    role = QString::fromStdString(rolest);
+    std::cout <<"ili fil abon"<<role.toStdString();
+
+    if(role =="Admin principal" )
+         {
+                 hide() ;
+                 personnelle personnelle ;
+                 personnelle.setModal(true) ;
+                 personnelle.exec() ;
+         }
+    else
+    {
+        QApplication::setOverrideCursor(Qt::ForbiddenCursor);
+        QTimer::singleShot(300, [this]()
+        {  QApplication::restoreOverrideCursor();  });
+    }
+
 }
 
 void abonnement::on_pushButton_31_clicked()
 {
-    hide() ;
-    programme programme ;
-    programme.setModal(true) ;
-    programme.exec() ;
+
+    std::string filePath = "C:\\Users\\CHAIMA\\Documents\\Esprit 2eme\\semestre 2\\projet c++\\TvEase6\\TvEase\\role\\role.txt";
+    std::string rolest = getRoleFromFileAB(filePath);
+    role = QString::fromStdString(rolest);
+
+    if(role=="Responsable clientele" )
+        {
+        QApplication::setOverrideCursor(Qt::ForbiddenCursor);
+        QTimer::singleShot(300, [this]()
+        {  QApplication::restoreOverrideCursor();  });
+
+
+        }
+        else
+        {
+            hide() ;
+            programme programme ;
+            programme.setModal(true) ;
+            programme.exec() ;
+
+        }  ;
 }
 
 void abonnement::on_pushButton_32_clicked()
 {
-    hide() ;
-    publicite publicite ;
-    publicite.setModal(true) ;
-    publicite.exec() ;
+
+    std::string filePath = "C:\\Users\\CHAIMA\\Documents\\Esprit 2eme\\semestre 2\\projet c++\\TvEase6\\TvEase\\role\\role.txt";
+    std::string rolest = getRoleFromFileAB(filePath);
+    role = QString::fromStdString(rolest);
+
+    if(role=="Responsable clientele" )
+        {
+        QApplication::setOverrideCursor(Qt::ForbiddenCursor);
+        QTimer::singleShot(300, [this]()
+        {  QApplication::restoreOverrideCursor();  });
+        }
+        else
+        {
+            hide() ;
+            publicite publicite ;
+            publicite.setModal(true) ;
+            publicite.exec() ;
+        }
 }
 
 void abonnement::on_pushButton_33_clicked()
 {
-    hide() ;
-    auditeur auditeur ;
-    auditeur.setModal(true) ;
-    auditeur.exec() ;
+
+
+    std::string filePath = "C:\\Users\\CHAIMA\\Documents\\Esprit 2eme\\semestre 2\\projet c++\\TvEase6\\TvEase\\role\\role.txt";
+    std::string rolest = getRoleFromFileAB(filePath);
+    role = QString::fromStdString(rolest);
+
+    if(role=="Responsable interne" )
+          {
+            QApplication::setOverrideCursor(Qt::ForbiddenCursor);
+            QTimer::singleShot(300, [this]()
+           {  QApplication::restoreOverrideCursor();  });
+         }
+          else
+          {
+              hide() ;
+              auditeur auditeur ;
+              auditeur.setModal(true) ;
+              auditeur.exec() ;
+          }
 
 }
 
 void abonnement::on_pushButton_35_clicked()
 {
-    hide() ;
-    studio studio ;
-    studio.setModal(true) ;
-    studio.exec() ;
+
+    std::string filePath = "C:\\Users\\CHAIMA\\Documents\\Esprit 2eme\\semestre 2\\projet c++\\TvEase6\\TvEase\\role\\role.txt";
+    std::string rolest = getRoleFromFileAB(filePath);
+    role = QString::fromStdString(rolest);
+
+    if(role=="Responsable clientele" )
+      {
+        QApplication::setOverrideCursor(Qt::ForbiddenCursor);
+        QTimer::singleShot(300, [this]()
+        {  QApplication::restoreOverrideCursor();  });
+      }
+      else
+      {
+          hide() ;
+          studio studio ;
+          studio.setModal(true) ;
+          studio.exec() ;
+      }
+
+}
+
+void abonnement::on_pushButton_34_clicked()
+{
+    std::string filePath = "C:\\Users\\CHAIMA\\Documents\\Esprit 2eme\\semestre 2\\projet c++\\TvEase6\\TvEase\\role\\role.txt";
+    std::string rolest = getRoleFromFileAB(filePath);
+    role = QString::fromStdString(rolest);
+
+    if(role=="Responsable interne" )
+     {
+        QApplication::setOverrideCursor(Qt::ForbiddenCursor);
+        QTimer::singleShot(300, [this]()
+        {  QApplication::restoreOverrideCursor();  });
+    }
+          else
+          {
+              hide() ;
+              abonnement abonnement ;
+              abonnement.setModal(true) ;
+              abonnement.exec() ;
+          }
+}
+/////////////////////////////////////////////////////////////parametre mot de passe
+/////////////////// MODIFICATION MOT DE PASSE //////////////
+
+#include"confirmmotpass.h"
+
+void abonnement::on_pushButton_parametre_compte_clicked()
+{
+
+    confirmMotPass  confirmMotPass ;
+    confirmMotPass.setModal(true) ;
+    confirmMotPass.exec() ;
 }
 ////////////////////// khalilll
 

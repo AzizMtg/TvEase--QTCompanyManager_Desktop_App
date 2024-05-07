@@ -15,6 +15,13 @@ public:
     explicit abonnement(QWidget *parent = nullptr);
     ~abonnement();
 
+    void setcinCNX(const QString& cin) {
+            this->cin = cin;
+        }
+       void setROLECNX(const QString& role) {
+            this->role = role;
+        }
+
 private slots:
     void on_pushButton_30_clicked();
 
@@ -26,10 +33,6 @@ private slots:
 
     void on_pushButton_35_clicked();
 
-<<<<<<< Updated upstream
-private:
-    Ui::abonnement *ui;
-=======
     void on_pushButton_34_clicked();
 
     void on_pushButton_parametre_compte_clicked();
@@ -112,7 +115,6 @@ private:
       QString cin , role ;
       cabonnement Atmp;
          QStandardItemModel* model;
->>>>>>> Stashed changes
 };
 
 #endif // ABONNEMENT_H

@@ -14,21 +14,19 @@
    <string>Dialog</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">background-color: #E3E4F2;</string>
+   <string notr="true">background-color: #F0F0F0; </string>
   </property>
   <widget class="QGroupBox" name="groupBox">
    <property name="geometry">
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>261</width>
-     <height>801</height>
+     <width>181</width>
+     <height>851</height>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">background-color :#ABADD8 ; 
-border-top-right-radius : 40px ; 
-</string>
+    <string notr="true">background-image: url(:/img/images/background.jpg);</string>
    </property>
    <property name="title">
     <string/>
@@ -37,8 +35,8 @@ border-top-right-radius : 40px ;
     <property name="geometry">
      <rect>
       <x>0</x>
-      <y>80</y>
-      <width>261</width>
+      <y>70</y>
+      <width>181</width>
       <height>738</height>
      </rect>
     </property>
@@ -57,9 +55,19 @@ border-top-right-radius : 40px ;
          <verstretch>0</verstretch>
         </sizepolicy>
        </property>
+       <property name="font">
+        <font>
+         <family>Neue Haas Grotesk 58 Pro Thin</family>
+         <pointsize>-1</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
        <property name="styleSheet">
         <string notr="true">background-color: #E3E4F2;
-  font-family: Arial, sans-serif; 
+	background-image: url();
+
+  font-family: Neue Haas Grotesk Text Pro Thin, sans-serif; 
   font-weight: bold; 
     font-size: 20px; 
 border : none ; 
@@ -67,16 +75,16 @@ border-radius : 0 px ;
 color : #4D53A8 ; </string>
        </property>
        <property name="text">
-        <string> Personnels</string>
+        <string/>
        </property>
        <property name="icon">
         <iconset resource="source.qrc">
-         <normaloff>:/img/images/personnel.png</normaloff>:/img/images/personnel.png</iconset>
+         <normaloff>:/img/images/perso.png</normaloff>:/img/images/perso.png</iconset>
        </property>
        <property name="iconSize">
         <size>
-         <width>50</width>
-         <height>100</height>
+         <width>30</width>
+         <height>30</height>
         </size>
        </property>
       </widget>
@@ -89,10 +97,19 @@ color : #4D53A8 ; </string>
          <verstretch>0</verstretch>
         </sizepolicy>
        </property>
+       <property name="font">
+        <font>
+         <family>Neue Haas Grotesk 58 Pro Thin</family>
+         <pointsize>-1</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
        <property name="styleSheet">
         <string notr="true">QPushButton{
 background-color: transparent;
-    font-family: Arial, sans-serif; 
+	background-image: url();
+    font-family: Neue Haas Grotesk Text Pro Thin; 
     font-weight: bold; 
     font-size: 20px; 
 border : none ; 
@@ -107,16 +124,16 @@ background-color: #E3E4F2;
 </string>
        </property>
        <property name="text">
-        <string>Programmes</string>
+        <string/>
        </property>
        <property name="icon">
         <iconset resource="source.qrc">
-         <normaloff>:/img/images/programme.png</normaloff>:/img/images/programme.png</iconset>
+         <normaloff>:/img/images/program.png</normaloff>:/img/images/program.png</iconset>
        </property>
        <property name="iconSize">
         <size>
-         <width>50</width>
-         <height>100</height>
+         <width>30</width>
+         <height>30</height>
         </size>
        </property>
       </widget>
@@ -129,10 +146,20 @@ background-color: #E3E4F2;
          <verstretch>0</verstretch>
         </sizepolicy>
        </property>
+       <property name="font">
+        <font>
+         <family>Neue Haas Grotesk 58 Pro Thin</family>
+         <pointsize>-1</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
        <property name="styleSheet">
         <string notr="true">QPushButton{
 background-color: transparent;
-    font-family: Arial, sans-serif; 
+	background-image: url();
+
+    font-family: Neue Haas Grotesk Text Pro Thin; 
     font-weight: bold; 
     font-size: 20px; 
 border : none ; 
@@ -145,16 +172,16 @@ background-color: #E3E4F2;
 }</string>
        </property>
        <property name="text">
-        <string> Publicités </string>
+        <string/>
        </property>
        <property name="icon">
         <iconset resource="source.qrc">
-         <normaloff>:/img/images/ad.png</normaloff>:/img/images/ad.png</iconset>
+         <normaloff>:/img/images/pub.png</normaloff>:/img/images/pub.png</iconset>
        </property>
        <property name="iconSize">
         <size>
-         <width>50</width>
-         <height>100</height>
+         <width>30</width>
+         <height>30</height>
         </size>
        </property>
       </widget>
@@ -167,10 +194,20 @@ background-color: #E3E4F2;
          <verstretch>0</verstretch>
         </sizepolicy>
        </property>
+       <property name="font">
+        <font>
+         <family>Neue Haas Grotesk 58 Pro Thin</family>
+         <pointsize>-1</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
        <property name="styleSheet">
         <string notr="true">QPushButton{
 background-color: transparent;
-    font-family: Arial, sans-serif; 
+	background-image: url();
+
+    font-family: Neue Haas Grotesk Text Pro Thin; 
     font-weight: bold; 
     font-size: 20px; 
 border : none ; 
@@ -183,16 +220,16 @@ background-color: #E3E4F2;
 }</string>
        </property>
        <property name="text">
-        <string> Auditeurs </string>
+        <string/>
        </property>
        <property name="icon">
         <iconset resource="source.qrc">
-         <normaloff>:/img/images/people.png</normaloff>:/img/images/people.png</iconset>
+         <normaloff>:/img/images/audi.png</normaloff>:/img/images/audi.png</iconset>
        </property>
        <property name="iconSize">
         <size>
-         <width>50</width>
-         <height>100</height>
+         <width>30</width>
+         <height>30</height>
         </size>
        </property>
       </widget>
@@ -205,10 +242,20 @@ background-color: #E3E4F2;
          <verstretch>0</verstretch>
         </sizepolicy>
        </property>
+       <property name="font">
+        <font>
+         <family>Neue Haas Grotesk 58 Pro Thin</family>
+         <pointsize>-1</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
        <property name="styleSheet">
         <string notr="true">QPushButton{
 background-color: transparent;
-    font-family: Arial, sans-serif; 
+	background-image: url();
+
+    font-family: Neue Haas Grotesk Text Pro Thin; 
     font-weight: bold; 
     font-size: 20px; 
 border : none ; 
@@ -221,16 +268,16 @@ background-color: #E3E4F2;
 }</string>
        </property>
        <property name="text">
-        <string>Abonnements </string>
+        <string/>
        </property>
        <property name="icon">
         <iconset resource="source.qrc">
-         <normaloff>:/img/images/subscribe.png</normaloff>:/img/images/subscribe.png</iconset>
+         <normaloff>:/img/images/abonementtt.png</normaloff>:/img/images/abonementtt.png</iconset>
        </property>
        <property name="iconSize">
         <size>
-         <width>50</width>
-         <height>100</height>
+         <width>30</width>
+         <height>30</height>
         </size>
        </property>
       </widget>
@@ -243,15 +290,26 @@ background-color: #E3E4F2;
          <verstretch>0</verstretch>
         </sizepolicy>
        </property>
+       <property name="font">
+        <font>
+         <family>Neue Haas Grotesk 58 Pro Thin</family>
+         <pointsize>-1</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
        <property name="styleSheet">
         <string notr="true">QPushButton{
 background-color: transparent;
-    font-family: Arial, sans-serif; 
+	background-image: url();
+
+    font-family: Neue Haas Grotesk Text Pro Thin;
     font-weight: bold; 
     font-size: 20px; 
 border : none ; 
 border-radius : 0 px ;
 color : #4D53A8 ; 
+background-image:url();
 }
 QPushButton:hover{
 background-color: #E3E4F2;
@@ -259,16 +317,16 @@ background-color: #E3E4F2;
 }</string>
        </property>
        <property name="text">
-        <string>Studios</string>
+        <string/>
        </property>
        <property name="icon">
         <iconset resource="source.qrc">
-         <normaloff>:/img/images/studio.png</normaloff>:/img/images/studio.png</iconset>
+         <normaloff>:/img/images/stu.png</normaloff>:/img/images/stu.png</iconset>
        </property>
        <property name="iconSize">
         <size>
-         <width>50</width>
-         <height>100</height>
+         <width>30</width>
+         <height>30</height>
         </size>
        </property>
       </widget>
@@ -281,9 +339,18 @@ background-color: #E3E4F2;
          <verstretch>0</verstretch>
         </sizepolicy>
        </property>
+       <property name="font">
+        <font>
+         <family>Arial</family>
+         <pointsize>-1</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
        <property name="styleSheet">
         <string notr="true">QPushButton{
 background-color: transparent;
+	background-image: url();
     font-family: Arial, sans-serif; 
     font-weight: bold; 
     font-size: 20px; 
@@ -297,112 +364,99 @@ background-color: #E3E4F2;
 }</string>
        </property>
        <property name="text">
-        <string>Quitter</string>
+        <string> Quitter</string>
        </property>
        <property name="icon">
         <iconset resource="source.qrc">
-         <normaloff>:/img/images/button.png</normaloff>:/img/images/button.png</iconset>
+         <normaloff>:/img/images/quit.png</normaloff>:/img/images/quit.png</iconset>
        </property>
        <property name="iconSize">
         <size>
          <width>50</width>
-         <height>100</height>
+         <height>50</height>
         </size>
        </property>
       </widget>
      </item>
     </layout>
    </widget>
-   <widget class="QLabel" name="label">
-    <property name="geometry">
-     <rect>
-      <x>50</x>
-      <y>20</y>
-      <width>171</width>
-      <height>31</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <pointsize>20</pointsize>
-      <weight>75</weight>
-      <italic>true</italic>
-      <bold>true</bold>
-     </font>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">border : none ;
-color : #333770 ;
-    </string>
-    </property>
-    <property name="text">
-     <string>Dashboard</string>
-    </property>
-   </widget>
   </widget>
   <widget class="QTabWidget" name="tabWidget">
    <property name="geometry">
     <rect>
-     <x>300</x>
-     <y>50</y>
-     <width>1251</width>
-     <height>641</height>
+     <x>280</x>
+     <y>90</y>
+     <width>1201</width>
+     <height>631</height>
     </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Neue Haas Grotesk Text Pro Blac</family>
+     <pointsize>10</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="cursor">
+    <cursorShape>PointingHandCursor</cursorShape>
    </property>
    <property name="styleSheet">
     <string notr="true">QTabWidget::pane {
-    border-top: 2px solid #C2C7CB; /* Top border color */
-    position: absolute;
+    border-top: 5px solid #40A2E3; /* Top border color */
     top: -0.5em;
-border:none ; 
-
+    border: none;
+    border-top-left-radius: 10px; /* Rounded border on the far left */
+    border-top-right-radius: 10px; /* Rounded border on the far right */
 }
 
 QTabWidget::tab-bar {
     alignment: center;
-
 }
 
 QTabBar::tab {
-    background-color: #ABADD8 ;  /* Background color of tabs */
-    color: #000000; /* Text color of tabs */
-    padding: 15px; /* Padding of tabs */
-    border-top-left-radius: 4px; /* Rounded corners */
-    border-top-right-radius: 4px;
- margin-right : 75px ; 
-width:200px;
-border-radius : 10px;
+    background-color: #EEE6D8 ;/* #DD7373;*/   /*#40A2E3;*/
+    /* Background color of tabs */
+    color:  black;  /*#E4E5E0;*/
+    /* Text color of tabs */
+    font: 12pt Arial, sans-serif;
+    padding: 17px; /* Padding of tabs */
+    width: 200px;
 }
 
 QTabBar::tab:selected {
-    background-color: #333770 ;  /* Background color of selected tab */
-    color: #FFFFFF; /* Text color of selected tab */
+    /* Background color of selected tab */
+    
+	background-color: #333770;
+    color: white; /* Text color of selected tab */
 }
 
 QTabBar::tab:hover {
 }
 
+/* Apply circular border to QPushButton container */
+#buttonContainer {
+    border: 2px solid #C2C7CB; /* Border color and width */
+    border-radius: 50%; /* Circular border */
+    padding: 9px; /* Adjust padding as needed */
+}
+
 QPushButton {
-    background-color: #4CAF50; /* Background color of button */
+    background-color: #E7E7E7; /* Background color of button */
     color: #FFFFFF; /* Text color of button */
-    padding: 8px; /* Padding of button */
+    padding: 20px; /* Padding of button */
     border: none; /* No border */
-    border-radius: 4px; /* Rounded corners *
-}</string>
+    border-radius: 7px; /* Rounded corners */
+}
+</string>
    </property>
    <property name="currentIndex">
-<<<<<<< Updated upstream
-    <number>3</number>
-=======
     <number>2</number>
->>>>>>> Stashed changes
    </property>
    <widget class="QWidget" name="tab">
     <attribute name="title">
      <string>Affichage données</string>
     </attribute>
-<<<<<<< Updated upstream
-=======
     <widget class="QGroupBox" name="groupBox_2">
      <property name="geometry">
       <rect>
@@ -661,14 +715,11 @@ border-radius: 20px;
       </property>
      </widget>
     </widget>
->>>>>>> Stashed changes
    </widget>
    <widget class="QWidget" name="tab_3">
     <attribute name="title">
      <string>Ajout employé</string>
     </attribute>
-<<<<<<< Updated upstream
-=======
     <widget class="QGroupBox" name="groupBox_3">
      <property name="geometry">
       <rect>
@@ -1396,14 +1447,11 @@ border : 1px solid black ;</string>
       </property>
      </widget>
     </widget>
->>>>>>> Stashed changes
    </widget>
    <widget class="QWidget" name="tab_4">
     <attribute name="title">
      <string>Modification  données</string>
     </attribute>
-<<<<<<< Updated upstream
-=======
     <widget class="QGroupBox" name="groupBox_4">
      <property name="geometry">
       <rect>
@@ -2131,16 +2179,11 @@ border : 1px solid black ;
       </property>
      </widget>
     </widget>
->>>>>>> Stashed changes
    </widget>
    <widget class="QWidget" name="tab_2">
     <attribute name="title">
      <string>Suppression données</string>
     </attribute>
-<<<<<<< Updated upstream
-   </widget>
-  </widget>
-=======
     <widget class="QGroupBox" name="groupBox_6">
      <property name="geometry">
       <rect>
@@ -2847,7 +2890,6 @@ border-bottom : solid 1px black ;
     </size>
    </property>
   </widget>
->>>>>>> Stashed changes
  </widget>
  <resources>
   <include location="source.qrc"/>

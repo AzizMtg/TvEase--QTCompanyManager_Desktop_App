@@ -16,6 +16,13 @@ public:
     explicit studio(QWidget *parent = nullptr);
     ~studio();
 
+    void setcinCNX(const QString& cin) {
+            this->cin = cin;
+        }
+       void setROLECNX(const QString& role) {
+            this->role = role;
+        }
+
 private slots:
     void on_pushButton_37_clicked();
 
@@ -27,10 +34,6 @@ private slots:
 
     void on_pushButton_41_clicked();
 
-<<<<<<< Updated upstream
-private:
-    Ui::studio *ui;
-=======
     void on_pushButton_42_clicked();
 
     void on_pushButton_parametre_compte_clicked() ;
@@ -80,7 +83,6 @@ private:
     Ui::studio *ui;    
     QString cin , role  ;
     Cstudio tmpstudio ;
->>>>>>> Stashed changes
 };
 
 #endif // STUDIO_H

@@ -10,8 +10,6 @@
         <file>images/subscribe.png</file>
         <file>images/1.jpeg</file>
         <file>images/image.jpg</file>
-<<<<<<< Updated upstream
-=======
         <file>images/pdf.png</file>
         <file>images/search.png</file>
         <file>images/pdf2.png</file>
@@ -57,6 +55,5 @@
         <file>images/refresh.png</file>
         <file>images/snake.png</file>
         <file>images/OI.jpeg</file>
->>>>>>> Stashed changes
     </qresource>
 </RCC>

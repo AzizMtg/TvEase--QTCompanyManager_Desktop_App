@@ -7,14 +7,219 @@
 #include "abonnement.h"
 #include "studio.h"
 
-//
+#include "QMessageBox"
+#include"cpersonnel.h"
+
+// taba3 il pdf
+#include <QFileDialog>
+#include <QPdfWriter>
+#include <QPainter>
+#include <QTableView>
+
+#include <QTextDocument>
+#include <QTextCursor>
+#include <QStandardItemModel>
+#include <QMessageBox>
+#include <QTextDocumentWriter>
+#include <QtPrintSupport/QPrinter>
+#include <QtPrintSupport/QPrintDialog>
+#include <QTextDocument>
+#include <QFile>
+#include <QFileDialog>
+#include <QMessageBox>
+#include <QStandardPaths>
+#include <QTextTable>
+
+
+//taba3 il recherche
+#include <QSortFilterProxyModel>
+#include <QStandardItemModel>
+
+// taba3 il combobox modifier
+#include <QSqlRecord>
+
+// jointure
+#include "travailler.h"
+
+
+// lil exe
+#include<windows.h>
+#include <cstdlib>
+#include <QProcess>
+// Pour travailler avec les fichiers
+#include<iostream>
+#include <fstream>
+using namespace std;
+#include<QtDebug>
+#include <QDir>
+#include <QString>
+
+
+
+#include<QTimer>
+
+//role
+#include <iostream>
+#include <fstream>
+#include <string>
+
+
+/////////////////////////ROLE
+std::string getRoleFromFilePR(const std::string& filePath) {
+    // Open the file for reading
+    std::ifstream inFile(filePath);
+
+    // Check if the file is successfully opened
+    if (inFile.is_open()) {
+        std::string line;
+        std::string role; // Variable to store the second line
+
+        // Read and discard the first line
+        std::getline(inFile, line);
+
+        // Read the second line and store it in the variable
+        if (std::getline(inFile, role)) {
+            // Close the file
+            inFile.close();
+            return role;
+        } else {
+            // Handle the case where the file does not have a second line
+            std::cerr << "File does not have a second line." << std::endl;
+        }
+    } else {
+        std::cerr << "Error opening file for reading." << std::endl;
+    }
+
+    // Return an empty string if there was an error
+    return "";
+}
+
+std::string getNomPrenomFromFilePR(const std::string& filePath) {
+    // Open the file for reading
+    std::ifstream inFile(filePath);
+
+    // Check if the file is successfully opened
+    if (inFile.is_open()) {
+        std::string line;
+        std::string nomPrenom; // Variable to store "nom prenom"
+
+        // Discard the first two lines
+        for (int i = 0; i < 2; ++i) {
+            if (!std::getline(inFile, line)) {
+                std::cerr << "File does not have enough lines." << std::endl;
+                inFile.close();
+                return "";
+            }
+        }
+
+        // Read the third line and append it to the nomPrenom string
+        if (std::getline(inFile, line)) {
+            nomPrenom += line + " ";
+        } else {
+            std::cerr << "File does not have a third line." << std::endl;
+            inFile.close();
+            return "";
+        }
+
+        // Read the fourth line and append it to the nomPrenom string
+        if (std::getline(inFile, line)) {
+            nomPrenom += line;
+        } else {
+            std::cerr << "File does not have a fourth line." << std::endl;
+            inFile.close();
+            return "";
+        }
+
+        // Close the file
+        inFile.close();
+
+        return nomPrenom;
+    } else {
+        std::cerr << "Error opening file for reading." << std::endl;
+    }
+
+    // Return an empty string if there was an error
+    return "";
+}
+
+///
+
+
+///////////////////////////////////////////////////////////////////////////////
 personnelle::personnelle(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::personnelle)
 {
     ui->setupUi(this);
+//////////////////////////////////ROLE ILI FIL LABEL ISMOU YODHOR WA ROLE IMTA3OU
+    std::string filePath = "C:\\Users\\CHAIMA\\Documents\\Esprit 2eme\\semestre 2\\projet c++\\TvEase6\\TvEase\\role\\role.txt";
+    std::string rolest = getRoleFromFilePR(filePath);
+    role = QString::fromStdString(rolest);
+    ui->lineEdit_role->setText(role);
+
+    std::string nomprenom = getNomPrenomFromFilePR(filePath);
+    QString Messwelcome = "Bienvenu " +QString::fromStdString(nomprenom);
+    ui->lineEdit_nomprenom->setText(Messwelcome);
+
+
+////////////////////////////////////////////////////////////////////////
+
+
+ ui->lineEdit_ajouter_cin->setValidator(new QIntValidator(0,99999999,this)) ;
+ ui->lineEdit_ajouter_num_tele->setValidator(new QIntValidator(0,99999999,this)) ;
+ ui->lineEdit_modifier_num_tele->setValidator(new QIntValidator(0,9999999,this)) ;
+ ui->lineEdit_modifier_salaire->setValidator(new QIntValidator(0,9999999999,this)) ;
+ ui->lineEdit_ajouter_salaire->setValidator(new QIntValidator(0,9999999999,this)) ;
+
+
+/// taba3 il afficher
+    // Create the proxy model
+    proxyModel = new QSortFilterProxyModel(this);
+    proxyModel->setSourceModel(tmppersonnel.afficher());
+    ui->tableView_lister->setModel(proxyModel);
+
+    // Apply styles to the header
+    QString headerStyle = "QHeaderView::section {"
+                            "    font-weight: bold;" // Making text bold
+                            "    background-color: #EEE6D8 ;" // bleue color
+                            "    border: 1px solid black;" // Adding a border
+                            "}";
+
+    ui->tableView_lister->horizontalHeader()->setStyleSheet(headerStyle);
+    ui->tableView_lister->horizontalHeader()->resizeSection(7,200);
+    ui->tableView_lister->horizontalHeader()->resizeSection(8,150);
+    ui->tableView_lister->horizontalHeader()->resizeSection(9,200);
+
+
+/// taba3 il modifier combobox liste
+    //taba3 il modifier il combobox imta3 il cin lister tous les cin fi wost il cmbobox
+    QSqlQueryModel *model = tmppersonnel.afficher_CIN();
+   // ui->comboBox_modifier_perso->clear(); // Effacez le modèle existant
+    ui->comboBox_modifier_perso->setModel(model);
+
+    // ki na5tar cin mou3ayan les informations yodhrou
+    connect(ui->comboBox_modifier_perso, SIGNAL(currentIndexChanged(int)), this, SLOT(on_comboBox_modifier_currentIndexChanged(int)));
+
+
+/// taba3 il supprimer combo box liste
+    //taba3 il modifier il combobox imta3 il cin lister tous les cin fi wost il cmbobox
+    QSqlQueryModel *models = tmppersonnel.afficher_CIN();
+   // ui->comboBox_modifier_perso->clear(); // Effacez le modèle existant
+    ui->comboBox_supprimer_perso->setModel(models);
+
+
+/// taba3 il recherche
+    // a3maltha bich kan il line edit imta3 il recherche fara8 yafichi il tableau kamil
+    connect(ui->lineEdit_recherche, &QLineEdit::textChanged, this, &personnelle::afficherTousElementsSiVide);
+
+
+
+
 }
 
+
+
+/////////////////////////////////
 personnelle::~personnelle()
 {
     delete ui;
@@ -22,49 +227,135 @@ personnelle::~personnelle()
 
 void personnelle::on_pushButton_6_clicked()
 {
-    hide() ;
-    programme programme ;
-    programme.setModal(true) ;
-    programme.exec() ;
+    std::string filePath = "C:\\Users\\CHAIMA\\Documents\\Esprit 2eme\\semestre 2\\projet c++\\TvEase6\\TvEase\\role\\role.txt";
+    std::string rolest = getRoleFromFilePR(filePath);
+    role = QString::fromStdString(rolest);
+    std::cout <<"ili fil pers"<<role.toStdString();
+
+    if(role=="Responsable clientele" )
+    {
+        QApplication::setOverrideCursor(Qt::ForbiddenCursor);
+        QTimer::singleShot(300, [this]()
+        {  QApplication::restoreOverrideCursor();  });
+    }
+    else
+    {
+        hide() ;
+        programme programme ;
+        programme.setModal(true) ;
+        programme.exec() ;
+    }
+
 
 }
 
 void personnelle::on_pushButton_5_clicked()
 {
-    hide() ;
-    publicite publicite ;
-    publicite.setModal(true) ;
-    publicite.exec() ;
+
+    std::string filePath = "C:\\Users\\CHAIMA\\Documents\\Esprit 2eme\\semestre 2\\projet c++\\TvEase6\\TvEase\\role\\role.txt";
+    std::string rolest = getRoleFromFilePR(filePath);
+    role = QString::fromStdString(rolest);
+    std::cout <<"ili fil pers"<<role.toStdString();
+
+    if(role=="Responsable clientele" )
+    {
+        QApplication::setOverrideCursor(Qt::ForbiddenCursor);
+        QTimer::singleShot(300, [this]()
+        {  QApplication::restoreOverrideCursor();  });
+    }
+    else
+    {
+        hide() ;
+        publicite publicite ;
+        publicite.setModal(true) ;
+        publicite.exec() ;
+    }
+
 
 }
 
 void personnelle::on_pushButton_4_clicked()
 {
-    hide() ;
-    auditeur auditeur ;
-    auditeur.setModal(true) ;
-    auditeur.exec() ;
+
+    std::string filePath = "C:\\Users\\CHAIMA\\Documents\\Esprit 2eme\\semestre 2\\projet c++\\TvEase6\\TvEase\\role\\role.txt";
+    std::string rolest = getRoleFromFilePR(filePath);
+    role = QString::fromStdString(rolest);
+    std::cout <<"ili fil pers"<<role.toStdString();
+
+
+
+    if(role=="Responsable interne" )
+    {
+        QApplication::setOverrideCursor(Qt::ForbiddenCursor);
+        QTimer::singleShot(300, [this]()
+        {  QApplication::restoreOverrideCursor();  });
+    }
+    else
+    {
+        hide() ;
+        auditeur auditeur ;
+        auditeur.setModal(true) ;
+        auditeur.exec() ;
+
+    }
 
 }
 
 void personnelle::on_pushButton_3_clicked()
 {
-    hide() ;
-    abonnement abonnement ;
-    abonnement.setModal(true) ;
-    abonnement.exec() ;
+    std::string filePath = "C:\\Users\\CHAIMA\\Documents\\Esprit 2eme\\semestre 2\\projet c++\\TvEase6\\TvEase\\role\\role.txt";
+    std::string rolest = getRoleFromFilePR(filePath);
+    role = QString::fromStdString(rolest);
+    std::cout <<"ili fil pers"<<role.toStdString();
+
+
+
+
+    if(role=="Responsable interne" )
+    {
+        QApplication::setOverrideCursor(Qt::ForbiddenCursor);
+        QTimer::singleShot(300, [this]()
+        {  QApplication::restoreOverrideCursor();  });
+    }
+    else
+    {
+        hide() ;
+        abonnement abonnement ;
+        abonnement.setModal(true) ;
+        abonnement.exec() ;
+
+    }
+
+
 }
 
 void personnelle::on_pushButton_2_clicked()
 {
-    hide() ;
-    studio studio ;
-    studio.setModal(true) ;
-    studio.exec() ;
+
+    std::string filePath = "C:\\Users\\CHAIMA\\Documents\\Esprit 2eme\\semestre 2\\projet c++\\TvEase6\\TvEase\\role\\role.txt";
+    std::string rolest = getRoleFromFilePR(filePath);
+    role = QString::fromStdString(rolest);
+    std::cout <<"ili fil pers"<<role.toStdString();
+
+
+
+    if(role=="Responsable clientele" )
+    {
+        QApplication::setOverrideCursor(Qt::ForbiddenCursor);
+        QTimer::singleShot(300, [this]()
+        {  QApplication::restoreOverrideCursor();  });
+    }
+    else
+    {
+        hide() ;
+        studio studio ;
+        studio.setModal(true) ;
+        studio.exec() ;
+    }
+
+
 
 }
-<<<<<<< Updated upstream
-=======
 void personnelle::on_pushButton_8_clicked()
 {
      std::string filePath = "C:\\Users\\CHAIMA\\Documents\\Esprit 2eme\\semestre 2\\projet c++\\TvEase6\\TvEase\\role\\role.txt";
@@ -986,4 +1277,3 @@ void personnelle::on_pushButton_9_clicked()
       securitestudio.setModal(true) ;
       securitestudio.exec() ;
 }
->>>>>>> Stashed changes

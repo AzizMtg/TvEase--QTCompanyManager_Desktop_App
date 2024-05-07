@@ -1,14 +1,8 @@
-<<<<<<< Updated upstream
-QT       += core gui
-
-greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
-=======
 QT       += core gui sql widgets serialport printsupport serialport
 QT += charts network
 QT += multimedia
 QT       += core gui multimedia multimediawidgets
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets quickwidgets
->>>>>>> Stashed changes
 
 CONFIG += c++11
 
@@ -25,16 +19,24 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 SOURCES += \
     abonnement.cpp \
+    arduino.cpp \
     auditeur.cpp \
+    codempass.cpp \
+    confirmmotpass.cpp \
+    connexion.cpp \
+    cpersonnel.cpp \
+    csecuritysd.cpp \
+    ctravailler.cpp \
+    forgetmotpass.cpp \
     main.cpp \
     mainwindow.cpp \
+    nouvmotpass.cpp \
+    nouvoncepass.cpp \
     personnelle.cpp \
     programme.cpp \
     publicite.cpp \
+    securitestudio.cpp \
     singin.cpp \
-<<<<<<< Updated upstream
-    studio.cpp
-=======
     staperso.cpp \
     studio.cpp \
     travailler.cpp\
@@ -83,19 +85,26 @@ SOURCES += \
     audi.cpp \
 
 
->>>>>>> Stashed changes
 
 HEADERS += \
     abonnement.h \
+    arduino.h \
     auditeur.h \
+    codempass.h \
+    confirmmotpass.h \
+    connexion.h \
+    cpersonnel.h \
+    csecuritysd.h \
+    ctravailler.h \
+    forgetmotpass.h \
     mainwindow.h \
+    nouvmotpass.h \
+    nouvoncepass.h \
     personnelle.h \
     programme.h \
     publicite.h \
+    securitestudio.h \
     singin.h \
-<<<<<<< Updated upstream
-    studio.h
-=======
     staperso.h \
     studio.h \
     travailler.h \
@@ -145,19 +154,21 @@ HEADERS += \
 
 
 
->>>>>>> Stashed changes
 
 FORMS += \
     abonnement.ui \
     auditeur.ui \
+    codempass.ui \
+    confirmmotpass.ui \
+    forgetmotpass.ui \
     mainwindow.ui \
+    nouvmotpass.ui \
+    nouvoncepass.ui \
     personnelle.ui \
     programme.ui \
     publicite.ui \
+    securitestudio.ui \
     singin.ui \
-<<<<<<< Updated upstream
-    studio.ui
-=======
     staperso.ui \
     studio.ui \
     travailler.ui\
@@ -184,7 +195,6 @@ FORMS += \
 
 
 
->>>>>>> Stashed changes
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

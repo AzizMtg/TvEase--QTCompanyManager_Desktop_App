@@ -16,8 +16,6 @@ public:
     explicit publicite(QWidget *parent = nullptr);
     ~publicite();
 
-<<<<<<< Updated upstream
-=======
     void setcinCNX(const QString& cin) {
             this->cin = cin;
         }
@@ -42,7 +40,6 @@ public slots:
     void onProgramSelected(int index);
     void onTableViewClicked(const QModelIndex& index);
 
->>>>>>> Stashed changes
 private slots:
     void on_pushButton_16_clicked();
 
@@ -54,10 +51,6 @@ private slots:
 
     void on_pushButton_21_clicked();
 
-<<<<<<< Updated upstream
-private:
-    Ui::publicite *ui;
-=======
     void on_pushButton_18_clicked();
 
     void on_pushButton_parametre_compte_clicked();
@@ -116,7 +109,6 @@ private:
     Ui::publicite *ui;
     QString cin , role  ;
     Cpub tmp;
->>>>>>> Stashed changes
 };
 
 #endif // PUBLICITE_H

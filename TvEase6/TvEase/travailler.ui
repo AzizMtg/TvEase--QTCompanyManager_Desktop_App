@@ -1,0 +1,630 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>travailler</class>
+ <widget class="QDialog" name="travailler">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>993</width>
+    <height>733</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color : #BBD2E1	 ;/* #B5C0D0; */
+</string>
+  </property>
+  <widget class="QTableView" name="tableView_jointure">
+   <property name="geometry">
+    <rect>
+     <x>70</x>
+     <y>360</y>
+     <width>871</width>
+     <height>301</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">  background-color:  white; </string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_3">
+   <property name="geometry">
+    <rect>
+     <x>240</x>
+     <y>20</y>
+     <width>521</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Segoe Print</family>
+     <pointsize>20</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+     <underline>true</underline>
+     <strikeout>false</strikeout>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">padding-top : 100px ;
+padding-bottom : 100px ;
+color : #7396A0 ;</string>
+   </property>
+   <property name="text">
+    <string>Fiche affectation personnels - studios</string>
+   </property>
+  </widget>
+  <widget class="QComboBox" name="comboBox_trie_jointure">
+   <property name="geometry">
+    <rect>
+     <x>770</x>
+     <y>330</y>
+     <width>171</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color : white ; </string>
+   </property>
+   <item>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="icon">
+     <iconset resource="source.qrc">
+      <normaloff>:/img/images/table.png</normaloff>:/img/images/table.png</iconset>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>trie dans l'ordre decroissant par cin</string>
+    </property>
+    <property name="icon">
+     <iconset resource="source.qrc">
+      <normaloff>:/img/images/decroissant.png</normaloff>:/img/images/decroissant.png</iconset>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>trie dans l'ordre croissant par cin</string>
+    </property>
+    <property name="icon">
+     <iconset resource="source.qrc">
+      <normaloff>:/img/images/croissant.png</normaloff>:/img/images/croissant.png</iconset>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>trie dans l'ordre croissant par localisation</string>
+    </property>
+    <property name="icon">
+     <iconset resource="source.qrc">
+      <normaloff>:/img/images/croissant.png</normaloff>:/img/images/croissant.png</iconset>
+    </property>
+   </item>
+  </widget>
+  <widget class="QLabel" name="label_5">
+   <property name="geometry">
+    <rect>
+     <x>690</x>
+     <y>330</y>
+     <width>61</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>10</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="text">
+    <string>Trier ...</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="lineEdit_recher_jointure">
+   <property name="geometry">
+    <rect>
+     <x>80</x>
+     <y>330</y>
+     <width>231</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color : white ; 
+</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_recher_jointure">
+   <property name="geometry">
+    <rect>
+     <x>330</x>
+     <y>330</y>
+     <width>31</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="cursor">
+    <cursorShape>PointingHandCursor</cursorShape>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: white ;</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="icon">
+    <iconset resource="source.qrc">
+     <normaloff>:/img/images/search.png</normaloff>:/img/images/search.png</iconset>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>60</width>
+     <height>15</height>
+    </size>
+   </property>
+  </widget>
+  <widget class="QGroupBox" name="groupBox">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>80</y>
+     <width>491</width>
+     <height>201</height>
+    </rect>
+   </property>
+   <property name="title">
+    <string/>
+   </property>
+   <widget class="QComboBox" name="comboBox_cin_jointure">
+    <property name="geometry">
+     <rect>
+      <x>230</x>
+      <y>20</y>
+      <width>201</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">  background-color:  white; </string>
+    </property>
+   </widget>
+   <widget class="QComboBox" name="comboBox_studio_jointure">
+    <property name="geometry">
+     <rect>
+      <x>230</x>
+      <y>70</y>
+      <width>201</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">  background-color:  white; </string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>10</y>
+      <width>171</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Microsoft YaHei</family>
+      <pointsize>15</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color : #516B73;</string>
+    </property>
+    <property name="text">
+     <string>CIN personnel   :</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_2">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>70</y>
+      <width>171</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Microsoft YaHei</family>
+      <pointsize>15</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color : #516B73;</string>
+    </property>
+    <property name="text">
+     <string>Numero studio :</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_afficher_jointure">
+    <property name="geometry">
+     <rect>
+      <x>340</x>
+      <y>160</y>
+      <width>75</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">#pushButton_afficher_jointure
+{background-color : #333770 ;
+border-radius : 10px ;
+color : white ; 
+padding:100px ;
+border:none ; 
+}
+
+#pushButton_afficher_jointure:hover
+{
+
+}</string>
+    </property>
+    <property name="text">
+     <string>Affecter</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_supp_jointure">
+    <property name="geometry">
+     <rect>
+      <x>250</x>
+      <y>160</y>
+      <width>75</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">
+#pushButton_supp_jointure
+{background-color : #333770 ;
+border-radius : 10px ;
+color : white ; 
+padding:100px ;
+border:none ; 
+}
+
+#pushButton_supp_jointure:hover
+{
+
+}</string>
+    </property>
+    <property name="text">
+     <string>Supprimer</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_11">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>110</y>
+      <width>171</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Microsoft YaHei</family>
+      <pointsize>15</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color : #516B73;</string>
+    </property>
+    <property name="text">
+     <string>Code Acces  : </string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="lineEdit_code_acces">
+    <property name="geometry">
+     <rect>
+      <x>230</x>
+      <y>110</y>
+      <width>201</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: white ; </string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QLabel" name="label_6">
+   <property name="geometry">
+    <rect>
+     <x>350</x>
+     <y>280</y>
+     <width>381</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Papyrus</family>
+     <pointsize>15</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+     <underline>true</underline>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color :#333770 ;</string>
+   </property>
+   <property name="text">
+    <string>Afiichage du personnels  -  studios </string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton__telechargement_jointure">
+   <property name="geometry">
+    <rect>
+     <x>380</x>
+     <y>680</y>
+     <width>231</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>10</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+     <underline>true</underline>
+    </font>
+   </property>
+   <property name="cursor">
+    <cursorShape>PointingHandCursor</cursorShape>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: transparent ; </string>
+   </property>
+   <property name="text">
+    <string>Telechargement</string>
+   </property>
+   <property name="icon">
+    <iconset resource="source.qrc">
+     <normaloff>:/img/images/pd.png</normaloff>:/img/images/pd.png</iconset>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>50</width>
+     <height>20</height>
+    </size>
+   </property>
+  </widget>
+  <widget class="QGroupBox" name="groupBox_2">
+   <property name="geometry">
+    <rect>
+     <x>520</x>
+     <y>80</y>
+     <width>451</width>
+     <height>201</height>
+    </rect>
+   </property>
+   <property name="title">
+    <string/>
+   </property>
+   <widget class="QComboBox" name="comboBox_modifier_cin_jointure">
+    <property name="geometry">
+     <rect>
+      <x>170</x>
+      <y>50</y>
+      <width>241</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color : white ; </string>
+    </property>
+   </widget>
+   <widget class="QComboBox" name="comboBox_modifier_studio_jointure">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>140</y>
+      <width>201</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color : white ; </string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_4">
+    <property name="geometry">
+     <rect>
+      <x>50</x>
+      <y>0</y>
+      <width>341</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Papyrus</family>
+      <pointsize>16</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+      <underline>true</underline>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">padding :1px;
+color : #333770 ;</string>
+    </property>
+    <property name="text">
+     <string>     Donner information  a modifier :</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_7">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>110</y>
+      <width>401</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>13</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color : black;</string>
+    </property>
+    <property name="text">
+     <string>Nouveau Numero du studio et Code d accees :</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_modifier_jointure">
+    <property name="geometry">
+     <rect>
+      <x>260</x>
+      <y>150</y>
+      <width>75</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">#pushButton_modifier_jointure
+{background-color : #333770 ;
+border-radius : 10px ;
+color : white ; 
+padding:100px ;
+border:none ; 
+}
+
+#pushButton_modifier_jointure:hover
+{
+
+}</string>
+    </property>
+    <property name="text">
+     <string>Modifier</string>
+    </property>
+   </widget>
+   <widget class="QComboBox" name="comboBox_modifier_idskol_jointure">
+    <property name="geometry">
+     <rect>
+      <x>170</x>
+      <y>80</y>
+      <width>241</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color : white ; </string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_9">
+    <property name="geometry">
+     <rect>
+      <x>40</x>
+      <y>80</y>
+      <width>101</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Microsoft YaHei</family>
+      <pointsize>15</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color : #516B73;</string>
+    </property>
+    <property name="text">
+     <string>Studio    :</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_10">
+    <property name="geometry">
+     <rect>
+      <x>40</x>
+      <y>40</y>
+      <width>101</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Microsoft YaHei</family>
+      <pointsize>15</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color : #516B73;</string>
+    </property>
+    <property name="text">
+     <string>Personel :</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="lineEdit_code_acces_modif">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>170</y>
+      <width>201</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(255, 255, 255);</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QLabel" name="label_8">
+   <property name="geometry">
+    <rect>
+     <x>60</x>
+     <y>20</y>
+     <width>101</width>
+     <height>71</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">image: url(:/img/images/personnel.png);</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+ </widget>
+ <resources>
+  <include location="source.qrc"/>
+ </resources>
+ <connections/>
+</ui>

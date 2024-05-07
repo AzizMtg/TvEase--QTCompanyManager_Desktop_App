@@ -18,6 +18,14 @@ public:
 private slots:
     void on_pushButton_2_clicked();
 
+    void on_pushButton_3_clicked();
+
+    void on_pushButton_clicked();
+
+    void on_lineEdit_email_sign_in_cursorPositionChanged(int arg1, int arg2);
+
+    void on_lineEdit_password_sign_in_cursorPositionChanged(int arg1, int arg2);
+
 private:
     Ui::SingIn *ui;
 };

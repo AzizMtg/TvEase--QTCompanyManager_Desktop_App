@@ -49,8 +49,6 @@ public:
     explicit auditeur(QWidget *parent = nullptr);
     ~auditeur();
 
-<<<<<<< Updated upstream
-=======
     void setcinCNX(const QString& cin) {
             this->cin = cin;
         }
@@ -61,7 +59,6 @@ public:
        void imageCaptured(int reqid, const QImage &img);
 
 
->>>>>>> Stashed changes
 private slots:
     void on_pushButton_23_clicked();
 
@@ -73,10 +70,6 @@ private slots:
 
     void on_pushButton_28_clicked();
 
-<<<<<<< Updated upstream
-private:
-    Ui::auditeur *ui;
-=======
     void on_pushButton_26_clicked();
 
     void on_label_34_linkActivated(const QString &link);
@@ -150,7 +143,6 @@ private:
        QMediaRecorder *recorder;
        auditeur *auditeurInstance;
 
->>>>>>> Stashed changes
 };
 
 class ImageDelegatee : public QStyledItemDelegate {

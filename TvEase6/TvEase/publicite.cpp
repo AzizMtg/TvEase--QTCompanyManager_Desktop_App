@@ -6,9 +6,12 @@
 #include "auditeur.h"
 #include "abonnement.h"
 #include "studio.h"
+// file role
+#include <iostream>
+#include <fstream>
+#include <string>
+#include<QTimer>
 //
-<<<<<<< Updated upstream
-=======
 /// azizzz
 
 #include "event.h"
@@ -165,14 +168,11 @@ std::string getNomPrenomFromFilePUB(const std::string& filePath) {
 
 
 ////////////////////////////////////////////////
->>>>>>> Stashed changes
 publicite::publicite(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::publicite)
 {
     ui->setupUi(this);
-<<<<<<< Updated upstream
-=======
 
 /////////////ROLE
         std::string filePath = "C:\\Users\\CHAIMA\\Documents\\Esprit 2eme\\semestre 2\\projet c++\\TvEase6\\TvEase\\role\\role.txt";
@@ -378,7 +378,6 @@ publicite::publicite(QWidget *parent) :
                 connect(ui->tableView, SIGNAL(clicked(const QModelIndex&)), this, SLOT(onTableViewClicked(const QModelIndex&)));
 
 
->>>>>>> Stashed changes
 }
 
 publicite::~publicite()
@@ -386,50 +385,161 @@ publicite::~publicite()
     delete ui;
 }
 
-<<<<<<< Updated upstream
-=======
 
 /////////////////////// chaima
->>>>>>> Stashed changes
 void publicite::on_pushButton_16_clicked()
 {
-    hide() ;
-    personnelle personnelle ;
-    personnelle.setModal(true) ;
-    personnelle.exec() ;
+
+    std::string filePath = "C:\\Users\\CHAIMA\\Documents\\Esprit 2eme\\semestre 2\\projet c++\\TvEase6\\TvEase\\role\\role.txt";
+    std::string rolest = getRoleFromFilePUB(filePath);
+    role = QString::fromStdString(rolest);
+    std::cout <<"ili fil pub"<<role.toStdString();
+
+    if(role =="Admin principal" )
+         {
+                 hide() ;
+                 personnelle personnelle ;
+                 personnelle.setModal(true) ;
+                 personnelle.exec() ;
+         }
+    else
+    {
+        QApplication::setOverrideCursor(Qt::ForbiddenCursor);
+        QTimer::singleShot(300, [this]()
+        {  QApplication::restoreOverrideCursor();  });
+    }
 
 }
 
 void publicite::on_pushButton_17_clicked()
 {
-    hide() ;
-    programme programme ;
-    programme.setModal(true) ;
-    programme.exec() ;
+    std::string filePath = "C:\\Users\\CHAIMA\\Documents\\Esprit 2eme\\semestre 2\\projet c++\\TvEase6\\TvEase\\role\\role.txt";
+    std::string rolest = getRoleFromFilePUB(filePath);
+    role = QString::fromStdString(rolest);
+    std::cout <<"ili fil pub"<<role.toStdString();
+
+    if(role=="Responsable clientele" )
+        {
+        QApplication::setOverrideCursor(Qt::ForbiddenCursor);
+        QTimer::singleShot(300, [this]()
+        {  QApplication::restoreOverrideCursor();  });
+        }
+        else
+        {
+            hide() ;
+            programme programme ;
+            programme.setModal(true) ;
+            programme.exec() ;
+
+        }
 }
 
 void publicite::on_pushButton_19_clicked()
 {
-    hide() ;
-    auditeur auditeur ;
-    auditeur.setModal(true) ;
-    auditeur.exec() ;
+    std::string filePath = "C:\\Users\\CHAIMA\\Documents\\Esprit 2eme\\semestre 2\\projet c++\\TvEase6\\TvEase\\role\\role.txt";
+    std::string rolest = getRoleFromFilePUB(filePath);
+    role = QString::fromStdString(rolest);
+    std::cout <<"ili fil pub"<<role.toStdString();
+
+
+    if(role=="Responsable interne" )
+          {
+             QApplication::setOverrideCursor(Qt::ForbiddenCursor);
+             QTimer::singleShot(300, [this]()
+            {  QApplication::restoreOverrideCursor();  });
+          }
+          else
+          {
+              hide() ;
+              auditeur auditeur ;
+              auditeur.setModal(true) ;
+              auditeur.exec() ;
+          }
 }
 
 void publicite::on_pushButton_20_clicked()
 {
-    hide() ;
-    abonnement abonnement ;
-    abonnement.setModal(true) ;
-    abonnement.exec() ;
+
+    std::string filePath = "C:\\Users\\CHAIMA\\Documents\\Esprit 2eme\\semestre 2\\projet c++\\TvEase6\\TvEase\\role\\role.txt";
+    std::string rolest = getRoleFromFilePUB(filePath);
+    role = QString::fromStdString(rolest);
+    std::cout <<"ili fil pub"<<role.toStdString();
+
+
+    if(role=="Responsable interne" )
+       {
+        QApplication::setOverrideCursor(Qt::ForbiddenCursor);
+        QTimer::singleShot(300, [this]()
+        {  QApplication::restoreOverrideCursor();  });
+       }
+       else
+       {
+           hide() ;
+           abonnement abonnement ;
+           abonnement.setModal(true) ;
+           abonnement.exec() ;
+       }
 }
 
 void publicite::on_pushButton_21_clicked()
 {
-    hide() ;
-    studio studio ;
-    studio.setModal(true) ;
-    studio.exec() ;
+
+    std::string filePath = "C:\\Users\\CHAIMA\\Documents\\Esprit 2eme\\semestre 2\\projet c++\\TvEase6\\TvEase\\role\\role.txt";
+    std::string rolest = getRoleFromFilePUB(filePath);
+    role = QString::fromStdString(rolest);
+    std::cout <<"ili fil pub"<<role.toStdString();
+
+
+    if(role=="Responsable clientele" )
+      {
+        QApplication::setOverrideCursor(Qt::ForbiddenCursor);
+        QTimer::singleShot(300, [this]()
+        {  QApplication::restoreOverrideCursor();  });
+      }
+      else
+      {
+          hide() ;
+          studio studio ;
+          studio.setModal(true) ;
+          studio.exec() ;
+      }
+}
+
+void publicite::on_pushButton_18_clicked()
+{
+
+    std::string filePath = "C:\\Users\\CHAIMA\\Documents\\Esprit 2eme\\semestre 2\\projet c++\\TvEase6\\TvEase\\role\\role.txt";
+    std::string rolest = getRoleFromFilePUB(filePath);
+    role = QString::fromStdString(rolest);
+    std::cout <<"ili fil pub"<<role.toStdString();
+
+
+    if(role=="Responsable clientele" )
+        {
+        QApplication::setOverrideCursor(Qt::ForbiddenCursor);
+        QTimer::singleShot(300, [this]()
+        {  QApplication::restoreOverrideCursor();  });
+        }
+        else
+        {
+            hide() ;
+            publicite publicite ;
+            publicite.setModal(true) ;
+            publicite.exec() ;
+
+        }
+}
+//////////////////////////////////////////////////
+/////////////////// MODIFICATION MOT DE PASSE //////////////
+#include"confirmmotpass.h"
+
+
+void publicite::on_pushButton_parametre_compte_clicked()
+{
+
+    confirmMotPass  confirmMotPass ;
+    confirmMotPass.setModal(true) ;
+    confirmMotPass.exec() ;
 }
 //////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////

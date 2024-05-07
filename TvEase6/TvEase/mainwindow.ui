@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>800</width>
-    <height>600</height>
+    <width>873</width>
+    <height>589</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -25,15 +25,6 @@ background-repeat: no-repeat;
     <property name="geometry">
      <rect>
       <x>310</x>
-<<<<<<< Updated upstream
-      <y>460</y>
-      <width>121</width>
-      <height>31</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">background-color : white ; </string>
-=======
       <y>480</y>
       <width>231</width>
       <height>41</height>
@@ -53,10 +44,9 @@ background-repeat: no-repeat;
     background-color: white;
 }
 </string>
->>>>>>> Stashed changes
     </property>
     <property name="text">
-     <string>se connecter</string>
+     <string>NEXT</string>
     </property>
    </widget>
    <widget class="QLabel" name="labelgif">
@@ -86,7 +76,7 @@ background-repeat: no-repeat;
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>800</width>
+     <width>873</width>
      <height>22</height>
     </rect>
    </property>
