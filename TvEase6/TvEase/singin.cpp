@@ -32,6 +32,19 @@ SingIn::SingIn(QWidget *parent) :
     ui(new Ui::SingIn)
 {
     ui->setupUi(this);
+
+
+    /// son
+        mediaPlayer = new QMediaPlayer(this);
+
+              // Charger le fichier audio
+              mediaPlayer->setMedia(QUrl::fromLocalFile("C:/Users/CHAIMA/Documents/Esprit 2eme/semestre 2/projet c++/TvEase6/signIN.mp3"));
+
+              // Lire automatiquement le fichier audio lorsque la fenêtre est ouverte
+              mediaPlayer->play();
+
+
+
 }
 
 SingIn::~SingIn()
@@ -168,10 +181,11 @@ void SingIn::on_pushButton_2_clicked()
  QString hashed_pass_qstring = QString::fromStdString(hashed_pass); // inbadlouh min string il Qstring
  bool credentialsValid = verifyUserCredentials(email, hashed_pass_qstring);
 
-
-/* personnelle personnelle2 ;
- personnelle2.setModal(true) ;
-  personnelle2.exec() ;*/
+/*
+hide() ;
+personnelle personnelle2 ;
+personnelle2.setModal(true) ;
+personnelle2.exec() ;*/
 
  if (credentialsValid)
  {
@@ -222,21 +236,21 @@ void SingIn::on_pushButton_2_clicked()
 
              if(role=="Admin principal")
                    {
-                       //hide() ;
+                       hide() ;
                        personnelle personnelle ;
                        personnelle.setModal(true) ;
                         personnelle.exec() ;
                     }
             else if (role=="Responsable clientele")
                    {
-                       // hide() ;
+                        hide() ;
                        auditeur auditeur ;
                        auditeur.setModal(true) ;
                        auditeur.exec() ;
                     }
            else if (role=="Responsable interne")
                    {
-                       // hide() ;
+                        hide() ;
                        programme programme ;
                        programme.setModal(true) ;
                        programme.exec() ;
@@ -304,4 +318,19 @@ void SingIn::on_lineEdit_password_sign_in_cursorPositionChanged(int arg1, int ar
     } else {
         ui->pushButton_4->setIcon(QIcon(":/img/images/connormal.png"));
     }
+}
+
+#include <QCoreApplication>
+#include <QUrl>
+#include <QDesktopServices>
+
+void SingIn::on_pushButton_5_clicked()
+{
+    LPCWSTR filePath = L"C:\\Users\\CHAIMA\\Documents\\Esprit 2eme\\semestre 2\\projet c++\\TvEase6\\TvEase\\Guide.html";
+
+       HINSTANCE result = ShellExecute(NULL, L"open", filePath, NULL, NULL, SW_SHOWNORMAL);
+       if ((int)result <= 32) {
+           // Error occurred
+           qDebug() << "ShellExecute failed with error code: " << (int)result;
+       }
 }

@@ -47,7 +47,7 @@ public:
              this->role = role;
          }
 
-
+void updateTime() ;
 
 private slots:
     void on_pushButton_9_clicked();
@@ -108,6 +108,16 @@ private slots:
  //    void hideAnimation();
          void on_pushButton_clicked();
 
+        // void on_pushButton3_clicked();
+
+         void on_pushButton_16_clicked();
+
+         void on_chatbot_clicked();
+
+         void on_Notif_clicked();
+
+         void on_pushButton_17_clicked();
+
 private:
     Ui::programme *ui;
     QString cin , role  ;
@@ -121,6 +131,8 @@ private:
            int idProgramme;
            QByteArray selected_image_data;
            QByteArray image_data;
+
+            QSortFilterProxyModel *proxyModel;
 
 
 };

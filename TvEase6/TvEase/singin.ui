@@ -11,7 +11,11 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Dialog</string>
+   <string>Tv'Ease</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="source.qrc">
+    <normaloff>:/img/images/tv.png</normaloff>:/img/images/tv.png</iconset>
   </property>
   <property name="styleSheet">
    <string notr="true">border-top-right-radius : 0px;
@@ -141,7 +145,7 @@ border-bottom: 1px solid #3A3F7E; }
 </string>
     </property>
     <property name="text">
-     <string>mot de passe oublier</string>
+     <string>mot de passe oublie</string>
     </property>
    </widget>
    <widget class="QPushButton" name="pushButton">
@@ -191,6 +195,34 @@ border-bottom: 1px solid #3A3F7E; }
       <width>200</width>
       <height>200</height>
      </size>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_5">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>490</y>
+      <width>131</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">#pushButton_5{
+border : none ;
+color : blue ; 
+border-bottom: 1px solid blue; }
+
+#pushButton_5:hover {
+color : #3A3F7E ; 
+border-bottom: 1px solid #3A3F7E; }
+
+</string>
+    </property>
+    <property name="text">
+     <string>Guide d'utilisation </string>
     </property>
    </widget>
   </widget>

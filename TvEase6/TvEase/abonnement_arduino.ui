@@ -11,16 +11,26 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Dialog</string>
+   <string>Tv'Ease</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="source.qrc">
+    <normaloff>:/img/images/logo.png</normaloff>:/img/images/logo.png</iconset>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color : #B5C0D0 ; </string>
   </property>
   <widget class="QLineEdit" name="lineEdit">
    <property name="geometry">
     <rect>
-     <x>170</x>
+     <x>150</x>
      <y>170</y>
-     <width>261</width>
+     <width>301</width>
      <height>51</height>
     </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color : white ; </string>
    </property>
   </widget>
   <widget class="QPushButton" name="envoyer">
@@ -65,11 +75,14 @@
   <widget class="QDateEdit" name="dateEdit">
    <property name="geometry">
     <rect>
-     <x>200</x>
-     <y>271</y>
-     <width>201</width>
-     <height>51</height>
+     <x>150</x>
+     <y>260</y>
+     <width>301</width>
+     <height>61</height>
     </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color : white ; </string>
    </property>
   </widget>
   <widget class="QPushButton" name="zid">
@@ -88,26 +101,35 @@
   <widget class="QLineEdit" name="expirewale">
    <property name="geometry">
     <rect>
-     <x>210</x>
-     <y>360</y>
+     <x>220</x>
+     <y>370</y>
      <width>171</width>
      <height>41</height>
     </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color : #D3D3D3 ;</string>
    </property>
   </widget>
   <widget class="QLabel" name="label">
    <property name="geometry">
     <rect>
      <x>190</x>
-     <y>35</y>
+     <y>30</y>
      <width>291</width>
      <height>31</height>
     </rect>
    </property>
    <property name="font">
     <font>
-     <pointsize>12</pointsize>
+     <pointsize>15</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+     <underline>true</underline>
     </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color : #333770 ; </string>
    </property>
    <property name="text">
     <string>CLICK # pour envoyer</string>
@@ -116,22 +138,30 @@
   <widget class="QLabel" name="label_2">
    <property name="geometry">
     <rect>
-     <x>180</x>
+     <x>200</x>
      <y>70</y>
-     <width>281</width>
+     <width>221</width>
      <height>41</height>
     </rect>
    </property>
    <property name="font">
     <font>
      <pointsize>12</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+     <underline>true</underline>
     </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color : #333770 ; </string>
    </property>
    <property name="text">
     <string>CLICK C pour renouveller</string>
    </property>
   </widget>
  </widget>
- <resources/>
+ <resources>
+  <include location="source.qrc"/>
+ </resources>
  <connections/>
 </ui>

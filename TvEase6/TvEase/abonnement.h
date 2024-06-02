@@ -3,6 +3,8 @@
 
 #include <QDialog>
 #include "cabonnement.h"
+#include "espeak.h"
+
 namespace Ui {
 class abonnement;
 }
@@ -21,7 +23,7 @@ public:
        void setROLECNX(const QString& role) {
             this->role = role;
         }
-
+void updateTime() ;
 private slots:
     void on_pushButton_30_clicked();
 
@@ -54,7 +56,7 @@ private slots:
 
       void on_pushButton_recherche_abonnement_clicked();
       void afficherTousElementsSiVide(const QString &text);
-      void generatePDF(const QString& filename, int id, int numero, const QDate& debut, const QDate& expiration, const QString& type);
+      void generatePDF(const QString& filename, int id, int numero, const QDate& debut, const QDate& expiration, const QString& type , const QString& prix );
 
 
   void mettreAJourGraphique();
@@ -100,7 +102,6 @@ private slots:
       cap.release();
       cv::destroyAllWindows();
   }*/
-
   void on_pushButton_estimer_clicked();
 
   void on_pushButton_promo_clicked();
@@ -110,11 +111,23 @@ private slots:
 
   void on_pushButton_clicked();
 
+  void on_pushButton_10_clicked();
+
+  void on_pushButton_11_clicked();
+
+  void on_pushButton_12_clicked();
+
+  void on_Notif_clicked();
+
+  void on_chatbot_clicked();
+
 private:
     Ui::abonnement *ui;
       QString cin , role ;
       cabonnement Atmp;
          QStandardItemModel* model;
+          QSortFilterProxyModel *proxyModel;
+
 };
 
 #endif // ABONNEMENT_H

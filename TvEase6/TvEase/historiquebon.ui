@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>historiquebon</class>
+ <widget class="QDialog" name="historiquebon">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>700</width>
+    <height>580</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Tv'Ease</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="source.qrc">
+    <normaloff>:/img/images/logo.png</normaloff>:/img/images/logo.png</iconset>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color : #BBD2E1	 ;/* #B5C0D0; */
+</string>
+  </property>
+  <widget class="QLabel" name="label_17">
+   <property name="geometry">
+    <rect>
+     <x>200</x>
+     <y>30</y>
+     <width>331</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>MS Shell Dlg 2</family>
+     <pointsize>20</pointsize>
+     <weight>50</weight>
+     <italic>false</italic>
+     <bold>false</bold>
+     <underline>true</underline>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">padding-top : 100px ;
+padding-bottom : 100px ;
+font: 20pt &quot;MS Shell Dlg 2&quot;;
+color : #7396A0 ;
+background-color:none;</string>
+   </property>
+   <property name="text">
+    <string>Historique des opérations</string>
+   </property>
+  </widget>
+  <widget class="QTableView" name="tableView_historique">
+   <property name="geometry">
+    <rect>
+     <x>140</x>
+     <y>80</y>
+     <width>431</width>
+     <height>431</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QTableView {
+    background-color: #ffffff; /* Couleur de fond */
+    alternate-background-color: #f2f2f2; /* Couleur de fond alternative des lignes */
+    border: 1px solid #dcdcdc; /* Bordure */
+    selection-background-color: #a9c6e7; /* Couleur de fond de la sélection */
+}
+
+QTableView::item {
+    padding: 5px; /* Marge intérieure des cellules */
+    border-bottom: 1px solid #dcdcdc; /* Bordure basse de chaque cellule */
+}
+
+QTableView::item:selected {
+    background-color: #a9c6e7; /* Couleur de fond de la cellule sélectionnée */
+    color: #000000; /* Couleur du texte de la cellule sélectionnée */
+}
+
+QHeaderView::section {
+    background-color: #4c7da3; /* Couleur de fond de l'en-tête */
+    color: #ffffff; /* Couleur du texte de l'en-tête */
+    padding: 10px; /* Marge intérieure de l'en-tête */
+    border: 1px solid #dcdcdc; /* Bordure de l'en-tête */
+}
+
+QHeaderView::section:checked {
+    background-color: #7aa8cc; /* Couleur de fond de l'en-tête lorsqu'il est cochée */
+}
+
+QScrollBar:vertical {
+    background: transparent; /* Fond de la barre de défilement */
+    border: none; /* Pas de bordure */
+    width: 10px; /* Largeur de la barre de défilement */
+    margin: 0px 0px 0px 0px; /* Marge */
+}
+
+QScrollBar::handle:vertical {
+    background: #a9c6e7; /* Couleur de la poignée de la barre de défilement */
+    min-height: 20px; /* Hauteur minimale de la poignée */
+}
+
+QScrollBar::handle:vertical:hover {
+    background: #7aa8cc; /* Couleur de la poignée de la barre de défilement au survol */
+}
+
+QScrollBar::add-line:vertical, QScrollBar::sub-line:vertical {
+    background: none; /* Pas de couleur de fond pour les boutons de défilement */
+}
+
+QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical {
+    background: none; /* Pas de couleur de fond pour les pages de défilement */
+}
+</string>
+   </property>
+  </widget>
+ </widget>
+ <resources>
+  <include location="source.qrc"/>
+ </resources>
+ <connections/>
+</ui>

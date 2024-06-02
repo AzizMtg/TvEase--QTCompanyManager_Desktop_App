@@ -55,5 +55,33 @@
         <file>images/refresh.png</file>
         <file>images/snake.png</file>
         <file>images/OI.jpeg</file>
+        <file>images/game-console.png</file>
+        <file>images/parking-car.png</file>
+        <file>images/clock.png</file>
+        <file>images/calendar.png</file>
+        <file>images/chat-app.png</file>
+        <file>images/credit.png</file>
+        <file>images/email.png</file>
+        <file>images/voice-message.png</file>
+        <file>images/motherboard.png</file>
+        <file>images/pattern-lock.png</file>
+        <file>images/studio (1).png</file>
+        <file>images/studio-set.png</file>
+        <file>images/studio-mixer.png</file>
+        <file>images/calender.png</file>
+        <file>images/messagerie-de-la-boite-de-reception.png</file>
+        <file>images/chatbot.png</file>
+        <file>images/lecoute-clandestine.png</file>
+        <file>images/paiement-par-carte-de-credit.png</file>
+        <file>images/motherboard (1).png</file>
+        <file>images/motherboard (2).png</file>
+        <file>images/gestion-du-temps.png</file>
+        <file>images/le-temps-qui-passe.png</file>
+        <file>images/ajouter.png</file>
+        <file>images/history_3503775.png</file>
+        <file>images/icons8-discount-100.png</file>
+        <file>images/swap-up-down_14171496.png</file>
+        <file>images/liste-de-controle (1).png</file>
+        <file>images/parking.png</file>
     </qresource>
 </RCC>

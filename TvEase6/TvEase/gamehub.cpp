@@ -31,7 +31,7 @@ void gamehub::on_pushButton_clicked()
     // Get the current hour
     int currentHour = currentDateTime.time().hour();
 //mbadel hne ya 7sin (ena li fl futur ) bech nwari madame kifech ki yabda mouch wa9t ftour chnowa ysir
-    if (currentHour >= 12 && currentHour < 24) {
+    if (currentHour >= 10 && currentHour < 17) {
     QGameBoard *lop = new QGameBoard();
 
         // Show the lopiza window
@@ -52,7 +52,7 @@ void gamehub::on_pushButton_2_clicked()
     // Get the current hour
     int currentHour = currentDateTime.time().hour();
 //mbadel hne ya 7sin (ena li fl futur ) bech nwari madame kifech ki yabda mouch wa9t ftour chnowa ysir
-    if (currentHour >= 13 && currentHour < 24) {
+    if (currentHour >= 10 && currentHour < 17) {
         // Show the widget normally
         Widget *lop = new Widget();
         lop->show();

@@ -11,7 +11,11 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Dialog</string>
+   <string>Tv'Ease</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="source.qrc">
+    <normaloff>:/img/images/logo.png</normaloff>:/img/images/logo.png</iconset>
   </property>
   <property name="styleSheet">
    <string notr="true">background-color: #F0F0F0; </string>
@@ -105,6 +109,9 @@ color : #4D53A8 ; </string>
          <bold>true</bold>
         </font>
        </property>
+       <property name="cursor">
+        <cursorShape>PointingHandCursor</cursorShape>
+       </property>
        <property name="styleSheet">
         <string notr="true">QPushButton{
 background-color: transparent;
@@ -154,6 +161,9 @@ background-color: #E3E4F2;
          <bold>true</bold>
         </font>
        </property>
+       <property name="cursor">
+        <cursorShape>PointingHandCursor</cursorShape>
+       </property>
        <property name="styleSheet">
         <string notr="true">QPushButton{
 background-color: transparent;
@@ -201,6 +211,9 @@ background-color: #E3E4F2;
          <weight>75</weight>
          <bold>true</bold>
         </font>
+       </property>
+       <property name="cursor">
+        <cursorShape>PointingHandCursor</cursorShape>
        </property>
        <property name="styleSheet">
         <string notr="true">QPushButton{
@@ -250,6 +263,9 @@ background-color: #E3E4F2;
          <bold>true</bold>
         </font>
        </property>
+       <property name="cursor">
+        <cursorShape>PointingHandCursor</cursorShape>
+       </property>
        <property name="styleSheet">
         <string notr="true">QPushButton{
 background-color: transparent;
@@ -297,6 +313,9 @@ background-color: #E3E4F2;
          <weight>75</weight>
          <bold>true</bold>
         </font>
+       </property>
+       <property name="cursor">
+        <cursorShape>PointingHandCursor</cursorShape>
        </property>
        <property name="styleSheet">
         <string notr="true">QPushButton{
@@ -346,6 +365,9 @@ background-color: #E3E4F2;
          <weight>75</weight>
          <bold>true</bold>
         </font>
+       </property>
+       <property name="cursor">
+        <cursorShape>PointingHandCursor</cursorShape>
        </property>
        <property name="styleSheet">
         <string notr="true">QPushButton{
@@ -516,6 +538,9 @@ border : 1px solid black ;</string>
         <height>31</height>
        </rect>
       </property>
+      <property name="cursor">
+       <cursorShape>PointingHandCursor</cursorShape>
+      </property>
       <property name="styleSheet">
        <string notr="true">background-color: rgb(185, 185, 185) ; 
 border : 1px solid black ;</string>
@@ -676,6 +701,9 @@ color : white ;
         <height>31</height>
        </rect>
       </property>
+      <property name="cursor">
+       <cursorShape>PointingHandCursor</cursorShape>
+      </property>
       <property name="styleSheet">
        <string notr="true">QPushButton{
 background:none;
@@ -686,13 +714,13 @@ border : none ;
 border-radius : 0 px ;
 color : black ; 
 padding:2px;
-background-color:  #32936F;
+background-color:  #85A0AB;
 border-radius: 20px;
 
 
 }
 QPushButton:hover{
-background-color:  #0b6a3c;
+background-color:  #638691;
 border:none ; 
 border-radius: 20px;
 
@@ -1131,16 +1159,18 @@ border : 1px solid black ;</string>
       </property>
       <property name="styleSheet">
        <string notr="true">#pushButton_ajouter_personnel
-{background-color : #32936F ;
+{
 border-radius : 10px ;
 color : white ; 
 padding:10px ;
 border:none ; 
+background-color:#333770;
+color : white ; 
 }
 
 #pushButton_ajouter_personnel:hover
 {
-background-color:  #0b6a3c;
+background-color:  ;
 }</string>
       </property>
       <property name="text">
@@ -1228,15 +1258,17 @@ border : 1px solid black ;</string>
       </property>
       <property name="styleSheet">
        <string notr="true">#pushButton_RESET_personnel_
-{background-color : #DC2B37 ;
+{background-color : #7396A0 ;
 border-radius : 10px ;
 color : white ; 
 padding : 10px ; 
-border:none ; }
+border:none ; 
+}
 
 
 #pushButton_RESET_personnel_:hover
-{background-color:  #EE4A43;
+{background-color: #638691  ;
+color:  ; 
 
  }
 
@@ -1260,7 +1292,7 @@ border:none ; }
 </string>
       </property>
       <property name="text">
-       <string>Effacer</string>
+       <string>Efffacer</string>
       </property>
      </widget>
      <widget class="QLineEdit" name="lineEdit_3">
@@ -1599,16 +1631,18 @@ border : 1px solid black ;</string>
       <property name="styleSheet">
        <string notr="true">#pushButton_modifier_personnel
 {
-background-color:  #FFEB3B;
 border-radius : 10px ;
 color : white ; 
-padding : 10px;}
+padding : 10px;
+background-color:#333770;
+color : white ; 
+
+}
 
 
 #pushButton_modifier_personnel:hover
 {
 color : white ; 
-background-color:  #FFF176;
  }
 
 </string>
@@ -1698,7 +1732,8 @@ border : 1px solid black ;</string>
       </property>
       <property name="styleSheet">
        <string notr="true">#pushButton_RESET_personnel_1
-{background-color :  #DC2B37;
+{
+background-color : #7396A0 ;
 border-radius : 10px ;
 color : white ; 
 padding : 10px ; 
@@ -1708,7 +1743,7 @@ border:none ; }
 #pushButton_RESET_personnel_1:hover
 {
 color : white ; 
-background-color : #EE4A43;
+background-color: #638691  ;
  }
 
 
@@ -1723,7 +1758,7 @@ background-color : #EE4A43;
 </string>
       </property>
       <property name="text">
-       <string>Effacer</string>
+       <string>Efffacer</string>
       </property>
      </widget>
      <widget class="QLabel" name="label_37">
@@ -2018,7 +2053,7 @@ border : 1px solid black ;</string>
      <widget class="QLineEdit" name="lineEdit">
       <property name="geometry">
        <rect>
-        <x>240</x>
+        <x>300</x>
         <y>20</y>
         <width>591</width>
         <height>31</height>
@@ -2031,7 +2066,7 @@ border : 1px solid black ;</string>
         <weight>50</weight>
         <italic>false</italic>
         <bold>false</bold>
-        <underline>false</underline>
+        <underline>true</underline>
        </font>
       </property>
       <property name="styleSheet">
@@ -2208,7 +2243,7 @@ border-radius: 30px;
       <property name="geometry">
        <rect>
         <x>560</x>
-        <y>320</y>
+        <y>310</y>
         <width>131</width>
         <height>31</height>
        </rect>
@@ -2224,15 +2259,18 @@ border-radius: 30px;
        <cursorShape>PointingHandCursor</cursorShape>
       </property>
       <property name="styleSheet">
-       <string notr="true">#pushButton_supprimer_perso{
-background-color : #DC2B37;
+       <string notr="true">#pushButton_supprimer_perso
+{
 border-radius : 10px ;
 color : white ; 
-padding : 10px ;}
+padding : 10px ;
+background-color:#333770;
+color : white ; 
+}
 
 #pushButton_supprimer_perso:hover{
 color : white ; 
-background-color : #EE4A43;}
+}
 
 
 
@@ -2332,9 +2370,9 @@ border : 1px solid black ;</string>
      <widget class="QLineEdit" name="lineEdit_2">
       <property name="geometry">
        <rect>
-        <x>290</x>
+        <x>360</x>
         <y>120</y>
-        <width>561</width>
+        <width>511</width>
         <height>31</height>
        </rect>
       </property>
@@ -2345,6 +2383,7 @@ border : 1px solid black ;</string>
         <weight>50</weight>
         <italic>false</italic>
         <bold>false</bold>
+        <underline>true</underline>
        </font>
       </property>
       <property name="styleSheet">
@@ -2354,7 +2393,7 @@ font: 20pt &quot;MS Shell Dlg 2&quot;;
 color : #7396A0 ;</string>
       </property>
       <property name="text">
-       <string>Choisir le CIN du personnel à supprimer :</string>
+       <string>Choisir le CIN d'employe à supprimer :</string>
       </property>
      </widget>
     </widget>
@@ -2408,7 +2447,7 @@ border-top-left-radius: 20px; /* Coin arrondi en haut à gauche */
    <property name="title">
     <string/>
    </property>
-   <widget class="QLabel" name="label_30">
+   <widget class="QLabel" name="label_date">
     <property name="geometry">
      <rect>
       <x>940</x>
@@ -2437,12 +2476,12 @@ color : #333770 ;
      <string>Vendredi 22  Fevrier 2024</string>
     </property>
    </widget>
-   <widget class="QLabel" name="label_31">
+   <widget class="QLabel" name="label_heure">
     <property name="geometry">
      <rect>
-      <x>1020</x>
+      <x>970</x>
       <y>50</y>
-      <width>51</width>
+      <width>191</width>
       <height>31</height>
      </rect>
     </property>
@@ -2463,7 +2502,7 @@ color : #333770 ;
 </string>
     </property>
     <property name="text">
-     <string>13°</string>
+     <string/>
     </property>
    </widget>
    <widget class="QLineEdit" name="lineEdit_role">
@@ -2553,10 +2592,10 @@ background-image : url();</string>
    <widget class="QPushButton" name="pushButton_travailler_jointure">
     <property name="geometry">
      <rect>
-      <x>830</x>
+      <x>480</x>
       <y>20</y>
-      <width>71</width>
-      <height>71</height>
+      <width>81</width>
+      <height>61</height>
      </rect>
     </property>
     <property name="font">
@@ -2568,31 +2607,31 @@ background-image : url();</string>
      <cursorShape>PointingHandCursor</cursorShape>
     </property>
     <property name="styleSheet">
-     <string notr="true">
-
-#pushButton_travailler_jointure
-{/*background-color : #DD7373; ; */
-color : black ; 
-border-radius : 20px ; 
-border-bottom : solid 1px black ; 
-background : transparent;
-
+     <string notr="true">QPushButton {
+    background: #B5C0D0;
+    border: none;
+    border-radius: 0px;
+    color: #4D53A8;
 }
 
-#pushButton_travailler_jointure:hover
-{
-}</string>
+QPushButton:hover {
+    background: #E3E4F2;
+    border: none;
+    border-radius: 0px;
+    color: #4D53A8;
+}
+</string>
     </property>
     <property name="text">
      <string/>
     </property>
     <property name="icon">
      <iconset resource="source.qrc">
-      <normaloff>:/img/images/travailler.png</normaloff>:/img/images/travailler.png</iconset>
+      <normaloff>:/img/images/studio-mixer.png</normaloff>:/img/images/studio-mixer.png</iconset>
     </property>
     <property name="iconSize">
      <size>
-      <width>40</width>
+      <width>50</width>
       <height>500</height>
      </size>
     </property>
@@ -2603,26 +2642,29 @@ background : transparent;
    <widget class="QPushButton" name="pushButton_9">
     <property name="geometry">
      <rect>
-      <x>680</x>
-      <y>10</y>
-      <width>191</width>
-      <height>101</height>
+      <x>390</x>
+      <y>20</y>
+      <width>81</width>
+      <height>61</height>
      </rect>
     </property>
     <property name="cursor">
      <cursorShape>PointingHandCursor</cursorShape>
     </property>
     <property name="styleSheet">
-     <string notr="true">
-
-#pushButton_9
-{/*background-color : #DD7373; ; */
-color : black ; 
-border-radius : 20px ; 
-border-bottom : solid 1px black ; 
-background:transparent;
+     <string notr="true">QPushButton {
+    background: #B5C0D0;
+    border: none;
+    border-radius: 0px;
+    color: #4D53A8;
 }
 
+QPushButton:hover {
+    background: #E3E4F2;
+    border: none;
+    border-radius: 0px;
+    color: #4D53A8;
+}
 </string>
     </property>
     <property name="text">
@@ -2630,11 +2672,11 @@ background:transparent;
     </property>
     <property name="icon">
      <iconset resource="source.qrc">
-      <normaloff>:/img/images/accestudio.png</normaloff>:/img/images/accestudio.png</iconset>
+      <normaloff>:/img/images/pattern-lock.png</normaloff>:/img/images/pattern-lock.png</iconset>
     </property>
     <property name="iconSize">
      <size>
-      <width>40</width>
+      <width>50</width>
       <height>50</height>
      </size>
     </property>
@@ -2659,6 +2701,174 @@ background:transparent;
      <size>
       <width>70</width>
       <height>61</height>
+     </size>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_11">
+    <property name="geometry">
+     <rect>
+      <x>570</x>
+      <y>20</y>
+      <width>81</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+    background: #B5C0D0;
+    border: none;
+    border-radius: 0px;
+    color: #4D53A8;
+}
+
+QPushButton:hover {
+    background: #E3E4F2;
+    border: none;
+    border-radius: 0px;
+    color: #4D53A8;
+}
+</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="icon">
+     <iconset resource="source.qrc">
+      <normaloff>:/img/images/game-console.png</normaloff>:/img/images/game-console.png</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>50</width>
+      <height>50</height>
+     </size>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="chatbot">
+    <property name="geometry">
+     <rect>
+      <x>660</x>
+      <y>20</y>
+      <width>91</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+    background: #B5C0D0;
+    border: none;
+    border-radius: 0px;
+    color: #4D53A8;
+}
+
+QPushButton:hover {
+    background: #E3E4F2;
+    border: none;
+    border-radius: 0px;
+    color: #4D53A8;
+}
+</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="icon">
+     <iconset resource="source.qrc">
+      <normaloff>:/img/images/chatbot.png</normaloff>:/img/images/chatbot.png</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>35</width>
+      <height>52</height>
+     </size>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_12">
+    <property name="geometry">
+     <rect>
+      <x>850</x>
+      <y>20</y>
+      <width>81</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+    background: #B5C0D0;
+    border: none;
+    border-radius: 0px;
+    color: #4D53A8;
+}
+
+QPushButton:hover {
+    background: #E3E4F2;
+    border: none;
+    border-radius: 0px;
+    color: #4D53A8;
+}
+</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="icon">
+     <iconset resource="source.qrc">
+      <normaloff>:/img/images/calender.png</normaloff>:/img/images/calender.png</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>35</width>
+      <height>40</height>
+     </size>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="Notif">
+    <property name="geometry">
+     <rect>
+      <x>760</x>
+      <y>20</y>
+      <width>81</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+    background: #B5C0D0;
+    border: none;
+    border-radius: 0px;
+    color: #4D53A8;
+}
+
+QPushButton:hover {
+    background: #E3E4F2;
+    border: none;
+    border-radius: 0px;
+    color: #4D53A8;
+}
+</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="icon">
+     <iconset resource="source.qrc">
+      <normaloff>:/img/images/messagerie-de-la-boite-de-reception.png</normaloff>:/img/images/messagerie-de-la-boite-de-reception.png</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>50</width>
+      <height>100</height>
      </size>
     </property>
    </widget>

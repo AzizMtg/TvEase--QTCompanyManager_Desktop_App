@@ -51,6 +51,16 @@ MainWindow::MainWindow(QWidget *parent)
     ui->setupUi(this);
     playGifAutomatically();
 
+
+/// son
+    mediaPlayer = new QMediaPlayer(this);
+
+          // Charger le fichier audio
+          mediaPlayer->setMedia(QUrl::fromLocalFile("C:/Users/CHAIMA/Documents/Esprit 2eme/semestre 2/projet c++/TvEase6/fichier.mp3"));
+
+          // Lire automatiquement le fichier audio lorsque la fenêtre est ouverte
+          mediaPlayer->play();
+
 }
 
 MainWindow::~MainWindow()

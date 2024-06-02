@@ -9,12 +9,13 @@
 #include<QChartView>
 #include<QPieSeries>
 class cabonnement
-{int id_abonnement,numero_abonnement,id_auditeur;
-    QString Type_abonnement;
-    QDate Date_debut,Date_expiration;
+{int id_abonnement,numero_abonnement,id_auditeur ;
+    QString Type_abonnement ,prix ;
+    QDate Date_debut,Date_expiration ;
+
 public:
     cabonnement(){}
-    cabonnement(int,int,QDate,QDate,QString,int);
+    cabonnement(int,int,QDate,QDate,QString,int , QString );
     //getters
     int getId_abonnement(){return id_abonnement;}
     int getNum_abonnement(){return numero_abonnement;}

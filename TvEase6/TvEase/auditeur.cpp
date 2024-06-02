@@ -120,6 +120,17 @@ std::string getNomPrenomFromFileAU(const std::string& filePath) {
     return "";
 }
 ////
+void auditeur::updateTime()
+{
+    // Get the current time
+    QTime currentTime = QTime::currentTime();
+    // Convert the time to string in the format "hh:mm:ss"
+    QString timeText = currentTime.toString("hh:mm:ss");
+    // Update the QLabel text with the current time
+    ui->label_heure->setText(timeText);
+}
+
+///
 auditeur::auditeur(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::auditeur)
@@ -140,6 +151,31 @@ auditeur::auditeur(QWidget *parent) :
  ///////////// anas
     //aff list
        ui->tableView_lister_audi->setModel(tmpaudi.afficher()) ;
+
+      /// taba3 il afficher
+           // Create the proxy model
+           proxyModel = new QSortFilterProxyModel(this);
+           proxyModel->setSourceModel(tmpaudi.afficher());
+           ui->tableView_lister_audi->setModel(proxyModel);
+
+           // Apply styles to the header
+           QString headerStyle = "QHeaderView::section {"
+                                   "    font-weight: bold;" // Making text bold
+                                   "    background-color: #EEE6D8 ;" // bleue color
+                                   "    border: 1px solid black;" // Adding a border
+                                   "}";
+
+           ui->tableView_lister_audi->horizontalHeader()->setStyleSheet(headerStyle);
+           ui->tableView_lister_audi->horizontalHeader()->resizeSection(0,100);
+           ui->tableView_lister_audi->horizontalHeader()->resizeSection(1,100);
+           ui->tableView_lister_audi->horizontalHeader()->resizeSection(2,200);
+           ui->tableView_lister_audi->horizontalHeader()->resizeSection(3,200);
+           ui->tableView_lister_audi->horizontalHeader()->resizeSection(4,200);
+           ui->tableView_lister_audi->horizontalHeader()->resizeSection(5,200);
+           ui->tableView_lister_audi->horizontalHeader()->resizeSection(6,200);
+
+
+
 
        QAbstractItemModel *model = ui->tableView_lister_audi->model();
        int numeroColumnIndex = -1;
@@ -185,6 +221,16 @@ auditeur::auditeur(QWidget *parent) :
        recorder->setVideoSettings(settings);
        M_Camera->setCaptureMode(QCamera::CaptureVideo);
 
+       ///////////////time/////////////////////////
+         // Create a QTimer to update the time every second
+            QTimer *timer = new QTimer(this);
+            connect(timer, &QTimer::timeout, this, &auditeur::updateTime);
+            timer->start(5); // 1000 milliseconds = 1 second
+
+            /////
+                    QDateTime currentDateTime = QDateTime::currentDateTime();
+                         QString currentDate = currentDateTime.toString("dddd dd/MM/yyyy");
+                         ui->label_date->setText(currentDate);
 
 }
 
@@ -207,10 +253,31 @@ void auditeur::on_pushButton_23_clicked()
 
     if(role =="Admin principal" )
          {
-                 hide() ;
-                 personnelle personnelle ;
-                 personnelle.setModal(true) ;
-                 personnelle.exec() ;
+
+                 // Create the new UI
+                 personnelle *newUI = new personnelle;
+
+                 // Make the new UI transparent
+                  newUI->setWindowOpacity(0.0);
+
+                 // Show the new UI
+                 newUI->show();
+
+                 // Animate the opacity to make it gradually visible
+                 QPropertyAnimation *animation = new QPropertyAnimation(newUI, "windowOpacity");
+                 animation->setDuration(50); // 500 milliseconds
+                 animation->setStartValue(0.0);
+                 animation->setEndValue(1.0);
+
+                 // Hide the old UI (this dialog) after the animation finishes
+                 connect(animation, &QPropertyAnimation::finished, this, [=]() {
+                     hide();
+                     animation->deleteLater(); // Delete the animation object when done
+                 });
+
+                 // Start the animation
+                 animation->start();
+
          }
     else
        {
@@ -241,10 +308,32 @@ void auditeur::on_pushButton_24_clicked()
        }
         else
         {
-            hide() ;
-            programme programme ;
-            programme.setModal(true) ;
-            programme.exec() ;
+
+            // Create the new UI
+            programme *newUI = new programme;
+
+            // Make the new UI transparent
+             newUI->setWindowOpacity(0.0);
+
+            // Show the new UI
+            newUI->show();
+
+            // Animate the opacity to make it gradually visible
+            QPropertyAnimation *animation = new QPropertyAnimation(newUI, "windowOpacity");
+            animation->setDuration(50); // 500 milliseconds
+            animation->setStartValue(0.0);
+            animation->setEndValue(1.0);
+
+            // Hide the old UI (this dialog) after the animation finishes
+            connect(animation, &QPropertyAnimation::finished, this, [=]() {
+                hide();
+                animation->deleteLater(); // Delete the animation object when done
+            });
+
+            // Start the animation
+            animation->start();
+
+
 
         }
 
@@ -268,10 +357,34 @@ void auditeur::on_pushButton_25_clicked()
         }
         else
         {
-            hide() ;
-            publicite publicite ;
-            publicite.setModal(true) ;
-            publicite.exec() ;
+            // Create the new UI
+            publicite *newUI = new publicite;
+
+            // Make the new UI transparent
+             newUI->setWindowOpacity(0.0);
+
+            // Show the new UI
+            newUI->show();
+
+            // Animate the opacity to make it gradually visible
+            QPropertyAnimation *animation = new QPropertyAnimation(newUI, "windowOpacity");
+            animation->setDuration(50); // 500 milliseconds
+            animation->setStartValue(0.0);
+            animation->setEndValue(1.0);
+
+            // Hide the old UI (this dialog) after the animation finishes
+            connect(animation, &QPropertyAnimation::finished, this, [=]() {
+                hide();
+                animation->deleteLater(); // Delete the animation object when done
+            });
+
+            // Start the animation
+            animation->start();
+
+
+
+
+
         }
 }
 
@@ -295,10 +408,30 @@ void auditeur::on_pushButton_27_clicked()
         }
         else
         {
-            hide() ;
-            abonnement abonnement ;
-            abonnement.setModal(true) ;
-            abonnement.exec() ;
+            // Create the new UI
+            abonnement *newUI = new abonnement;
+
+            // Make the new UI transparent
+             newUI->setWindowOpacity(0.0);
+
+            // Show the new UI
+            newUI->show();
+
+            // Animate the opacity to make it gradually visible
+            QPropertyAnimation *animation = new QPropertyAnimation(newUI, "windowOpacity");
+            animation->setDuration(50); // 500 milliseconds
+            animation->setStartValue(0.0);
+            animation->setEndValue(1.0);
+
+            // Hide the old UI (this dialog) after the animation finishes
+            connect(animation, &QPropertyAnimation::finished, this, [=]() {
+                hide();
+                animation->deleteLater(); // Delete the animation object when done
+            });
+
+            // Start the animation
+            animation->start();
+
         }
 
 }
@@ -323,17 +456,37 @@ void auditeur::on_pushButton_28_clicked()
        }
        else
        {
-           hide() ;
-           studio studio ;
-           studio.setModal(true) ;
-           studio.exec() ;
+
+           // Create the new UI
+           studio *newUI = new studio;
+
+           // Make the new UI transparent
+            newUI->setWindowOpacity(0.0);
+
+           // Show the new UI
+           newUI->show();
+
+           // Animate the opacity to make it gradually visible
+           QPropertyAnimation *animation = new QPropertyAnimation(newUI, "windowOpacity");
+           animation->setDuration(50); // 500 milliseconds
+           animation->setStartValue(0.0);
+           animation->setEndValue(1.0);
+
+           // Hide the old UI (this dialog) after the animation finishes
+           connect(animation, &QPropertyAnimation::finished, this, [=]() {
+               hide();
+               animation->deleteLater(); // Delete the animation object when done
+           });
+
+           // Start the animation
+           animation->start();
        }
 }
 
 void auditeur::on_pushButton_26_clicked()
 {
 
-    std::string filePath = "C:\\Users\\CHAIMA\\Documents\\Esprit 2eme\\semestre 2\\projet c++\\TvEase6\\TvEase\\role\\role.txt";
+   /* std::string filePath = "C:\\Users\\CHAIMA\\Documents\\Esprit 2eme\\semestre 2\\projet c++\\TvEase6\\TvEase\\role\\role.txt";
     std::string rolest = getRoleFromFileAD(filePath);
 
      role = QString::fromStdString(rolest);
@@ -353,7 +506,7 @@ void auditeur::on_pushButton_26_clicked()
             auditeur auditeur ;
             auditeur.setModal(true) ;
             auditeur.exec() ;
-        }
+        }*/
 
 }
 
@@ -991,5 +1144,90 @@ void auditeur::on_pushButton_15_clicked()
 
 void auditeur::on_pushButton_RESET_audi_clicked()
 {
+    QMessageBox::StandardButton reply;
+    reply = QMessageBox::question(this, "Confirmation", "Etes-vous sûr de vouloir effacer tous les champs ?",
+                                    QMessageBox::Yes|QMessageBox::No);
+    if (reply == QMessageBox::Yes) {
+        // Clear all input fields
+        ui->ajouter_id_audi->clear() ;
+         ui->ajouter_nom_audi->clear() ;
+         ui->ajouter_prenom_audi->clear() ;
+         ui->ajouter_adr_audi->clear() ;
+         ui->ajouter_ddn_audi->clear() ;
+         ui->ajouter_mail_audi->clear() ;
+         ui->ajouter_tele_audi->clear() ;
+         ui->imagebrowser->clear() ;
 
+
+        QMessageBox::information(this, "Succès", "Champs effacés avec succès !");
+   }
+}
+
+void auditeur::on_pushButton_RESET_audi_2_clicked()
+{
+    QMessageBox::StandardButton reply;
+    reply = QMessageBox::question(this, "Confirmation", "Etes-vous sûr de vouloir effacer tous les champs ?",
+                                    QMessageBox::Yes|QMessageBox::No);
+    if (reply == QMessageBox::Yes) {
+        // Clear all input fields
+        ui->modifier_id_audi->clear() ;
+         ui->modifier_adr_audi->clear() ;
+         ui->modifier_ddn_audi->clear() ;
+         ui->modifier_nom_audi->clear() ;
+         ui->modifier_mail_audi->clear() ;
+         ui->modifier_tele_audi->clear() ;
+         ui->modifier_prenom_audi->clear() ;
+
+
+        QMessageBox::information(this, "Succès", "Champs effacés avec succès !");
+   }
+}
+
+void auditeur::on_pushButton_RESET_audi_3_clicked()
+{
+    QMessageBox::StandardButton reply;
+    reply = QMessageBox::question(this, "Confirmation", "Etes-vous sûr de vouloir effacer tous les champs ?",
+                                    QMessageBox::Yes|QMessageBox::No);
+    if (reply == QMessageBox::Yes) {
+        // Clear all input fields
+        ui->supprimer_id_audi->clear() ;
+
+
+
+        QMessageBox::information(this, "Succès", "Champs effacés avec succès !");
+   }
+}
+#include"gamehub.h"
+void auditeur::on_pushButton_11_clicked()
+{
+
+    gamehub gameh ;
+    gameh.setModal(true) ;
+    gameh.exec() ;
+}
+#include"chat.h"
+void auditeur::on_chatbot_clicked()
+{
+    chat c ;
+    c.setModal(true) ;
+    c.exec() ;
+
+}
+#include"lopiza.h"
+
+void auditeur::on_Notif_clicked()
+{
+
+ Lopiza *lop = new Lopiza();
+
+        // Show the lopiza window
+        lop->show();
+        lop->raise();
+}
+#include"event.h"
+void auditeur::on_pushButton_7_clicked()
+{
+    Event c;
+       c.setModal(true);
+       c.exec();
 }

@@ -137,7 +137,8 @@ QSqlQueryModel* Cstudio::afficher()
       QSqlQueryModel* model = new QSqlQueryModel();
       QSqlQuery query;
 
-      query.prepare("SELECT ids, localisation, type, etat, capacite FROM studio WHERE ids LIKE :valeur OR localisation LIKE :valeur OR etat LIKE :valeur OR type LIKE :valeur OR capacite LIKE :valeur");
+     // query.prepare("SELECT ids, localisation, type, etat, capacite FROM studio WHERE ids LIKE :valeur OR localisation LIKE :valeur OR etat LIKE :valeur OR type LIKE :valeur OR capacite LIKE :valeur");
+      query.prepare("SELECT ids , localisation , type, etat, capacite FROM studio WHERE LOWER(ids) LIKE LOWER(:valeur) OR LOWER(localisation) LIKE LOWER(:valeur) OR LOWER(type) LIKE LOWER(:valeur) OR LOWER(etat) LIKE LOWER(:valeur) OR LOWER(capacite) LIKE LOWER(:valeur)");
 
       query.bindValue(":valeur", "%" + valeur + "%"); // Ajout des caractères de joker pour une recherche partielle
 

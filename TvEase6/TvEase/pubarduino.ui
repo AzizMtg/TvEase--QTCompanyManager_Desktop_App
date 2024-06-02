@@ -11,7 +11,14 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Dialog</string>
+   <string>Tv'Ease</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="source.qrc">
+    <normaloff>:/img/images/logo.png</normaloff>:/img/images/logo.png</iconset>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color : #B5C0D0 ; </string>
   </property>
   <widget class="QLineEdit" name="lineEdit">
    <property name="geometry">
@@ -71,7 +78,7 @@
    <property name="geometry">
     <rect>
      <x>40</x>
-     <y>280</y>
+     <y>300</y>
      <width>371</width>
      <height>41</height>
     </rect>
@@ -80,10 +87,12 @@
     <font>
      <family>Neue Haas Grotesk Text Pro Medi</family>
      <pointsize>10</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
     </font>
    </property>
    <property name="styleSheet">
-    <string notr="true">color: rgb(182, 60, 0);</string>
+    <string notr="true">color: #333770 ;</string>
    </property>
    <property name="text">
     <string>appuier sur 'A' pour effacer la totalité du text</string>
@@ -92,9 +101,9 @@
   <widget class="QLabel" name="label_6">
    <property name="geometry">
     <rect>
-     <x>100</x>
-     <y>250</y>
-     <width>371</width>
+     <x>40</x>
+     <y>260</y>
+     <width>291</width>
      <height>41</height>
     </rect>
    </property>
@@ -102,10 +111,12 @@
     <font>
      <family>Neue Haas Grotesk Text Pro Medi</family>
      <pointsize>10</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
     </font>
    </property>
    <property name="styleSheet">
-    <string notr="true">color: rgb(182, 60, 0);</string>
+    <string notr="true">color: #333770 ;</string>
    </property>
    <property name="text">
     <string>appuier sur 'B' pour effacer</string>
@@ -114,7 +125,7 @@
   <widget class="QLabel" name="label_2">
    <property name="geometry">
     <rect>
-     <x>100</x>
+     <x>40</x>
      <y>220</y>
      <width>281</width>
      <height>41</height>
@@ -124,10 +135,12 @@
     <font>
      <family>Neue Haas Grotesk Text Pro Medi</family>
      <pointsize>10</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
     </font>
    </property>
    <property name="styleSheet">
-    <string notr="true">color: rgb(110, 190, 113);</string>
+    <string notr="true">color: #333770 ;</string>
    </property>
    <property name="text">
     <string>appuier sur '#' pour Envoyer</string>
@@ -145,8 +158,13 @@
    <property name="font">
     <font>
      <family>Neue Haas Grotesk Text Pro Medi</family>
-     <pointsize>11</pointsize>
+     <pointsize>13</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
     </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: #7396A0 ;</string>
    </property>
    <property name="text">
     <string>Veuiller taper sur le Keypad </string>
@@ -155,8 +173,8 @@
   <widget class="QLabel" name="label_3">
    <property name="geometry">
     <rect>
-     <x>90</x>
-     <y>10</y>
+     <x>80</x>
+     <y>30</y>
      <width>371</width>
      <height>31</height>
     </rect>
@@ -164,19 +182,22 @@
    <property name="font">
     <font>
      <family>Neue Haas Grotesk Text Pro</family>
-     <pointsize>13</pointsize>
+     <pointsize>15</pointsize>
      <weight>75</weight>
      <bold>true</bold>
+     <underline>true</underline>
     </font>
    </property>
    <property name="styleSheet">
-    <string notr="true">color: rgb(255, 0, 0);</string>
+    <string notr="true">color: #333770 ;</string>
    </property>
    <property name="text">
     <string>En Utilisant la carte Arduino</string>
    </property>
   </widget>
  </widget>
- <resources/>
+ <resources>
+  <include location="source.qrc"/>
+ </resources>
  <connections/>
 </ui>

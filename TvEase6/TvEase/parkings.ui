@@ -11,13 +11,20 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Dialog</string>
+   <string>Tv'Ease</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="source.qrc">
+    <normaloff>:/img/images/logo.png</normaloff>:/img/images/logo.png</iconset>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color : #B5C0D0 ; </string>
   </property>
   <widget class="QLabel" name="label">
    <property name="geometry">
     <rect>
-     <x>20</x>
-     <y>40</y>
+     <x>300</x>
+     <y>50</y>
      <width>441</width>
      <height>101</height>
     </rect>
@@ -28,6 +35,9 @@
      <pointsize>28</pointsize>
     </font>
    </property>
+   <property name="styleSheet">
+    <string notr="true">background-color : white ; </string>
+   </property>
    <property name="text">
     <string>TextLabel</string>
    </property>
@@ -35,8 +45,8 @@
   <widget class="QLabel" name="label_2">
    <property name="geometry">
     <rect>
-     <x>40</x>
-     <y>150</y>
+     <x>70</x>
+     <y>170</y>
      <width>891</width>
      <height>311</height>
     </rect>
@@ -46,11 +56,42 @@
      <pointsize>28</pointsize>
     </font>
    </property>
+   <property name="styleSheet">
+    <string notr="true">background-color : white ; </string>
+   </property>
    <property name="text">
     <string>TextLabel</string>
    </property>
   </widget>
+  <widget class="QPushButton" name="pushButton">
+   <property name="geometry">
+    <rect>
+     <x>70</x>
+     <y>50</y>
+     <width>141</width>
+     <height>101</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: transparent ; </string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="icon">
+    <iconset resource="source.qrc">
+     <normaloff>:/img/images/parking.png</normaloff>:/img/images/parking.png</iconset>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>1000</width>
+     <height>100</height>
+    </size>
+   </property>
+  </widget>
  </widget>
- <resources/>
+ <resources>
+  <include location="source.qrc"/>
+ </resources>
  <connections/>
 </ui>

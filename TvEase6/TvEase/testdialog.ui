@@ -11,19 +11,55 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Dialog</string>
+   <string>Tv'Ease</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="source.qrc">
+    <normaloff>:/img/images/logo.png</normaloff>:/img/images/logo.png</iconset>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color : #9AC8CD ; </string>
   </property>
   <widget class="QPushButton" name="pushButtonSpeak">
    <property name="geometry">
     <rect>
-     <x>160</x>
-     <y>230</y>
-     <width>93</width>
-     <height>28</height>
+     <x>130</x>
+     <y>210</y>
+     <width>141</width>
+     <height>31</height>
     </rect>
    </property>
+   <property name="font">
+    <font>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="cursor">
+    <cursorShape>PointingHandCursor</cursorShape>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">#pushButtonSpeak
+{
+border-radius : 10px ;
+color : white ; 
+padding : 10px ;
+background-color:#333770;
+color : white ; 
+}
+
+#pushButtonSpeak:hover{
+color : white ; 
+}
+
+
+
+
+
+</string>
+   </property>
    <property name="text">
-    <string>PushButton</string>
+    <string>Ecouter</string>
    </property>
   </widget>
   <widget class="QLineEdit" name="lineEditText">
@@ -35,8 +71,13 @@
      <height>51</height>
     </rect>
    </property>
+   <property name="styleSheet">
+    <string notr="true">background-color : white ; </string>
+   </property>
   </widget>
  </widget>
- <resources/>
+ <resources>
+  <include location="source.qrc"/>
+ </resources>
  <connections/>
 </ui>

@@ -11,19 +11,24 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Dialog</string>
+   <string>Tv'Ease</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="source.qrc">
+    <normaloff>:/img/images/logo.png</normaloff>:/img/images/logo.png</iconset>
   </property>
   <widget class="QGroupBox" name="groupBox_2">
    <property name="geometry">
     <rect>
-     <x>-20</x>
-     <y>-10</y>
+     <x>-90</x>
+     <y>0</y>
      <width>821</width>
      <height>811</height>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">background-image: url(:/img/images/background.jpg);</string>
+    <string notr="true">/*background-image: url(:/img/images/background.jpg);*/
+background-color : #BBD2E1 ; </string>
    </property>
    <property name="title">
     <string/>
@@ -31,9 +36,9 @@
    <widget class="QLabel" name="label">
     <property name="geometry">
      <rect>
-      <x>100</x>
+      <x>350</x>
       <y>40</y>
-      <width>211</width>
+      <width>171</width>
       <height>41</height>
      </rect>
     </property>
@@ -42,13 +47,15 @@
       <family>Neue Haas Grotesk Text Pro Ligh</family>
       <pointsize>20</pointsize>
       <weight>75</weight>
+      <italic>true</italic>
       <bold>true</bold>
+      <underline>true</underline>
      </font>
     </property>
     <property name="styleSheet">
      <string notr="true">border : none ;
 background-color: none;
-color : #333770 ;
+color : #7396A0 ;
 background-image : url();
     
 </string>
@@ -60,26 +67,33 @@ background-image : url();
    <widget class="QPushButton" name="ajt">
     <property name="geometry">
      <rect>
-      <x>620</x>
-      <y>40</y>
-      <width>71</width>
-      <height>41</height>
+      <x>700</x>
+      <y>20</y>
+      <width>81</width>
+      <height>61</height>
      </rect>
     </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
     <property name="styleSheet">
-     <string notr="true">image: url(:/img/images/parametre.png);</string>
+     <string notr="true">
+background-color: transparent ; 
+border : none ;
+color : #333770 ;
+background-image : url();</string>
     </property>
     <property name="text">
      <string/>
     </property>
     <property name="icon">
-     <iconset>
-      <normaloff>:/img/images/add-circle-outline-logo-icon-png-svg.png</normaloff>:/img/images/add-circle-outline-logo-icon-png-svg.png</iconset>
+     <iconset resource="source.qrc">
+      <normaloff>:/img/images/parametre.png</normaloff>:/img/images/parametre.png</iconset>
     </property>
     <property name="iconSize">
      <size>
-      <width>30</width>
-      <height>30</height>
+      <width>50</width>
+      <height>50</height>
      </size>
     </property>
    </widget>
@@ -88,7 +102,7 @@ background-image : url();
      <rect>
       <x>110</x>
       <y>150</y>
-      <width>521</width>
+      <width>411</width>
       <height>271</height>
      </rect>
     </property>
@@ -122,7 +136,7 @@ background-image : url();
     <property name="geometry">
      <rect>
       <x>110</x>
-      <y>110</y>
+      <y>100</y>
       <width>641</width>
       <height>41</height>
      </rect>
@@ -133,6 +147,7 @@ background-image : url();
       <pointsize>12</pointsize>
       <weight>75</weight>
       <bold>true</bold>
+      <underline>true</underline>
      </font>
     </property>
     <property name="styleSheet">
@@ -152,29 +167,37 @@ background-image : url();
      <rect>
       <x>340</x>
       <y>580</y>
-      <width>101</width>
-      <height>28</height>
+      <width>111</width>
+      <height>31</height>
      </rect>
     </property>
     <property name="font">
      <font>
       <family>Neue Haas Grotesk Text Pro Thin</family>
       <pointsize>10</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
      </font>
     </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
     <property name="styleSheet">
-     <string notr="true">#pushButton_modifier_personnel
+     <string notr="true">#particip
 {
-background-color:  #FFEB3B;
 border-radius : 10px ;
 color : white ; 
-padding : 10px;}
-
-
-#pushButton_modifier_personnel:hover
-{
+padding:10px ;
+border:none ; 
+background-color:#333770;
 color : white ; 
-background-color:  #FFF176;
+
+}
+
+
+#particip:hover
+{
+background-color:  ;
  }
 
 </string>
@@ -188,7 +211,7 @@ background-color:  #FFF176;
      <rect>
       <x>120</x>
       <y>450</y>
-      <width>171</width>
+      <width>141</width>
       <height>31</height>
      </rect>
     </property>
@@ -203,7 +226,7 @@ background-color:  #FFF176;
     <property name="styleSheet">
      <string notr="true">border : none ;
 background-color: none;
-color : rgb(255, 255, 127) ;
+color : #516B73 ;
 background-image : url();
     
 </string>
@@ -234,7 +257,7 @@ background-image : url();
      <rect>
       <x>120</x>
       <y>490</y>
-      <width>171</width>
+      <width>71</width>
       <height>31</height>
      </rect>
     </property>
@@ -249,7 +272,7 @@ background-image : url();
     <property name="styleSheet">
      <string notr="true">border : none ;
 background-color: none;
-color :rgb(255, 255, 127) ;
+color : #516B73 ;
 background-image : url();
     
 </string>
@@ -280,7 +303,7 @@ background-image : url();
      <rect>
       <x>120</x>
       <y>530</y>
-      <width>171</width>
+      <width>131</width>
       <height>31</height>
      </rect>
     </property>
@@ -295,7 +318,7 @@ background-image : url();
     <property name="styleSheet">
      <string notr="true">border : none ;
 background-color: none;
-color :rgb(255, 255, 127) ;
+color : #516B73 ;
 background-image : url();
     
 </string>
@@ -307,30 +330,36 @@ background-image : url();
    <widget class="QPushButton" name="pushButton">
     <property name="geometry">
      <rect>
-      <x>260</x>
-      <y>650</y>
+      <x>280</x>
+      <y>640</y>
       <width>241</width>
-      <height>28</height>
+      <height>31</height>
      </rect>
     </property>
     <property name="font">
      <font>
       <family>Neue Haas Grotesk Text Pro Medi</family>
+      <weight>75</weight>
+      <bold>true</bold>
      </font>
     </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
     <property name="styleSheet">
-     <string notr="true">#pushButton_modifier_personnel
-{
-background-color:  #FFEB3B;
+     <string notr="true">#pushButton
+{background-color : #7396A0 ;
 border-radius : 10px ;
 color : white ; 
-padding : 10px;}
+padding : 10px ; 
+border:none ; 
+}
 
 
-#pushButton_modifier_personnel:hover
-{
-color : white ; 
-background-color:  #FFF176;
+#pushButton:hover
+{background-color: #638691  ;
+color:  ; 
+
  }
 
 </string>
@@ -363,6 +392,8 @@ background-image : url();
    </widget>
   </widget>
  </widget>
- <resources/>
+ <resources>
+  <include location="source.qrc"/>
+ </resources>
  <connections/>
 </ui>

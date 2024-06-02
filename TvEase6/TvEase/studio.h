@@ -3,6 +3,7 @@
 
 #include <QDialog>
 #include "cstudio.h"
+#include <QSortFilterProxyModel>
 
 namespace Ui {
 class studio;
@@ -22,7 +23,7 @@ public:
        void setROLECNX(const QString& role) {
             this->role = role;
         }
-
+void updateTime() ;
 private slots:
     void on_pushButton_37_clicked();
 
@@ -79,10 +80,18 @@ private slots:
 
   void updateLineEdit(double latitude, double longitude);
 
+  void on_chatbot_clicked();
+
+  void on_Notif_clicked();
+
+  void on_pushButton_13_clicked();
+
 private:
     Ui::studio *ui;    
     QString cin , role  ;
     Cstudio tmpstudio ;
+    QSortFilterProxyModel *proxyModel; // Declaration of the proxy model
+
 };
 
 #endif // STUDIO_H

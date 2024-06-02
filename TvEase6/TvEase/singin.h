@@ -3,6 +3,11 @@
 
 #include <QDialog>
 
+#include <QMainWindow>
+#include <QApplication>
+#include <QMainWindow>
+#include <QMediaPlayer>
+#include <QVBoxLayout>
 namespace Ui {
 class SingIn;
 }
@@ -26,8 +31,11 @@ private slots:
 
     void on_lineEdit_password_sign_in_cursorPositionChanged(int arg1, int arg2);
 
+    void on_pushButton_5_clicked();
+
 private:
     Ui::SingIn *ui;
+    QMediaPlayer *mediaPlayer;
 };
 
 #endif // SINGIN_H

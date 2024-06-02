@@ -28,6 +28,7 @@ SOURCES += \
     csecuritysd.cpp \
     ctravailler.cpp \
     forgetmotpass.cpp \
+    historiquebon.cpp \
     main.cpp \
     mainwindow.cpp \
     nouvmotpass.cpp \
@@ -97,6 +98,7 @@ HEADERS += \
     csecuritysd.h \
     ctravailler.h \
     forgetmotpass.h \
+    historiquebon.h \
     mainwindow.h \
     nouvmotpass.h \
     nouvoncepass.h \
@@ -161,6 +163,7 @@ FORMS += \
     codempass.ui \
     confirmmotpass.ui \
     forgetmotpass.ui \
+    historiquebon.ui \
     mainwindow.ui \
     nouvmotpass.ui \
     nouvoncepass.ui \

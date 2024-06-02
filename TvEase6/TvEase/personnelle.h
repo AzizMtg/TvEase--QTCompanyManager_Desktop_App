@@ -29,6 +29,8 @@ public:
          this->role = role;
      }
 
+    void updateTime() ;
+
 private slots:
     void on_pushButton_6_clicked();
 
@@ -85,6 +87,14 @@ private slots:
    void on_pushButton_stat_clicked();
 
    void on_pushButton_9_clicked();
+
+   void on_pushButton_11_clicked();
+
+   void on_chatbot_clicked();
+
+   void on_Notif_clicked();
+
+   void on_pushButton_12_clicked();
 
 private:
     Ui::personnelle *ui;

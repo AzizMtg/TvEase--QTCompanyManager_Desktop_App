@@ -11,19 +11,23 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Dialog</string>
+   <string>Tv'Ease</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="source.qrc">
+    <normaloff>:/img/images/logo.png</normaloff>:/img/images/logo.png</iconset>
   </property>
   <widget class="QGroupBox" name="groupBox">
    <property name="geometry">
     <rect>
-     <x>80</x>
-     <y>30</y>
-     <width>881</width>
-     <height>681</height>
+     <x>0</x>
+     <y>0</y>
+     <width>1191</width>
+     <height>731</height>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">background-color: rgb(255, 255, 255);</string>
+    <string notr="true">background-color: #fdf1f1 ;</string>
    </property>
    <property name="title">
     <string/>
@@ -31,7 +35,7 @@
    <widget class="QCheckBox" name="checkBox_6">
     <property name="geometry">
      <rect>
-      <x>650</x>
+      <x>780</x>
       <y>410</y>
       <width>201</width>
       <height>20</height>
@@ -44,7 +48,7 @@
    <widget class="QCheckBox" name="checkBox_4">
     <property name="geometry">
      <rect>
-      <x>650</x>
+      <x>780</x>
       <y>310</y>
       <width>201</width>
       <height>20</height>
@@ -57,7 +61,7 @@
    <widget class="QLabel" name="label_9">
     <property name="geometry">
      <rect>
-      <x>75</x>
+      <x>205</x>
       <y>570</y>
       <width>71</width>
       <height>21</height>
@@ -76,7 +80,7 @@
    <widget class="QTimeEdit" name="alarmTime_3">
     <property name="geometry">
      <rect>
-      <x>490</x>
+      <x>620</x>
       <y>260</y>
       <width>118</width>
       <height>22</height>
@@ -86,7 +90,7 @@
    <widget class="QLineEdit" name="dd_5">
     <property name="geometry">
      <rect>
-      <x>150</x>
+      <x>280</x>
       <y>350</y>
       <width>301</width>
       <height>41</height>
@@ -99,7 +103,7 @@
    <widget class="QTimeEdit" name="alarmTime_8">
     <property name="geometry">
      <rect>
-      <x>490</x>
+      <x>620</x>
       <y>520</y>
       <width>118</width>
       <height>22</height>
@@ -109,7 +113,7 @@
    <widget class="QLineEdit" name="dd_7">
     <property name="geometry">
      <rect>
-      <x>150</x>
+      <x>280</x>
       <y>450</y>
       <width>301</width>
       <height>41</height>
@@ -122,7 +126,7 @@
    <widget class="QLabel" name="label_7">
     <property name="geometry">
      <rect>
-      <x>75</x>
+      <x>205</x>
       <y>460</y>
       <width>71</width>
       <height>21</height>
@@ -141,7 +145,7 @@
    <widget class="QCheckBox" name="checkBox_3">
     <property name="geometry">
      <rect>
-      <x>650</x>
+      <x>780</x>
       <y>260</y>
       <width>191</width>
       <height>20</height>
@@ -154,7 +158,7 @@
    <widget class="QLineEdit" name="dd">
     <property name="geometry">
      <rect>
-      <x>150</x>
+      <x>280</x>
       <y>150</y>
       <width>301</width>
       <height>41</height>
@@ -167,7 +171,7 @@
    <widget class="QCheckBox" name="checkBox_8">
     <property name="geometry">
      <rect>
-      <x>650</x>
+      <x>780</x>
       <y>520</y>
       <width>181</width>
       <height>20</height>
@@ -180,7 +184,7 @@
    <widget class="QCheckBox" name="checkBox">
     <property name="geometry">
      <rect>
-      <x>650</x>
+      <x>780</x>
       <y>160</y>
       <width>181</width>
       <height>20</height>
@@ -193,7 +197,7 @@
    <widget class="QCheckBox" name="checkBox_7">
     <property name="geometry">
      <rect>
-      <x>650</x>
+      <x>780</x>
       <y>460</y>
       <width>201</width>
       <height>20</height>
@@ -206,7 +210,7 @@
    <widget class="QLabel" name="label_4">
     <property name="geometry">
      <rect>
-      <x>75</x>
+      <x>205</x>
       <y>310</y>
       <width>71</width>
       <height>21</height>
@@ -225,7 +229,7 @@
    <widget class="QCheckBox" name="checkBox_9">
     <property name="geometry">
      <rect>
-      <x>650</x>
+      <x>780</x>
       <y>570</y>
       <width>171</width>
       <height>20</height>
@@ -238,7 +242,7 @@
    <widget class="QLineEdit" name="dd_9">
     <property name="geometry">
      <rect>
-      <x>150</x>
+      <x>280</x>
       <y>560</y>
       <width>301</width>
       <height>41</height>
@@ -251,7 +255,7 @@
    <widget class="QLineEdit" name="dd_8">
     <property name="geometry">
      <rect>
-      <x>150</x>
+      <x>280</x>
       <y>510</y>
       <width>301</width>
       <height>41</height>
@@ -264,7 +268,7 @@
    <widget class="QTimeEdit" name="alarmTime_5">
     <property name="geometry">
      <rect>
-      <x>490</x>
+      <x>620</x>
       <y>360</y>
       <width>118</width>
       <height>22</height>
@@ -274,7 +278,7 @@
    <widget class="QLineEdit" name="dd_4">
     <property name="geometry">
      <rect>
-      <x>150</x>
+      <x>280</x>
       <y>300</y>
       <width>301</width>
       <height>41</height>
@@ -287,7 +291,7 @@
    <widget class="QLineEdit" name="dd_6">
     <property name="geometry">
      <rect>
-      <x>150</x>
+      <x>280</x>
       <y>400</y>
       <width>301</width>
       <height>41</height>
@@ -300,7 +304,7 @@
    <widget class="QTimeEdit" name="alarmTime">
     <property name="geometry">
      <rect>
-      <x>490</x>
+      <x>620</x>
       <y>160</y>
       <width>118</width>
       <height>22</height>
@@ -310,7 +314,7 @@
    <widget class="QLineEdit" name="dd_3">
     <property name="geometry">
      <rect>
-      <x>150</x>
+      <x>280</x>
       <y>250</y>
       <width>301</width>
       <height>41</height>
@@ -323,7 +327,7 @@
    <widget class="QTimeEdit" name="alarmTime_9">
     <property name="geometry">
      <rect>
-      <x>490</x>
+      <x>620</x>
       <y>570</y>
       <width>118</width>
       <height>22</height>
@@ -333,7 +337,7 @@
    <widget class="QCheckBox" name="checkBox_2">
     <property name="geometry">
      <rect>
-      <x>650</x>
+      <x>780</x>
       <y>210</y>
       <width>201</width>
       <height>20</height>
@@ -346,7 +350,7 @@
    <widget class="QLabel" name="label_6">
     <property name="geometry">
      <rect>
-      <x>75</x>
+      <x>205</x>
       <y>410</y>
       <width>71</width>
       <height>21</height>
@@ -365,7 +369,7 @@
    <widget class="QLabel" name="label_2">
     <property name="geometry">
      <rect>
-      <x>75</x>
+      <x>205</x>
       <y>210</y>
       <width>71</width>
       <height>21</height>
@@ -384,7 +388,7 @@
    <widget class="QTimeEdit" name="alarmTime_4">
     <property name="geometry">
      <rect>
-      <x>490</x>
+      <x>620</x>
       <y>310</y>
       <width>118</width>
       <height>22</height>
@@ -394,7 +398,7 @@
    <widget class="QLabel" name="label_5">
     <property name="geometry">
      <rect>
-      <x>75</x>
+      <x>205</x>
       <y>360</y>
       <width>71</width>
       <height>21</height>
@@ -413,7 +417,7 @@
    <widget class="QLabel" name="label_3">
     <property name="geometry">
      <rect>
-      <x>75</x>
+      <x>205</x>
       <y>260</y>
       <width>71</width>
       <height>21</height>
@@ -432,7 +436,7 @@
    <widget class="QTimeEdit" name="alarmTime_2">
     <property name="geometry">
      <rect>
-      <x>490</x>
+      <x>620</x>
       <y>210</y>
       <width>118</width>
       <height>22</height>
@@ -442,7 +446,7 @@
    <widget class="QCheckBox" name="checkBox_5">
     <property name="geometry">
      <rect>
-      <x>650</x>
+      <x>780</x>
       <y>360</y>
       <width>181</width>
       <height>20</height>
@@ -455,7 +459,7 @@
    <widget class="QTimeEdit" name="alarmTime_7">
     <property name="geometry">
      <rect>
-      <x>490</x>
+      <x>620</x>
       <y>460</y>
       <width>118</width>
       <height>22</height>
@@ -465,7 +469,7 @@
    <widget class="QLineEdit" name="dd_2">
     <property name="geometry">
      <rect>
-      <x>150</x>
+      <x>280</x>
       <y>200</y>
       <width>301</width>
       <height>41</height>
@@ -478,7 +482,7 @@
    <widget class="QTimeEdit" name="alarmTime_6">
     <property name="geometry">
      <rect>
-      <x>490</x>
+      <x>620</x>
       <y>410</y>
       <width>118</width>
       <height>22</height>
@@ -498,7 +502,13 @@
      <font>
       <family>SimSun-ExtB</family>
       <pointsize>28</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+      <underline>true</underline>
      </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color : #333770 ; </string>
     </property>
     <property name="text">
      <string>Alarme :</string>
@@ -507,7 +517,7 @@
    <widget class="QLabel" name="label">
     <property name="geometry">
      <rect>
-      <x>75</x>
+      <x>205</x>
       <y>160</y>
       <width>71</width>
       <height>21</height>
@@ -526,7 +536,7 @@
    <widget class="QLabel" name="label_8">
     <property name="geometry">
      <rect>
-      <x>75</x>
+      <x>205</x>
       <y>520</y>
       <width>71</width>
       <height>21</height>
@@ -545,7 +555,7 @@
    <widget class="QLabel" name="timeLabel">
     <property name="geometry">
      <rect>
-      <x>320</x>
+      <x>450</x>
       <y>50</y>
       <width>351</width>
       <height>71</height>
@@ -564,11 +574,30 @@
    <widget class="QPushButton" name="pushButton">
     <property name="geometry">
      <rect>
-      <x>240</x>
-      <y>630</y>
+      <x>430</x>
+      <y>640</y>
       <width>361</width>
       <height>31</height>
      </rect>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">#pushButton
+{
+border-radius : 10px ;
+color : white ; 
+padding:10px ;
+border:none ; 
+background-color:#333770;
+color : white ; 
+}
+
+#pushButton:hover
+{
+background-color:  ;
+}</string>
     </property>
     <property name="text">
      <string>return</string>
@@ -576,6 +605,8 @@
    </widget>
   </widget>
  </widget>
- <resources/>
+ <resources>
+  <include location="source.qrc"/>
+ </resources>
  <connections/>
 </ui>

@@ -2,6 +2,10 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include <QApplication>
+#include <QMainWindow>
+#include <QMediaPlayer>
+#include <QVBoxLayout>
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -20,5 +24,6 @@ private slots:
 void  playGifAutomatically() ;
 private:
     Ui::MainWindow *ui;
+    QMediaPlayer *mediaPlayer;
 };
 #endif // MAINWINDOW_H

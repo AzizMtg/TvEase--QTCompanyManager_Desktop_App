@@ -13,6 +13,10 @@
   <property name="windowTitle">
    <string>Historique Publicite</string>
   </property>
+  <property name="windowIcon">
+   <iconset resource="source.qrc">
+    <normaloff>:/img/images/logo.png</normaloff>:/img/images/logo.png</iconset>
+  </property>
   <property name="styleSheet">
    <string notr="true"/>
   </property>
@@ -26,17 +30,8 @@
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">/* Set the background color of child widgets to transparent */
-/* Set the background image for the group box */
-#groupBox {
-    background-image: url(:/img/images/8e4aaa996388c571c188857db3fee3f8.jpg);
-}
-
-/* Set transparent background for child widgets */
-#groupBox QWidget {
-    background-color: transparent;
-}
-</string>
+    <string notr="true">
+background-color : #B5C0D0 ; </string>
    </property>
    <property name="title">
     <string/>
@@ -44,8 +39,8 @@
    <widget class="QLabel" name="label">
     <property name="geometry">
      <rect>
-      <x>100</x>
-      <y>80</y>
+      <x>120</x>
+      <y>60</y>
       <width>361</width>
       <height>61</height>
      </rect>
@@ -54,10 +49,15 @@
      <font>
       <family>Neue Haas Grotesk Text Pro Ligh</family>
       <pointsize>18</pointsize>
+      <weight>75</weight>
+      <italic>true</italic>
+      <bold>true</bold>
+      <underline>true</underline>
      </font>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color: transparent;
+     <string notr="true">background-color: transparent ; 
+color :white ; 
 </string>
     </property>
     <property name="text">
@@ -67,14 +67,14 @@
    <widget class="QTableView" name="histotab">
     <property name="geometry">
      <rect>
-      <x>80</x>
-      <y>150</y>
-      <width>401</width>
+      <x>110</x>
+      <y>130</y>
+      <width>321</width>
       <height>431</height>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color: rgb(255, 255, 255);
+     <string notr="true">background-color: white ; 
 </string>
     </property>
    </widget>
@@ -82,6 +82,8 @@
    <zorder>label</zorder>
   </widget>
  </widget>
- <resources/>
+ <resources>
+  <include location="source.qrc"/>
+ </resources>
  <connections/>
 </ui>

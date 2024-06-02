@@ -6,12 +6,16 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>296</width>
-    <height>606</height>
+    <width>288</width>
+    <height>581</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Messagerie LAN TvEase</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="source.qrc">
+    <normaloff>:/img/images/logo.png</normaloff>:/img/images/logo.png</iconset>
   </property>
   <property name="styleSheet">
    <string notr="true">background-image: url(:/img/images/background.jpg);</string>
@@ -44,8 +48,8 @@ background-image: url();
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>296</width>
-     <height>26</height>
+     <width>288</width>
+     <height>22</height>
     </rect>
    </property>
    <widget class="QMenu" name="menuFile">
@@ -113,7 +117,9 @@ background-image: url();
   </action>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
- <resources/>
+ <resources>
+  <include location="source.qrc"/>
+ </resources>
  <connections>
   <connection>
    <sender>menuBar</sender>

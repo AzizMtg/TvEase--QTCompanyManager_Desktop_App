@@ -13,17 +13,23 @@
   <property name="windowTitle">
    <string>Dialog</string>
   </property>
+  <property name="windowIcon">
+   <iconset resource="source.qrc">
+    <normaloff>:/img/images/logo.png</normaloff>:/img/images/logo.png</iconset>
+  </property>
   <widget class="QGroupBox" name="groupBox">
    <property name="geometry">
     <rect>
-     <x>0</x>
+     <x>-20</x>
      <y>0</y>
-     <width>571</width>
+     <width>641</width>
      <height>781</height>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">background-image: url(:/img/images/GettyImages-530686103-56a2b3775f9b58b7d0cd87d9.jpg);</string>
+    <string notr="true">/*background-image: url(:/img/images/background.jpg);*/
+background-color : #BBD2E1 ; 
+</string>
    </property>
    <property name="title">
     <string/>
@@ -33,15 +39,16 @@
      <rect>
       <x>80</x>
       <y>50</y>
-      <width>401</width>
+      <width>441</width>
       <height>341</height>
      </rect>
     </property>
     <property name="styleSheet">
      <string notr="true">border : none ;
-background-color: rgb(220, 220, 220);
+background-color: white ;
 color : #333770 ;
 background-image : url();
+
     
 </string>
     </property>
@@ -51,13 +58,13 @@ background-image : url();
      <rect>
       <x>90</x>
       <y>430</y>
-      <width>391</width>
+      <width>431</width>
       <height>271</height>
      </rect>
     </property>
     <property name="styleSheet">
      <string notr="true">border : none ;
-background-color: rgb(220, 220, 220);
+background-color: white ;
 color : #333770 ;
 background-image : url();
     
@@ -67,11 +74,36 @@ background-image : url();
    <widget class="QPushButton" name="retourner">
     <property name="geometry">
      <rect>
-      <x>420</x>
-      <y>710</y>
-      <width>121</width>
-      <height>41</height>
+      <x>220</x>
+      <y>720</y>
+      <width>111</width>
+      <height>31</height>
      </rect>
+    </property>
+    <property name="font">
+     <font>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">#retourner
+{
+border-radius : 10px ;
+color : white ; 
+padding:10px ;
+border:none ; 
+background-color:#333770;
+color : white ; 
+}
+
+#retourner:hover
+{
+background-color:  ;
+}</string>
     </property>
     <property name="text">
      <string>Retourner</string>
@@ -80,9 +112,9 @@ background-image : url();
    <widget class="QLabel" name="label">
     <property name="geometry">
      <rect>
-      <x>190</x>
+      <x>240</x>
       <y>10</y>
-      <width>271</width>
+      <width>171</width>
       <height>41</height>
      </rect>
     </property>
@@ -92,6 +124,7 @@ background-image : url();
       <pointsize>13</pointsize>
       <weight>75</weight>
       <bold>true</bold>
+      <underline>true</underline>
      </font>
     </property>
     <property name="styleSheet">
@@ -106,21 +139,22 @@ background-image : url();
      <string>Mes Evenements</string>
     </property>
    </widget>
-   <widget class="QLabel" name="label_2">
+   <widget class="QLabel" name="label_3">
     <property name="geometry">
      <rect>
-      <x>180</x>
-      <y>410</y>
-      <width>221</width>
-      <height>21</height>
+      <x>210</x>
+      <y>390</y>
+      <width>271</width>
+      <height>41</height>
      </rect>
     </property>
     <property name="font">
      <font>
       <family>Neue Haas Grotesk Text Pro Ligh</family>
-      <pointsize>11</pointsize>
+      <pointsize>13</pointsize>
       <weight>75</weight>
       <bold>true</bold>
+      <underline>true</underline>
      </font>
     </property>
     <property name="styleSheet">
@@ -137,6 +171,8 @@ background-image : url();
    </widget>
   </widget>
  </widget>
- <resources/>
+ <resources>
+  <include location="source.qrc"/>
+ </resources>
  <connections/>
 </ui>

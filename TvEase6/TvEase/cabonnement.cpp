@@ -15,27 +15,29 @@
 #include <QDateTime>
 #include <QSqlQueryModel>
 #include <QStandardItemModel>
-cabonnement::cabonnement(int id, int numero, QDate debut, QDate expiration, QString type,int idaudit) {
+cabonnement::cabonnement(int id, int numero, QDate debut, QDate expiration, QString type,int idaudit , QString prixx ) {
     id_abonnement = id;
     numero_abonnement = numero;
     Date_debut = debut;
     Date_expiration = expiration;
     Type_abonnement = type;
     id_auditeur = idaudit;
+    prix = prix ;
 
 }
 
 
 bool cabonnement::ajouter_abonnement() {
     QSqlQuery query;
-    query.prepare("INSERT INTO ABONNEMENT (ID_ABONNEMENT, NUMERO_ABONNEMENT, DATE_DEBUT, DATE_EXPIRATION, TYPE_ABONNEMENT, ID_AUDITEUR) "
-                  "VALUES ( abonnement_id_seq.NEXTVAL,:numero, :debut, :expiration, :type, :idaudit)");
+    query.prepare("INSERT INTO ABONNEMENT (ID_ABONNEMENT, NUMERO_ABONNEMENT, DATE_DEBUT, DATE_EXPIRATION, TYPE_ABONNEMENT, ID_AUDITEUR , PRIX) "
+                  "VALUES ( abonnement_id_seq.NEXTVAL,:numero, :debut, :expiration, :type, :idaudit ,:prix)");
     //query.bindValue(":id", id_abonnement);
     query.bindValue(":numero", numero_abonnement);
     query.bindValue(":debut", Date_debut.toString(Qt::ISODate)); // Format ISODate
     query.bindValue(":expiration", Date_expiration.toString(Qt::ISODate)); // Format ISODate
     query.bindValue(":type", Type_abonnement);
     query.bindValue(":idaudit", id_auditeur);
+     query.bindValue(":prix", prix);
 // le ID doit etre effectué avec auto-incrémente
 // le numéro dde l'abonnement doit etre Génerer automatiquement avec
 // il faut trouver une solution pour avo
@@ -211,7 +213,7 @@ QSqlQueryModel* cabonnement::rechercherdansAbonnement(QString valeur) {
     QSqlQueryModel *searchResultModel = new QSqlQueryModel();
 
       QSqlQuery query;
-      query.prepare("SELECT ID_ABONNEMENT, NUMERO_ABONNEMENT, DATE_DEBUT, DATE_EXPIRATION, TYPE_ABONNEMENT FROM ABONNEMENT WHERE LOWER(ID_ABONNEMENT) LIKE LOWER(:valeur) OR LOWER(NUMERO_ABONNEMENT) LIKE LOWER(:valeur) OR LOWER(DATE_DEBUT) LIKE LOWER(:valeur) OR LOWER(DATE_EXPIRATION) LIKE LOWER(:valeur) OR LOWER(TYPE_ABONNEMENT) LIKE LOWER(:valeur)");
+      query.prepare("SELECT ID_ABONNEMENT, NUMERO_ABONNEMENT, DATE_DEBUT, DATE_EXPIRATION, TYPE_ABONNEMENT ,ID_AUDITEUR  FROM ABONNEMENT WHERE LOWER(ID_ABONNEMENT) LIKE LOWER(:valeur) OR LOWER(NUMERO_ABONNEMENT) LIKE LOWER(:valeur) OR LOWER(DATE_DEBUT) LIKE LOWER(:valeur) OR LOWER(DATE_EXPIRATION) LIKE LOWER(:valeur) OR LOWER(TYPE_ABONNEMENT) LIKE LOWER(:valeur) OR LOWER(ID_AUDITEUR) LIKE LOWER(:valeur)");
       query.bindValue(":valeur", "%" + valeur.toLower() + "%"); // Convert search value to lowercase and add wildcard characters for partial matching
 
       if (!query.exec()) {
@@ -259,12 +261,24 @@ bool cabonnement::recuperer_donnees_types_abonnement(QPieSeries *series) {
         return false;
        }*/
 bool cabonnement::ajouter_historique(int Numero) {
+    // Lire le numéro ID depuis le fichier Role.txt
+    QFile roleFile("C:\\Users\\CHAIMA\\Documents\\Esprit 2eme\\semestre 2\\projet c++\\TvEase6\\TvEase\\role\\role.txt");
+    QString numeroID;
+    if (roleFile.open(QIODevice::ReadOnly | QIODevice::Text)) {
+        QTextStream in(&roleFile);
+        numeroID = in.readLine().trimmed(); // Lire la première ligne et supprimer les espaces blancs
+        roleFile.close();
+    } else {
+        qDebug() << "Impossible d'ouvrir le fichier Role.txt";
+        return false;
+    }
 
+    // Créer l'objet historique avec le numéro d'ID admin
     QJsonObject historiqueObj;
     historiqueObj["Numero"] = Numero;
     historiqueObj["Operation"] = "ajout";
     historiqueObj["Date_et_heure"] = QDateTime::currentDateTime().toString(Qt::ISODate);
-
+    historiqueObj["AdminID"] = numeroID; // Ajout du numéro d'ID admin
 
     QFile file("historique.json");
     if (!file.open(QIODevice::ReadWrite | QIODevice::Text)) {
@@ -372,7 +386,7 @@ QStandardItemModel *cabonnement::afficher_historique() {
 
     QStandardItemModel *model = new QStandardItemModel();
     model->setColumnCount(4); // Ajout d'une colonne supplémentaire
-    model->setHorizontalHeaderLabels({"Nom admin", "Numero", "Operation", "Date et heure"}); // Modification des en-têtes
+    model->setHorizontalHeaderLabels({ "Numero", "Operation", "Date et heure" ,"AdminID"}); // Modification des en-têtes
 
     // Parcours du tableau JSON et ajout des données au modèle
     QJsonArray historiqueArray = doc.array();
@@ -382,13 +396,17 @@ QStandardItemModel *cabonnement::afficher_historique() {
             int numero = obj["Numero"].toInt();
             QString operation = obj["Operation"].toString();
             QString dateTime = obj["Date_et_heure"].toString();
+            QString cin = obj["AdminID"].toString();
+
+
 
             QList<QStandardItem *> rowItems;
 
-            rowItems.append(new QStandardItem("Khalil"));
             rowItems.append(new QStandardItem(QString::number(numero)));
             rowItems.append(new QStandardItem(operation));
             rowItems.append(new QStandardItem(dateTime));
+            rowItems.append(new QStandardItem(cin));
+
             model->appendRow(rowItems);
         }
     }
@@ -399,11 +417,26 @@ QStandardItemModel *cabonnement::afficher_historique() {
 
 
 bool cabonnement::supprimer_historique(int numero_abonnement) {
+
+    // Lire le numéro ID depuis le fichier Role.txt
+    QFile roleFile("C:\\Users\\CHAIMA\\Documents\\Esprit 2eme\\semestre 2\\projet c++\\TvEase6\\TvEase\\role\\role.txt");
+    QString numeroID;
+    if (roleFile.open(QIODevice::ReadOnly | QIODevice::Text)) {
+        QTextStream in(&roleFile);
+        numeroID = in.readLine().trimmed(); // Lire la première ligne et supprimer les espaces blancs
+        roleFile.close();
+    } else {
+        qDebug() << "Impossible d'ouvrir le fichier Role.txt";
+        return false;
+    }
+
+
     // Création d'un objet JSON pour stocker les données
     QJsonObject historiqueObj;
     historiqueObj["Numero"] = numero_abonnement;
     historiqueObj["Operation"] = "suppression";
     historiqueObj["Date_et_heure"] = QDateTime::currentDateTime().toString(Qt::ISODate);
+    historiqueObj["AdminID"] = numeroID; // Ajout du numéro d'ID admin
 
     // Lecture du fichier JSON existant ou création d'un nouveau
     QFile file("historique.json");
@@ -440,11 +473,26 @@ bool cabonnement::supprimer_historique(int numero_abonnement) {
 }
 
 bool cabonnement::modifier_historique(int numero_abonnement) {
+    // Lire le numéro ID depuis le fichier Role.txt
+    QFile roleFile("C:\\Users\\CHAIMA\\Documents\\Esprit 2eme\\semestre 2\\projet c++\\TvEase6\\TvEase\\role\\role.txt");
+    QString numeroID;
+    if (roleFile.open(QIODevice::ReadOnly | QIODevice::Text)) {
+        QTextStream in(&roleFile);
+        numeroID = in.readLine().trimmed(); // Lire la première ligne et supprimer les espaces blancs
+        roleFile.close();
+    } else {
+        qDebug() << "Impossible d'ouvrir le fichier Role.txt";
+        return false;
+    }
+
+
+
     //  stocker les données
     QJsonObject historiqueObj;
     historiqueObj["Numero"] = numero_abonnement;
     historiqueObj["Operation"] = "modification";
     historiqueObj["Date_et_heure"] = QDateTime::currentDateTime().toString(Qt::ISODate);
+    historiqueObj["AdminID"] = numeroID; // Ajout du numéro d'ID admin
 
 
     QFile file("historique.json");

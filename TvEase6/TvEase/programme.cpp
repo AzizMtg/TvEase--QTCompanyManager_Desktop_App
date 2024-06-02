@@ -153,6 +153,15 @@ std::string getNomPrenomFromFilePG(const std::string& filePath) {
 }
 
 ///
+void programme::updateTime()
+{
+    // Get the current time
+    QTime currentTime = QTime::currentTime();
+    // Convert the time to string in the format "hh:mm:ss"
+    QString timeText = currentTime.toString("hh:mm:ss");
+    // Update the QLabel text with the current time
+    ui->label_heure->setText(timeText);
+}
 
 
 
@@ -183,6 +192,28 @@ programme::programme(QWidget *parent) :
 
 
        ui->tabprog->setModel(tp.afficher());
+
+       /// taba3 il afficher
+           // Create the proxy model
+           proxyModel = new QSortFilterProxyModel(this);
+           proxyModel->setSourceModel(tp.afficher());
+           ui->tabprog->setModel(proxyModel);
+
+           // Apply styles to the header
+           QString headerStyle = "QHeaderView::section {"
+                                   "    font-weight: bold;" // Making text bold
+                                   "    background-color: #EEE6D8 ;" // bleue color
+                                   "    border: 1px solid black;" // Adding a border
+                                   "}";
+
+           ui->tabprog->horizontalHeader()->setStyleSheet(headerStyle);
+           ui->tabprog->horizontalHeader()->resizeSection(7,200);
+
+
+
+
+
+
        ImageDelegate *imageDelegate = new ImageDelegate();
        ui->tabprog->setItemDelegateForColumn(8, imageDelegate);
 
@@ -196,6 +227,21 @@ programme::programme(QWidget *parent) :
 
 
        ui->comboBox_cin->setModel(models);
+
+
+       ////////// wa9t wa jour label
+       ///////////////time/////////////////////////
+         // Create a QTimer to update the time every second
+            QTimer *timer = new QTimer(this);
+            connect(timer, &QTimer::timeout, this, &programme::updateTime);
+            timer->start(5); // 1000 milliseconds = 1 second
+
+            /////
+                    QDateTime currentDateTime = QDateTime::currentDateTime();
+                         QString currentDate = currentDateTime.toString("dddd dd/MM/yyyy");
+                         ui->label_date->setText(currentDate);
+
+
 
 }
 
@@ -214,10 +260,31 @@ void programme::on_pushButton_9_clicked()
 
     if(role =="Admin principal" )
     {
-            hide() ;
-            personnelle personnelle ;
-            personnelle.setModal(true) ;
-            personnelle.exec() ;
+
+            // Create the new UI
+             personnelle *newUI = new personnelle;
+
+             // Make the new UI transparent
+              newUI->setWindowOpacity(0.0);
+
+             // Show the new UI
+             newUI->show();
+
+             // Animate the opacity to make it gradually visible
+             QPropertyAnimation *animation = new QPropertyAnimation(newUI, "windowOpacity");
+             animation->setDuration(50); // 500 milliseconds
+             animation->setStartValue(0.0);
+             animation->setEndValue(1.0);
+
+             // Hide the old UI (this dialog) after the animation finishes
+             connect(animation, &QPropertyAnimation::finished, this, [=]() {
+                 hide();
+                 animation->deleteLater(); // Delete the animation object when done
+             });
+
+             // Start the animation
+             animation->start();
+
     }
     else
     {
@@ -245,10 +312,31 @@ void programme::on_pushButton_11_clicked()
     }
     else
     {
-        hide() ;
-        publicite publicite ;
-        publicite.setModal(true) ;
-        publicite.exec() ;
+
+        // Create the new UI
+         publicite *newUI = new publicite;
+
+         // Make the new UI transparent
+          newUI->setWindowOpacity(0.0);
+
+         // Show the new UI
+         newUI->show();
+
+         // Animate the opacity to make it gradually visible
+         QPropertyAnimation *animation = new QPropertyAnimation(newUI, "windowOpacity");
+         animation->setDuration(50); // 500 milliseconds
+         animation->setStartValue(0.0);
+         animation->setEndValue(1.0);
+
+         // Hide the old UI (this dialog) after the animation finishes
+         connect(animation, &QPropertyAnimation::finished, this, [=]() {
+             hide();
+             animation->deleteLater(); // Delete the animation object when done
+         });
+
+         // Start the animation
+         animation->start();
+
     }
 
 
@@ -275,10 +363,30 @@ void programme::on_pushButton_12_clicked()
     }
     else
     {
-        hide() ;
-        auditeur auditeur ;
-        auditeur.setModal(true) ;
-        auditeur.exec() ;
+
+        // Create the new UI
+         auditeur *newUI = new auditeur;
+
+         // Make the new UI transparent
+          newUI->setWindowOpacity(0.0);
+
+         // Show the new UI
+         newUI->show();
+
+         // Animate the opacity to make it gradually visible
+         QPropertyAnimation *animation = new QPropertyAnimation(newUI, "windowOpacity");
+         animation->setDuration(50); // 500 milliseconds
+         animation->setStartValue(0.0);
+         animation->setEndValue(1.0);
+
+         // Hide the old UI (this dialog) after the animation finishes
+         connect(animation, &QPropertyAnimation::finished, this, [=]() {
+             hide();
+             animation->deleteLater(); // Delete the animation object when done
+         });
+
+         // Start the animation
+         animation->start();
     }
 
 
@@ -304,10 +412,33 @@ void programme::on_pushButton_13_clicked()
     }
     else
     {
-        hide() ;
-        abonnement abonnement ;
-        abonnement.setModal(true) ;
-        abonnement.exec() ;
+
+        // Create the new UI
+         abonnement *newUI = new abonnement;
+
+         // Make the new UI transparent
+          newUI->setWindowOpacity(0.0);
+
+         // Show the new UI
+         newUI->show();
+
+         // Animate the opacity to make it gradually visible
+         QPropertyAnimation *animation = new QPropertyAnimation(newUI, "windowOpacity");
+         animation->setDuration(50); // 500 milliseconds
+         animation->setStartValue(0.0);
+         animation->setEndValue(1.0);
+
+         // Hide the old UI (this dialog) after the animation finishes
+         connect(animation, &QPropertyAnimation::finished, this, [=]() {
+             hide();
+             animation->deleteLater(); // Delete the animation object when done
+         });
+
+         // Start the animation
+         animation->start();
+
+
+
     }
 
 
@@ -333,10 +464,31 @@ void programme::on_pushButton_14_clicked()
     }
     else
     {
-        hide() ;
-        studio studio ;
-        studio.setModal(true) ;
-        studio.exec() ;
+
+        // Create the new UI
+         studio *newUI = new studio;
+
+         // Make the new UI transparent
+          newUI->setWindowOpacity(0.0);
+
+         // Show the new UI
+         newUI->show();
+
+         // Animate the opacity to make it gradually visible
+         QPropertyAnimation *animation = new QPropertyAnimation(newUI, "windowOpacity");
+         animation->setDuration(50); // 500 milliseconds
+         animation->setStartValue(0.0);
+         animation->setEndValue(1.0);
+
+         // Hide the old UI (this dialog) after the animation finishes
+         connect(animation, &QPropertyAnimation::finished, this, [=]() {
+             hide();
+             animation->deleteLater(); // Delete the animation object when done
+         });
+
+         // Start the animation
+         animation->start();
+
     }
 
 
@@ -345,7 +497,7 @@ void programme::on_pushButton_14_clicked()
 void programme::on_pushButton_10_clicked()
 {
 
-    std::string filePath = "C:\\Users\\CHAIMA\\Documents\\Esprit 2eme\\semestre 2\\projet c++\\TvEase6\\TvEase\\role\\role.txt";
+   /* std::string filePath = "C:\\Users\\CHAIMA\\Documents\\Esprit 2eme\\semestre 2\\projet c++\\TvEase6\\TvEase\\role\\role.txt";
     std::string rolest = getRoleFromFilePG(filePath);
     role = QString::fromStdString(rolest);
     std::cout <<"ili fil prog"<<role.toStdString();
@@ -363,7 +515,7 @@ void programme::on_pushButton_10_clicked()
         programme programme ;
         programme.setModal(true) ;
         programme.exec() ;
-    }
+    }*/
 }
 ///////////////////////////////////
 /////////////////// MODIFICATION MOT DE PASSE //////////////
@@ -1121,3 +1273,34 @@ void programme::on_pushButton_clicked()
 
 
 
+#include"gamehub.h"
+void programme::on_pushButton_16_clicked()
+{
+
+    gamehub gameh ;
+    gameh.setModal(true) ;
+    gameh.exec() ;
+}
+#include"chat.h"
+void programme::on_chatbot_clicked()
+{
+    chat c ;
+    c.setModal(true) ;
+    c.exec() ;
+}
+#include"lopiza.h"
+void programme::on_Notif_clicked()
+{
+    Lopiza *lop = new Lopiza();
+
+           // Show the lopiza window
+           lop->show();
+           lop->raise();
+}
+#include"event.h"
+void programme::on_pushButton_17_clicked()
+{
+    Event c;
+      c.setModal(true);
+      c.exec();
+}

@@ -13,6 +13,10 @@
   <property name="windowTitle">
    <string>TvEase Chatbot</string>
   </property>
+  <property name="windowIcon">
+   <iconset resource="source.qrc">
+    <normaloff>:/img/images/logo.png</normaloff>:/img/images/logo.png</iconset>
+  </property>
   <property name="styleSheet">
    <string notr="true"/>
   </property>
@@ -26,7 +30,8 @@
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">background-image: url(:/img/images/background.jpg);</string>
+    <string notr="true">background-image: url(:/img/images/background.jpg); 
+background-color : #fdf1f1</string>
    </property>
    <widget class="QTextEdit" name="messageTextEdit">
     <property name="geometry">
@@ -60,6 +65,9 @@
       <italic>false</italic>
       <bold>false</bold>
      </font>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
     </property>
     <property name="styleSheet">
      <string notr="true">QPushButton{
@@ -122,14 +130,14 @@ background-image : url();
    <widget class="QLabel" name="label_2">
     <property name="geometry">
      <rect>
-      <x>40</x>
+      <x>30</x>
       <y>10</y>
       <width>71</width>
       <height>71</height>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">image: url(:/img/images/pngtree-chatbot-icon-chat-bot-robot-png-image_4841963.png);
+     <string notr="true">background-image: url(:/img/images/con1.png);
 border : none ;
 background-color: none;
 color : #333770 ;
@@ -196,8 +204,37 @@ background-image : url();
      <string>Votre assistant virtuel pour une gestion efficace !</string>
     </property>
    </widget>
+   <widget class="QPushButton" name="pushButton_8">
+    <property name="geometry">
+     <rect>
+      <x>580</x>
+      <y>10</y>
+      <width>75</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: transparent ; 
+background-image: url();</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="icon">
+     <iconset resource="source.qrc">
+      <normaloff>:/img/images/convoir.png</normaloff>:/img/images/convoir.png</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>70</width>
+      <height>61</height>
+     </size>
+    </property>
+   </widget>
   </widget>
  </widget>
- <resources/>
+ <resources>
+  <include location="source.qrc"/>
+ </resources>
  <connections/>
 </ui>

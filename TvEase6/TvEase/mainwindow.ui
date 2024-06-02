@@ -13,6 +13,10 @@
   <property name="windowTitle">
    <string>TvEase ! Tv Channel Manager</string>
   </property>
+  <property name="windowIcon">
+   <iconset resource="source.qrc">
+    <normaloff>:/img/images/logo.png</normaloff>:/img/images/logo.png</iconset>
+  </property>
   <property name="styleSheet">
    <string notr="true">
 background-size: 800px 600px;
@@ -29,6 +33,9 @@ background-repeat: no-repeat;
       <width>231</width>
       <height>41</height>
      </rect>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
     </property>
     <property name="styleSheet">
      <string notr="true">#pushButton {
@@ -83,6 +90,8 @@ background-repeat: no-repeat;
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
  </widget>
- <resources/>
+ <resources>
+  <include location="source.qrc"/>
+ </resources>
  <connections/>
 </ui>

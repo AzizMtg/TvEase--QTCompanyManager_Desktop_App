@@ -6,12 +6,16 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>687</width>
-    <height>630</height>
+    <width>678</width>
+    <height>615</height>
    </rect>
   </property>
   <property name="windowTitle">
-   <string>MainWindow</string>
+   <string>Tv'Ease</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="source.qrc">
+    <normaloff>:/img/images/logo.png</normaloff>:/img/images/logo.png</iconset>
   </property>
   <property name="styleSheet">
    <string notr="true">background-image: url(:/img/images/background.jpg);</string>
@@ -86,13 +90,15 @@ background-image: url();
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>687</width>
-     <height>26</height>
+     <width>678</width>
+     <height>22</height>
     </rect>
    </property>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
  </widget>
- <resources/>
+ <resources>
+  <include location="source.qrc"/>
+ </resources>
  <connections/>
 </ui>

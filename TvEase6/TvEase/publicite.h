@@ -4,6 +4,9 @@
 #include <QDialog>
 #include "cpub.h"
 #include <QFrame>
+#include <QSortFilterProxyModel>
+#include "espeak.h"
+
 namespace Ui {
 class publicite;
 }
@@ -22,7 +25,7 @@ public:
        void setROLECNX(const QString& role) {
             this->role= role;
         }
-
+void updateTime() ;
 
        /////
             Cpub fetchPubliciteById(int id);
@@ -39,7 +42,7 @@ public:
 public slots:
     void onProgramSelected(int index);
     void onTableViewClicked(const QModelIndex& index);
-
+void copySelectedTextToLineEdit(const QModelIndex& index);
 private slots:
     void on_pushButton_16_clicked();
 
@@ -105,10 +108,17 @@ private slots:
 
               void on_ard_3_clicked();
 
+              void on_pushButton_11_clicked();
+
 private:
     Ui::publicite *ui;
     QString cin , role  ;
     Cpub tmp;
+    QSortFilterProxyModel *proxyModel; // Declaration of the proxy model
+    ESpeak m_espeak;
+
+    QTime m_lastClickTime;
+           int m_lastClickedColumn;
 };
 
 #endif // PUBLICITE_H

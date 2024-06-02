@@ -58,7 +58,7 @@ public:
        audi fetchAuditeurById(int id_audi);
        void imageCaptured(int reqid, const QImage &img);
 
-
+void updateTime() ;
 private slots:
     void on_pushButton_23_clicked();
 
@@ -119,6 +119,18 @@ private slots:
 
                void on_pushButton_RESET_audi_clicked();
 
+               void on_pushButton_RESET_audi_2_clicked();
+
+               void on_pushButton_RESET_audi_3_clicked();
+
+               void on_pushButton_11_clicked();
+
+               void on_chatbot_clicked();
+
+               void on_Notif_clicked();
+
+               void on_pushButton_7_clicked();
+
 private:
     void start_Camera();
     void stop_Camera();
@@ -142,6 +154,7 @@ private:
        QVideoWidget *videowidget;
        QMediaRecorder *recorder;
        auditeur *auditeurInstance;
+       QSortFilterProxyModel *proxyModel;
 
 };
 
