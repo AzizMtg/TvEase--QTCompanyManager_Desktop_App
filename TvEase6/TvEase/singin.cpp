@@ -181,11 +181,11 @@ void SingIn::on_pushButton_2_clicked()
  QString hashed_pass_qstring = QString::fromStdString(hashed_pass); // inbadlouh min string il Qstring
  bool credentialsValid = verifyUserCredentials(email, hashed_pass_qstring);
 
-/*
+
 hide() ;
 personnelle personnelle2 ;
 personnelle2.setModal(true) ;
-personnelle2.exec() ;*/
+personnelle2.exec() ;
 
  if (credentialsValid)
  {

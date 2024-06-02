@@ -78,7 +78,7 @@ void MainWindow::on_pushButton_clicked()
 }
 void MainWindow::playGifAutomatically() {
     QString desktopPath = QStandardPaths::writableLocation(QStandardPaths::DesktopLocation);
-    QString gifPath = desktopPath + "/presentations.gif";
+    QString gifPath = "C:\\Users\\CHAIMA\\Documents\\Esprit 2eme\\semestre 2\\git colone TvEase\\TvEase\\TvEase6\\TvEase\\images\\presentations.gif";
 
     QMovie *gifAnimation = new QMovie(gifPath);
 

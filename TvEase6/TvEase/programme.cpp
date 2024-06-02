@@ -1184,7 +1184,7 @@ void programme::on_pushButton_stat_clicked()
 // Dans votre fonction membre ou dans le constructeur de votre classe programme
 void programme::playGifAutomatically() {
     QString desktopPath = QStandardPaths::writableLocation(QStandardPaths::DesktopLocation);
-    QString gifPath = desktopPath + "/presentation.gif";
+    QString gifPath = "C:\\Users\\CHAIMA\\Documents\\Esprit 2eme\\semestre 2\\git colone TvEase\\TvEase\\TvEase6\\TvEase\\images\\presentation.gif";
 
     QMovie *gifAnimation = new QMovie(gifPath);
 

@@ -1564,7 +1564,7 @@ void publicite::on_pushButton_6_clicked()
 
 void publicite::playGifAutomatically() {
      QString desktopPath = QStandardPaths::writableLocation(QStandardPaths::DesktopLocation);
-     QString gifPath = desktopPath + "/pen.gif";
+     QString gifPath = "C:\\Users\\CHAIMA\\Documents\\Esprit 2eme\\semestre 2\\git colone TvEase\\TvEase\\TvEase6\\TvEase\\images\\pen.gif";
 
      QMovie *gifAnimation = new QMovie(gifPath);
 
