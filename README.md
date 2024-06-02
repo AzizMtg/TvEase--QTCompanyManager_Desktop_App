@@ -8,6 +8,7 @@ TvEase is a comprehensive solution designed to manage various aspects of operati
 
 Key Features
 ------------
+![signin](https://github.com/AzizMtg/TvEase--QTCompanyManager_Desktop_App/assets/131389390/20efef31-d3ae-4c5f-b900-20880fe1795b)
 
 ### Subscription Management
 
@@ -29,15 +30,24 @@ Key Features
 * Manage roles, schedules, and tasks of the staff
 * Coordinate communication and activities among staff members
 
+  ![manag](https://github.com/AzizMtg/TvEase--QTCompanyManager_Desktop_App/assets/131389390/3a5e898e-0fa7-4058-a136-a01b14a77290)
+
+
 ### LAN Messaging
 
 * Instant messaging functionality for internal communication
 * Facilitates quick communication between team members
 
+  ![lan](https://github.com/AzizMtg/TvEase--QTCompanyManager_Desktop_App/assets/131389390/06ffec1d-97e9-4dc1-89ef-81b3c75bf3dc)
+
+
 ### Chatbot
 
 * AI-powered chatbot to answer common questions
 * Provides assistance to viewers and staff members
+
+  ![chatbot](https://github.com/AzizMtg/TvEase--QTCompanyManager_Desktop_App/assets/131389390/9f1a6d8b-26ce-4843-a763-b4ae73d912fb)
+
 
 ### Text-to-Speech
 
@@ -53,6 +63,9 @@ Key Features
 * Games for staff to enjoy during breaks
 * Helps boost morale and relaxation
 
+  ![game](https://github.com/AzizMtg/TvEase--QTCompanyManager_Desktop_App/assets/131389390/d41bb79b-14a9-4a71-8307-b289398f42ba)
+
+
 ### Event Participation
 
 * Staff can view and participate in events
@@ -64,11 +77,7 @@ Key Features
 * Helps in planning and coordinating events or tasks
 
 TvEase is a versatile tool that simplifies television channel operations, enhances productivity, and improves viewer experience.
-![signin](https://github.com/AzizMtg/TvEase--QTCompanyManager_Desktop_App/assets/131389390/20efef31-d3ae-4c5f-b900-20880fe1795b)
-![manag](https://github.com/AzizMtg/TvEase--QTCompanyManager_Desktop_App/assets/131389390/3a5e898e-0fa7-4058-a136-a01b14a77290)
-![lan](https://github.com/AzizMtg/TvEase--QTCompanyManager_Desktop_App/assets/131389390/06ffec1d-97e9-4dc1-89ef-81b3c75bf3dc)
-![chatbot](https://github.com/AzizMtg/TvEase--QTCompanyManager_Desktop_App/assets/131389390/9f1a6d8b-26ce-4843-a763-b4ae73d912fb)
-![game](https://github.com/AzizMtg/TvEase--QTCompanyManager_Desktop_App/assets/131389390/d41bb79b-14a9-4a71-8307-b289398f42ba)
+
 
 
 ## Usage
